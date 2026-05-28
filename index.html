@@ -111,7 +111,7 @@ tailwind.config = {
             <div class="text-xs text-muted mt-1">сомов налогов в год</div>
           </li>
           <li class="border-b border-steel pb-4">
-            <div class="text-3xl font-display font-semibold text-bone">87–200+</div>
+            <div class="text-3xl font-display font-semibold text-bone">200+</div>
             <div class="text-xs text-muted mt-1">АЗС в 7 регионах КР</div>
           </li>
           <li class="border-b border-steel pb-4">
@@ -152,7 +152,7 @@ tailwind.config = {
       <!-- Card 1 -->
       <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
         <div class="text-gold text-xs tracking-[0.3em] mb-4">МАСШТАБ</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">Сеть из 87–200+ АЗС</h3>
+        <h3 class="font-display text-2xl font-semibold mb-4">Сеть из 200+ АЗС</h3>
         <p class="text-bone/60 text-sm leading-relaxed">7 регионов Кыргызстана: Чуйская, Иссык-Кульская, Нарынская, Ошская, Баткенская, Джалал-Абадская, Таласская. 10+ видов топлива стандарта Евро-5.</p>
       </div>
       <!-- Card 2 -->
@@ -249,7 +249,7 @@ tailwind.config = {
                        ┌─────────────────┴─────────────────┐
                        ↓                                   ↓
               [Альфа Петролеум]                  [Альфа Ойл / Red Petroleum]
-              опт B2B, 30+ клиентов              87–200+ АЗС в 7 регионах
+              опт B2B, 30+ клиентов              200+ АЗС в 7 регионах
               госконтракты 3800+                 │
                                                   ├─→ Розничный клиент (RedPay + 0800)
                                                   ├─→ Магазины при АЗС
@@ -276,9 +276,9 @@ tailwind.config = {
       </div>
       <div class="md:col-span-8">
         <p class="text-lg text-bone/70 leading-relaxed mb-4">
-          Никакой системной критики. Это точки, в которых разные системы и подразделения говорят на разных языках — и каждый раз для синхронизации требуется ручная работа. Чем больше группа растёт, тем дороже каждый из этих разрывов.
+          Это <span class="text-gold">гипотезы для проверки на Discovery</span>, а не подтверждённые факты. Часть зон описана в ТЗ Заказчика по RedStaff Этап 2 (раздел 2.1). Остальные — типовые точки разрыва для группы такого масштаба и структуры. Финальный список и приоритет — фиксируются после интервью с командами Заказчика.
         </p>
-        <p class="text-sm text-muted">Источники болевых точек: ТЗ RedStaff Этап 2 раздел 2.1 · КП ASYSTEM по ИИ-агентам · публичные данные о масштабе группы.</p>
+        <p class="text-sm text-muted">Источники подтверждённых зон: ТЗ RedStaff Этап 2 раздел 2.1 · публичные данные о масштабе группы. Остальные точки — наши инженерные гипотезы.</p>
       </div>
     </div>
 
@@ -288,7 +288,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">01</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Три юр.лица группы</div>
+            <div class="text-bone font-semibold mb-1">Три юр.лица группы <span class="text-gold/70 text-[10px] tracking-widest">✓ ПУБЛИЧНО</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Консолидация P&L по группе через ручную сверку в 1С → трудоёмко, риск ошибок.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ Master Data Hub</div>
           </div>
@@ -299,7 +299,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">02</div>
           <div>
-            <div class="text-bone font-semibold mb-1">1С:ЗУП vs RedStaff Этап 1</div>
+            <div class="text-bone font-semibold mb-1">1С:ЗУП vs RedStaff Этап 1 <span class="text-gold/70 text-[10px] tracking-widest">✓ ИЗ ТЗ</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Master-источник не зафиксирован → ошибки начислений при смене должности или увольнении сотрудника.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ RedStaff Этап 2</div>
           </div>
@@ -310,7 +310,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">03</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Колл-центр 0800 vs RedPay vs OCPP</div>
+            <div class="text-bone font-semibold mb-1">Колл-центр vs RedPay vs OCPP <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Клиент звонит в 0800 — оператор не видит статус ЭЗС в реальном времени, не может ответить про баланс RedPay.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-ассистент клиента</div>
           </div>
@@ -321,7 +321,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">04</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Табель операторов АЗС</div>
+            <div class="text-bone font-semibold mb-1">Табель операторов АЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">СКУД установлен не на всех точках → удалённые АЗС в 7 регионах ведут табель в Excel вне системы.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ RedStaff Этап 3 (СКУД + GPS)</div>
           </div>
@@ -332,7 +332,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">05</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Тендеры на госплощадках</div>
+            <div class="text-bone font-semibold mb-1">Тендеры на госплощадках <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Отдел закупок физически не успевает мониторить все релевантные тендеры → пропуски возможностей.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-агент тендеров</div>
           </div>
@@ -343,7 +343,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">06</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Сметы новых АЗС и ЭЗС</div>
+            <div class="text-bone font-semibold mb-1">Сметы новых АЗС и ЭЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Сметный отдел тратит 3–4 недели на первичную смету. При активной стратегии расширения сети это узкое место.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ Сметный ИИ</div>
           </div>
@@ -354,7 +354,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">07</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Юридический отдел</div>
+            <div class="text-bone font-semibold mb-1">Юридический отдел <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Договоры с поставщиками, B2B-клиентами, аренда участков под АЗС, страховщики — тысячи документов в год.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-юрист</div>
           </div>
@@ -365,7 +365,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">08</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Логистика топлива</div>
+            <div class="text-bone font-semibold mb-1">Логистика топлива <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Без точного прогноза спроса по каждой АЗС — либо «сухие» резервуары в пик, либо замороженные оборотные средства.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ML прогноз спроса</div>
           </div>
@@ -376,7 +376,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">09</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Маркетинг RedPay</div>
+            <div class="text-bone font-semibold mb-1">Маркетинг RedPay <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Массовые скидки «всем» → бюджет горит на тех, кто и так купил бы. Push-нотификации «всем подряд» приводят к отключениям.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-маркетолог RedPay</div>
           </div>
@@ -387,7 +387,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">10</div>
           <div>
-            <div class="text-bone font-semibold mb-1">EV-направление и поломки ЭЗС</div>
+            <div class="text-bone font-semibold mb-1">EV-направление и поломки ЭЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Узнаём о поломке коннектора через жалобу клиента в соцсетях. Каждый случай — удар по доверию.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-аналитик ЭЗС</div>
           </div>
@@ -398,7 +398,7 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">11</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Биржевая публичность</div>
+            <div class="text-bone font-semibold mb-1">Биржевая публичность <span class="text-gold/70 text-[10px] tracking-widest">✓ ПУБЛИЧНО</span></div>
             <div class="text-sm text-bone/60 leading-relaxed">Облигации на 100 млн KGS + $36 млн кредит = повышенные требования к прозрачности отчётности и аудиту.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ Observability + Compliance</div>
           </div>
@@ -789,7 +789,7 @@ tailwind.config = {
         </ul>
         <div class="border-t border-steel pt-4">
           <div class="text-xs text-muted">ИСТОЧНИК ОЦЕНОК</div>
-          <div class="text-bone text-sm">Из КП ASYSTEM AI Suite, переоценивается на калибровке</div>
+          <div class="text-bone text-sm">Оценки калибруются на Discovery по фактическим данным Заказчика</div>
         </div>
       </div>
 
