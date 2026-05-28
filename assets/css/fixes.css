@@ -179,6 +179,23 @@ html, body {
 /* === Progress-rail полностью отключён — занимал место и налегал на TOC === */
 .progress-rail { display: none !important; }
 
+/* === .gs-card inside .chap-open.dark — белый фон + белый цвет наследовался = пустые карточки.
+ * На тёмных секциях даём карточкам тёмный фон и тёмное оформление под dark theme. */
+.chap-open.dark .gs-card,
+.colophon.dark .gs-card {
+  background: #131315 !important;
+  border-color: rgba(255,255,255,0.1) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+.chap-open.dark .gs-card h3,
+.colophon.dark .gs-card h3 { color: #fff !important; }
+.chap-open.dark .gs-card ul,
+.colophon.dark .gs-card ul { color: rgba(255,255,255,0.78) !important; }
+.chap-open.dark .gs-card .ll,
+.colophon.dark .gs-card .ll { color: var(--rp-red) !important; }
+.chap-open.dark .gs-card .src,
+.colophon.dark .gs-card .src { color: rgba(255,255,255,0.45) !important; border-top-color: rgba(255,255,255,0.08); }
+
 /* === Images: never overflow === */
 img, svg { max-width: 100%; height: auto; }
 
