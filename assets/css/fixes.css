@@ -202,24 +202,30 @@ img, svg { max-width: 100%; height: auto; }
 /* === Marquee — keep its overflow contained === */
 .marquee { overflow: hidden; }
 
-/* === Sticky CTA bottom safety === */
+/* === Sticky CTA — compact floating button across ALL viewports ===
+ * Дефолтный вариант (подпись «Документ · 01/2026 / Единая экосистема Red
+ * Petroleum» + кнопка) закрывал контент при чтении. Делаем её FAB-style:
+ * только круглая красная кнопка «Встреча →» в правом нижнем углу.
+ */
 .sticky-cta {
-  max-width: calc(100vw - 32px);
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  transform: translateY(120%) !important;
+  background: transparent !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  border-radius: 999px !important;
+  max-width: none !important;
   box-sizing: border-box;
 }
+.sticky-cta.show { transform: translateY(0) !important; }
+.sticky-cta > div:first-child { display: none !important; }
+.sticky-cta .btn {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
 
-/* On mobile: shrink sticky-cta to just the CTA button; hide the doc label */
 @media (max-width: 720px) {
-  .sticky-cta > div:first-child {
-    display: none !important;
-  }
-  .sticky-cta {
-    padding: 6px 8px !important;
-    gap: 0 !important;
-    right: 12px !important;
-    left: auto !important;
-    bottom: 12px !important;
-    width: auto !important;
-    max-width: calc(100vw - 24px) !important;
-  }
+  .sticky-cta { bottom: 14px !important; right: 14px !important; }
 }
