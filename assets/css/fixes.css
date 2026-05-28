@@ -277,6 +277,36 @@ html, body {
   .hero15 .h15-metrics { grid-template-columns: 1fr; gap: 20px; padding: 24px 0; }
 }
 
+/* === Inline SVG icons (replacing emoji) === */
+.ic, .ic-m {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.ic { margin-right: 4px; }
+.tag-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tag-flag .ic { margin-right: 0; }
+.mq-sep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  opacity: 0.65;
+}
+.b-letter--check {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: var(--rp-red) !important;
+}
+.b-letter--check svg { width: 56px; height: 56px; stroke-width: 2.4; }
+.scheme-grid9 .agi { color: var(--rp-red); }
+.scheme-grid9 .agi svg { display: block; }
+
 /* === Scheme section (SVG schemes) === */
 .scheme-section {
   padding: 100px var(--pad-x, 32px);
