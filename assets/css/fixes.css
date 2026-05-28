@@ -179,6 +179,179 @@ html, body {
 /* === Progress-rail полностью отключён — занимал место и налегал на TOC === */
 .progress-rail { display: none !important; }
 
+/* === Hero "15 секунд" — суть для занятого собственника ============================
+ * Высокий контраст, минимум текста, цифры крупно, CTA жирная.
+ */
+.hero15 {
+  background: linear-gradient(180deg, #0B0B0C 0%, #131315 100%);
+  color: #fff;
+  padding: 120px var(--pad-x, 32px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.hero15 .wrap {
+  max-width: var(--container, 1200px);
+  margin: 0 auto;
+}
+.hero15 .ll {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--rp-red);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero15 .h15-title {
+  font-size: clamp(2rem, 5vw, 4.5rem) !important;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0 0 32px 0;
+  color: #fff;
+  max-width: 1000px;
+}
+.hero15 .h15-title em {
+  font-style: normal;
+  color: var(--rp-red);
+}
+.hero15 .h15-sub {
+  font-size: clamp(15px, 1.4vw, 19px);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  max-width: 760px;
+  margin: 0 0 48px 0;
+}
+.hero15 .h15-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 40px;
+}
+.hero15 .h15-m .v {
+  font-size: clamp(28px, 3.5vw, 56px);
+  font-weight: 800;
+  color: var(--rp-red);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hero15 .h15-m .l {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+}
+.hero15 .h15-cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.hero15 .btn.lg {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--rp-red);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero15 .btn.lg:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(227,6,19,0.4); }
+.hero15 .h15-secondary {
+  color: rgba(255,255,255,0.65);
+  font-size: 14px;
+  text-decoration: none;
+  font-family: var(--mono);
+  letter-spacing: 0.06em;
+}
+.hero15 .h15-secondary:hover { color: var(--rp-red); }
+
+@media (max-width: 768px) {
+  .hero15 { padding: 64px 20px; }
+  .hero15 .h15-metrics { grid-template-columns: 1fr; gap: 20px; padding: 24px 0; }
+}
+
+/* === Scheme section (SVG schemes) === */
+.scheme-section {
+  padding: 100px var(--pad-x, 32px);
+  background: #fafafa;
+  border-bottom: 1px solid var(--line);
+}
+.scheme-section .wrap { max-width: var(--container, 1200px); margin: 0 auto; }
+.scheme-section .ll-scheme {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--rp-red);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.scheme-section .scheme-h {
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 48px 0;
+  color: var(--ink);
+  max-width: 800px;
+}
+.scheme-section .scheme-svg {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
+/* Grid of 9 ai agents */
+.scheme-grid9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.scheme-grid9 .ag {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 200ms, transform 200ms;
+}
+.scheme-grid9 .ag:hover { border-color: var(--rp-red); transform: translateY(-3px); }
+.scheme-grid9 .agn {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--rp-red);
+  font-weight: 600;
+}
+.scheme-grid9 .agi { font-size: 28px; line-height: 1; }
+.scheme-grid9 .agt {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.scheme-grid9 .agp {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+@media (max-width: 900px) {
+  .scheme-grid9 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .scheme-grid9 { grid-template-columns: 1fr; }
+  .scheme-section { padding: 60px 20px; }
+}
+
 /* === .gs-card inside .chap-open.dark — белый фон + белый цвет наследовался = пустые карточки.
  * На тёмных секциях даём карточкам тёмный фон и тёмное оформление под dark theme. */
 .chap-open.dark .gs-card,
