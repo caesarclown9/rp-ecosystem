@@ -1,1027 +1,1031 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="ru" class="no-js">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Red Petroleum — Единая корпоративная экосистема · ASYSTEM</title>
-<meta name="description" content="Концепция единой технологической экосистемы для группы компаний Red Petroleum / Альфа Ойл. Подготовлено ASYSTEM.">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        ink:    '#0A0A0B',
-        coal:   '#111114',
-        steel:  '#1A1A1D',
-        slate:  '#26262B',
-        bone:   '#E8E4D9',
-        cream:  '#F5F1E6',
-        wine:   '#8B0000',
-        burgundy: '#6F0F0F',
-        rust:   '#A23A1C',
-        gold:   '#C9A14A',
-        amber:  '#D4AF37',
-        muted:  '#8A857A'
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Space Grotesk"', 'Inter', 'sans-serif']
-      }
-    }
-  }
-}
-</script>
+<meta charset="utf-8">
+<title>Red Petroleum — Единая корпоративная экосистема · Документ 01/2026 · ASYSTEM</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Документ-концепция единой технологической экосистемы для группы компаний Red Petroleum / Альфа Ойл. Подготовлено ASYSTEM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
-
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<rect width="200" height="200" fill="#0B0B0C"/>
+<rect x="40" y="40" width="120" height="120" rx="6" fill="none" stroke="#E30613" stroke-width="2"/>
+<text x="100" y="92" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#E30613" letter-spacing="3">ДОКУМЕНТ</text>
+<text x="100" y="125" text-anchor="middle" font-family="sans-serif" font-size="32" fill="#fff" font-weight="800">01</text>
+<text x="100" y="148" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)" letter-spacing="2">2026</text>
+</svg>
+</template>
+<script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
 </head>
+<body>
 
-<body class="bg-ink text-bone font-sans antialiased selection:bg-gold selection:text-ink">
-
-<!-- ============ NAV ============ -->
-<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-ink/70 border-b border-steel">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#hero" class="flex items-center gap-3">
-      <span class="text-xs tracking-[0.3em] text-muted">ASYSTEM × RP</span>
+<!-- ============ FLOATING NAV (minimal) ============ -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#cover" class="nav-brand">
+      <span class="mark">A</span>
+      ASYSTEM <span style="color:var(--ink-3); font-weight:400;">×</span> RP
     </a>
-    <ul class="hidden lg:flex items-center gap-6 text-sm text-muted">
-      <li><a href="#today" class="hover:text-bone transition">Сегодня</a></li>
-      <li><a href="#group" class="hover:text-bone transition">Группа</a></li>
-      <li><a href="#chaos" class="hover:text-bone transition">Разрывы</a></li>
-      <li><a href="#vision" class="hover:text-bone transition">Видение</a></li>
-      <li><a href="#modules" class="hover:text-bone transition">Модули</a></li>
-      <li><a href="#roadmap" class="hover:text-bone transition">Карта</a></li>
-      <li><a href="#impact" class="hover:text-bone transition">Эффект</a></li>
-      <li><a href="#why" class="hover:text-bone transition">Почему</a></li>
-      <li><a href="#contact" class="hover:text-bone transition">Контакт</a></li>
-    </ul>
-    <a href="#contact" class="text-xs px-4 py-2 border border-gold/40 text-gold hover:bg-gold hover:text-ink transition">
-      Встреча
+    <div class="nav-links">
+      <a href="#toc">Содержание</a>
+      <a href="#ch-04">Разрывы</a>
+      <a href="#ch-06">Модули</a>
+      <a href="#ch-08">Эффект</a>
+    </div>
+    <a href="#colophon" class="nav-cta">
+      Встреча <span class="arr">→</span>
     </a>
   </div>
 </nav>
 
-<!-- ============ 1. HERO ============ -->
-<section id="hero" class="min-h-screen flex items-center relative overflow-hidden pt-24">
-  <div class="absolute inset-0 bg-gradient-to-b from-burgundy/20 via-ink to-ink"></div>
-  <div class="absolute inset-0">
-    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-wine/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
-  </div>
+<!-- ============ COVER (Document opening) ============ -->
+<header class="cover" id="cover">
+  <div class="wrap">
+    <div class="cover-meta">
+      <div class="item">
+        <div class="l">Документ</div>
+        <div class="v red">01 / 2026 · DRAFT</div>
+      </div>
+      <div class="item">
+        <div class="l">Тема</div>
+        <div class="v">Единая корпоративная экосистема</div>
+      </div>
+      <div class="item">
+        <div class="l">Подготовил</div>
+        <div class="v">ASYSTEM · Бишкек</div>
+      </div>
+    </div>
 
-  <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-10 items-center">
-    <div class="md:col-span-8">
-      <div class="text-xs tracking-[0.4em] text-gold mb-8">КОНЦЕПЦИЯ ЕДИНОЙ ЭКОСИСТЕМЫ</div>
-      <h1 class="font-display text-5xl md:text-7xl leading-[1.05] font-bold mb-8">
-        Red&nbsp;Petroleum —<br>
-        <span class="text-gold">это не сеть АЗС.</span><br>
-        Это технологическая компания,<br>
-        которая ещё не знает этого.
+    <div class="cover-body">
+      <div class="cover-no">№ 01 — Концепция · Конфиденциально</div>
+      <h1 class="cover-title">
+        Red Petroleum<br>
+        <span class="alt">— это не сеть АЗС.</span><br>
+        <em>Это</em> технологическая<br>
+        компания, которая ещё<br>
+        <span class="alt">не знает этого.</span>
       </h1>
-      <p class="text-xl text-bone/70 max-w-3xl leading-relaxed mb-10">
-        Доля &gt;50% рынка ГСМ Кыргызстана. ~3,8 млрд сомов налогов в бюджет. Первая нефтетрейдинговая компания на фондовой бирже КР. Сеть ЭЗС, мобильное приложение RedPay, HR-портал RedStaff, OCPP-инфраструктура.
-        <br><br>
-        <span class="text-bone">Группа уже работает как технологический холдинг — но данные, процессы и решения живут в разных контурах. Эта презентация показывает, как единая платформа консолидирует масштаб группы в управляемый актив.</span>
-      </p>
-      <div class="flex flex-wrap items-center gap-6">
-        <a href="#today" class="px-8 py-4 bg-gold text-ink font-medium hover:bg-amber transition">Что вы получите →</a>
-        <a href="#group" class="px-8 py-4 border border-bone/20 hover:border-bone/60 transition">Карта группы</a>
+      <div class="cover-thesis">
+        Доля&nbsp;&gt;50% рынка ГСМ. ~3,8&nbsp;млрд налогов в&nbsp;бюджет. 200+&nbsp;АЗС. Первая нефтетрейдинговая компания на&nbsp;бирже&nbsp;КР. Сеть&nbsp;ЭЗС, RedPay, RedStaff, OCPP-инфраструктура. Группа уже работает как&nbsp;технологический холдинг — но&nbsp;данные, процессы и&nbsp;решения живут в&nbsp;разных контурах. Этот документ показывает, как&nbsp;единая платформа консолидирует масштаб группы в&nbsp;управляемый актив.
+        <span class="author">— Подготовлено ASYSTEM · Май 2026</span>
       </div>
     </div>
 
-    <div class="md:col-span-4">
-      <div class="bg-coal/80 border border-steel p-8 backdrop-blur">
-        <div class="text-xs tracking-[0.3em] text-gold mb-6">КЛЮЧЕВЫЕ ЦИФРЫ</div>
-        <ul class="space-y-5">
-          <li class="border-b border-steel pb-4">
-            <div class="text-3xl font-display font-semibold text-bone">>50%</div>
-            <div class="text-xs text-muted mt-1">доля рынка ГСМ КР</div>
-          </li>
-          <li class="border-b border-steel pb-4">
-            <div class="text-3xl font-display font-semibold text-bone">~3,8 млрд</div>
-            <div class="text-xs text-muted mt-1">сомов налогов в год</div>
-          </li>
-          <li class="border-b border-steel pb-4">
-            <div class="text-3xl font-display font-semibold text-bone">200+</div>
-            <div class="text-xs text-muted mt-1">АЗС в 7 регионах КР</div>
-          </li>
-          <li class="border-b border-steel pb-4">
-            <div class="text-3xl font-display font-semibold text-bone">100 млн</div>
-            <div class="text-xs text-muted mt-1">KGS облигаций · 18% · 3 года</div>
-          </li>
-          <li>
-            <div class="text-3xl font-display font-semibold text-bone">$36 млн</div>
-            <div class="text-xs text-muted mt-1">кредит на модернизацию инфраструктуры</div>
-          </li>
-        </ul>
-      </div>
+    <div class="cover-foot">
+      <span>Альфа Ойл / Red Petroleum group</span>
+      <span class="scroll">Открыть документ</span>
     </div>
   </div>
+</header>
 
-  <div class="absolute bottom-8 inset-x-0 flex justify-center">
-    <div class="text-xs text-muted tracking-widest animate-bounce">↓ ПРОКРУТИТЕ</div>
+<!-- ============ MARQUEE — public facts ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>&gt;50% доля рынка ГСМ КР</span>
+    <span>~3,8 млрд сомов налогов в год</span>
+    <span>200+ АЗС в 7 регионах</span>
+    <span>100 млн KGS облигаций · 18% · 3 года</span>
+    <span>$36 млн кредит на модернизацию</span>
+    <span>3 800+ госконтрактов поставки топлива</span>
+    <span>Первая нефтетрейдинговая на бирже КР</span>
+    <span>OCPP-сервер 1.6 / 2.0.1</span>
+    <!-- duplicate for seamless loop -->
+    <span>&gt;50% доля рынка ГСМ КР</span>
+    <span>~3,8 млрд сомов налогов в год</span>
+    <span>200+ АЗС в 7 регионах</span>
+    <span>100 млн KGS облигаций · 18% · 3 года</span>
+    <span>$36 млн кредит на модернизацию</span>
+    <span>3 800+ госконтрактов поставки топлива</span>
+    <span>Первая нефтетрейдинговая на бирже КР</span>
+    <span>OCPP-сервер 1.6 / 2.0.1</span>
   </div>
-</section>
+</div>
 
-<!-- ============ 2. КТО ВЫ СЕГОДНЯ ============ -->
-<section id="today" class="py-32 border-t border-steel">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
-        <div class="text-xs tracking-[0.4em] text-gold mb-6">01 — СТАРТОВАЯ ТОЧКА</div>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-bold">Что у вас уже работает</h2>
-      </div>
-      <div class="md:col-span-8">
-        <p class="text-lg text-bone/70 leading-relaxed mb-8">
-          Эти факты — публичные. Они показывают: масштаб группы давно вышел за рамки «сети АЗС». Вы — вертикально-интегрированный холдинг с финансовой публичностью, EV-направлением, мобильным приложением и B2B-контурами.
-        </p>
-        <div class="text-xs text-muted">Источники: AmCham KG · Akchabar · Kaktus.media · Gazeta.kg · ТЗ RedStaff · договор RedCharge</div>
-      </div>
+<!-- ============ TABLE OF CONTENTS ============ -->
+<section class="toc" id="toc">
+  <div class="wrap">
+    <div class="toc-head">
+      <div class="l">Содержание<br>документа</div>
+      <h2 class="t">9 глав, читается за&nbsp;12&nbsp;минут.<br>Можно начать с&nbsp;любой.</h2>
     </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Card 1 -->
-      <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
-        <div class="text-gold text-xs tracking-[0.3em] mb-4">МАСШТАБ</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">Сеть из 200+ АЗС</h3>
-        <p class="text-bone/60 text-sm leading-relaxed">7 регионов Кыргызстана: Чуйская, Иссык-Кульская, Нарынская, Ошская, Баткенская, Джалал-Абадская, Таласская. 10+ видов топлива стандарта Евро-5.</p>
-      </div>
-      <!-- Card 2 -->
-      <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
-        <div class="text-gold text-xs tracking-[0.3em] mb-4">КЛИЕНТСКИЙ СЛОЙ</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">RedPay — лояльность</h3>
-        <p class="text-bone/60 text-sm leading-relaxed">Программа лояльности и мобильное приложение для розничного клиента: кэшбэк, бонусы, оплата. Подтверждено публикациями AmCham и официальным сайтом.</p>
-      </div>
-      <!-- Card 3 -->
-      <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
-        <div class="text-gold text-xs tracking-[0.3em] mb-4">EV-НАПРАВЛЕНИЕ</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">RedCharge + OCPP</h3>
-        <p class="text-bone/60 text-sm leading-relaxed">Сеть электрозарядных станций с OCPP-сервером (1.6 / 2.0.1), разработанным ASYSTEM. Стратегическое направление — указано как цель биржевого размещения.</p>
-      </div>
-      <!-- Card 4 -->
-      <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
-        <div class="text-gold text-xs tracking-[0.3em] mb-4">B2B</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">Опт + госконтракты</h3>
-        <p class="text-bone/60 text-sm leading-relaxed">Альфа Петролеум — оптовая торговля с 30+ корпоративными клиентами. Госконтракты 2015–2020: 3 800+ контрактов поставки топлива на 1+ млрд сомов.</p>
-      </div>
-      <!-- Card 5 -->
-      <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
-        <div class="text-gold text-xs tracking-[0.3em] mb-4">ФИНАНСЫ</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">Биржа + госкредит</h3>
-        <p class="text-bone/60 text-sm leading-relaxed">100 млн KGS облигаций под 18%, первая нефтетрейдинговая компания на бирже КР. $36 млн кредит от ОАО «Элдик Банк» под 7% на 3 года с льготным периодом 21 мес.</p>
-      </div>
-      <!-- Card 6 -->
-      <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
-        <div class="text-gold text-xs tracking-[0.3em] mb-4">ИТ-СТЕК</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">1С + Bitrix + RedStaff</h3>
-        <p class="text-bone/60 text-sm leading-relaxed">1С:ЗУП для HR и зарплаты. Bitrix24 для управления задачами. RedStaff Этап 1 — собственный HR-портал. OCPP-сервер. Мобильное приложение RedPay.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 3. КАРТА ГРУППЫ ============ -->
-<section id="group" class="py-32 border-t border-steel bg-coal/30">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
-        <div class="text-xs tracking-[0.4em] text-gold mb-6">02 — СТРУКТУРА</div>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-bold">Группа из трёх юридических лиц</h2>
-      </div>
-      <div class="md:col-span-8">
-        <p class="text-lg text-bone/70 leading-relaxed">
-          Каждое юр.лицо закрывает свою функцию в цепочке поставок: импорт, опт, розница. Это правильная инженерная декомпозиция бизнеса. Но операционные данные между ними сегодня связаны через ручные процессы — и в этом главный резерв для технологической надстройки.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 mb-16">
-      <div class="bg-ink border border-wine/40 p-8 relative">
-        <div class="absolute top-0 left-0 w-1 h-full bg-wine"></div>
-        <div class="text-wine text-xs tracking-[0.3em] mb-4">ИМПОРТ</div>
-        <h3 class="font-display text-2xl font-semibold mb-2">ОсОО «Биорг Ойл»</h3>
-        <div class="text-xs text-muted mb-6">Внешнеэкономическая</div>
-        <p class="text-bone/60 text-sm leading-relaxed mb-6">Закупка и ввоз нефтепродуктов с российских НПЗ. Точка входа сырья в группу.</p>
-        <div class="text-xs text-gold tracking-widest">ИСТОЧНИК ДАННЫХ →</div>
-        <div class="mt-2 text-bone/80 text-sm">Объёмы импорта · контракты · качество партий · логистика до нефтебазы</div>
-      </div>
-
-      <div class="bg-ink border border-gold/40 p-8 relative">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gold"></div>
-        <div class="text-gold text-xs tracking-[0.3em] mb-4">ОПТ B2B</div>
-        <h3 class="font-display text-2xl font-semibold mb-2">Альфа Петролеум LLC</h3>
-        <div class="text-xs text-muted mb-6">Бишкек, ул. Панфилова 188/2</div>
-        <p class="text-bone/60 text-sm leading-relaxed mb-6">Оптовая торговля для 30+ корпоративных покупателей. ДТ, бензин, СНГ, реактивное топливо, мазут, битум. Госконтракты.</p>
-        <div class="text-xs text-gold tracking-widest">ИСТОЧНИК ДАННЫХ →</div>
-        <div class="mt-2 text-bone/80 text-sm">Договоры B2B · тендеры · контроль исполнения · цены и условия</div>
-      </div>
-
-      <div class="bg-ink border border-bone/40 p-8 relative">
-        <div class="absolute top-0 left-0 w-1 h-full bg-bone"></div>
-        <div class="text-bone text-xs tracking-[0.3em] mb-4">РОЗНИЦА</div>
-        <h3 class="font-display text-2xl font-semibold mb-2">ОсОО «Альфа Ойл»</h3>
-        <div class="text-xs text-muted mb-6">Бишкек, БЦ «Альфа Ойл», ул. Жумабека 105/1</div>
-        <p class="text-bone/60 text-sm leading-relaxed mb-6">Бренд Red Petroleum: сеть АЗС, RedPay, ЭЗС, колл-центр, магазины при АЗС. Контрагент в действующем договоре RedCharge.</p>
-        <div class="text-xs text-gold tracking-widest">ИСТОЧНИК ДАННЫХ →</div>
-        <div class="mt-2 text-bone/80 text-sm">Продажи розницы · клиент RedPay · сессии ЭЗС · персонал АЗС</div>
-      </div>
-    </div>
-
-    <!-- Flow diagram -->
-    <div class="bg-ink border border-steel p-10">
-      <div class="text-xs tracking-[0.3em] text-gold mb-8 text-center">КАК ДВИЖЕТСЯ СЫРЬЁ И ДЕНЬГИ ПО ГРУППЕ</div>
-      <div class="relative">
-        <pre class="text-xs md:text-sm text-bone/80 leading-relaxed overflow-x-auto whitespace-pre font-mono">
-[Российские НПЗ]
-       │
-       ↓
-[ОсОО «Биорг Ойл»] ── импорт ──→ [Нефтебаза(ы) группы]
-                                         │
-                       ┌─────────────────┴─────────────────┐
-                       ↓                                   ↓
-              [Альфа Петролеум]                  [Альфа Ойл / Red Petroleum]
-              опт B2B, 30+ клиентов              200+ АЗС в 7 регионах
-              госконтракты 3800+                 │
-                                                  ├─→ Розничный клиент (RedPay)
-                                                  ├─→ Магазины при АЗС
-                                                  ├─→ ЭЗС (RedCharge OCPP)
-                                                  └─→ Корпоративные клиенты (B2B-портал)
-
-Финансовый контур:
-[Биржа КР] ←──── 100 млн KGS облигации (18%, 3 года) ────→ [Альфа Ойл]
-[Элдик Банк] ←── $36 млн кредит (7%, 3 года, льгот. 21 мес) → [Альфа Ойл]
-[ГНС КР]   ←──── ~3,769 млрд сомов налогов / год ─────────── [Группа]
-        </pre>
-      </div>
+    <div class="toc-list">
+      <a class="toc-row" href="#ch-01">
+        <span class="tn">01</span>
+        <span class="tt">Тезис</span>
+        <span class="ts">Почему «технологическая компания» — это не&nbsp;метафора</span>
+        <span class="tp">2 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-02">
+        <span class="tn">02</span>
+        <span class="tt">Стартовая точка</span>
+        <span class="ts">Шесть фактов, которые описывают сегодняшний масштаб</span>
+        <span class="tp">2 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-03">
+        <span class="tn">03</span>
+        <span class="tt">Структура группы</span>
+        <span class="ts">Три юр.лица, цепочка от&nbsp;импорта до&nbsp;розницы</span>
+        <span class="tp">1 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-04">
+        <span class="tn">04</span>
+        <span class="tt">Одиннадцать трений</span>
+        <span class="ts">Точки разрыва между контурами. Ledger для&nbsp;Discovery</span>
+        <span class="tp">3 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-05">
+        <span class="tn">05</span>
+        <span class="tt">Манифест</span>
+        <span class="ts">Три столпа единой экосистемы</span>
+        <span class="tp">1 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-06">
+        <span class="tn">06</span>
+        <span class="tt">Четыре модуля</span>
+        <span class="ts">Из чего собирается экосистема. Горизонтальный разворот</span>
+        <span class="tp">3 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-07">
+        <span class="tn">07</span>
+        <span class="tt">Восемнадцать месяцев</span>
+        <span class="ts">Дорожная карта: пять этапов, поэтапные результаты</span>
+        <span class="tp">1 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-08">
+        <span class="tn">08</span>
+        <span class="tt">Цифры</span>
+        <span class="ts">Эффект в&nbsp;деньгах. Симулятор для&nbsp;ваших параметров</span>
+        <span class="tp">2 мин →</span>
+      </a>
+      <a class="toc-row" href="#ch-09">
+        <span class="tn">09</span>
+        <span class="tt">Подпись</span>
+        <span class="ts">Почему ASYSTEM, на&nbsp;каких условиях</span>
+        <span class="tp">1 мин →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ 4. ТОЧКИ РАЗРЫВА ============ -->
-<section id="chaos" class="py-32 border-t border-steel">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
-        <div class="text-xs tracking-[0.4em] text-wine mb-6">03 — ГДЕ СЕЙЧАС НАПРЯЖЕНИЕ</div>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-bold">11 точек разрыва между контурами</h2>
-      </div>
-      <div class="md:col-span-8">
-        <p class="text-lg text-bone/70 leading-relaxed mb-4">
-          Это <span class="text-gold">гипотезы для проверки на Discovery</span>, а не подтверждённые факты. Часть зон описана в ТЗ Заказчика по RedStaff Этап 2 (раздел 2.1). Остальные — типовые точки разрыва для группы такого масштаба и структуры. Финальный список и приоритет — фиксируются после интервью с командами Заказчика.
-        </p>
-        <p class="text-sm text-muted">Источники подтверждённых зон: ТЗ RedStaff Этап 2 раздел 2.1 · публичные данные о масштабе группы. Остальные точки — наши инженерные гипотезы.</p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-4" id="chaos-grid">
-      <!-- 11 точек разрыва -->
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">01</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Три юр.лица группы <span class="text-gold/70 text-[10px] tracking-widest">✓ ПУБЛИЧНО / ⚑ МЕХАНИКА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Группа из трёх юр.лиц — публичный факт. Механика консолидации P&L (ручная или автоматическая) — уточняется на Discovery.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ Master Data Hub</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">02</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">1С:ЗУП vs RedStaff Этап 1 <span class="text-gold/70 text-[10px] tracking-widest">✓ ИЗ ТЗ</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Master-источник не зафиксирован → ошибки начислений при смене должности или увольнении сотрудника.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ RedStaff Этап 2</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">03</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Колл-центр vs RedPay vs OCPP <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Оператор клиентского сервиса не видит статус ЭЗС в реальном времени и не может ответить про баланс RedPay — типовая ситуация при разделённых системах.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-ассистент клиента</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">04</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Табель операторов АЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">СКУД установлен не на всех точках → удалённые АЗС в 7 регионах ведут табель в Excel вне системы.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ RedStaff Этап 3 (СКУД + GPS)</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">05</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Тендеры на госплощадках <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Отдел закупок физически не успевает мониторить все релевантные тендеры → пропуски возможностей.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-агент тендеров</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">06</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Сметы новых АЗС и ЭЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Длительный цикл первичной сметы. При активной стратегии расширения сети это потенциально узкое место.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ Сметный ИИ</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">07</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Юридический отдел <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Договоры с поставщиками, B2B-клиентами, аренда участков под АЗС, страховщики — значительный объём для ручной обработки.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-юрист</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">08</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Логистика топлива <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Точность прогноза спроса по каждой АЗС влияет на оптимальный уровень страховых запасов в резервуарах и оборачиваемость капитала.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ ML прогноз спроса</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">09</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Маркетинг RedPay <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Массовые акции для всей базы клиентов теряют эффективность по сравнению с персонализацией. Push-нотификации без сегментации приводят к отключениям.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-маркетолог RedPay</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">10</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">EV-направление и поломки ЭЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">При реактивной модели обслуживания о поломке коннектора узнают через жалобу клиента. Для растущей EV-сети это репутационный риск.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-аналитик ЭЗС</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border border-steel hover:border-wine/60 bg-coal/40 p-6 transition">
-        <div class="flex items-start gap-4">
-          <div class="text-3xl font-display font-bold text-wine">11</div>
-          <div>
-            <div class="text-bone font-semibold mb-1">Биржевая публичность <span class="text-gold/70 text-[10px] tracking-widest">✓ ПУБЛИЧНО</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Облигации на 100 млн KGS + $36 млн кредит = повышенные требования к прозрачности отчётности и аудиту.</div>
-            <div class="text-xs text-gold mt-3 tracking-widest">→ Observability + Compliance</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 5. ВИДЕНИЕ ============ -->
-<section id="vision" class="py-32 border-t border-steel bg-gradient-to-b from-ink via-burgundy/10 to-ink">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center max-w-4xl mx-auto mb-20">
-      <div class="text-xs tracking-[0.4em] text-gold mb-6">04 — ВИДЕНИЕ</div>
-      <h2 class="font-display text-5xl md:text-6xl leading-[1.05] font-bold mb-8">
-        Единая корпоративная<br>
-        <span class="text-gold">экосистема Red Petroleum</span>
-      </h2>
-      <p class="text-xl text-bone/70 leading-relaxed">
-        Один источник правды по данным группы. Один клиентский опыт через RedPay. Один HR-контур через RedStaff. ИИ-слой поверх каждого процесса. EV-направление как часть единой инфраструктуры, а не отдельный «остров».
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-coal border border-gold/30 p-8 text-center">
-        <div class="text-5xl text-gold font-display font-bold mb-4">1</div>
-        <div class="text-bone font-semibold mb-3">Master Data Hub</div>
-        <p class="text-sm text-bone/60">Единый источник правды по сотрудникам, объектам, клиентам, контрактам. RedStaff Этап 2 — фундамент.</p>
-      </div>
-      <div class="bg-coal border border-gold/30 p-8 text-center">
-        <div class="text-5xl text-gold font-display font-bold mb-4">2</div>
-        <div class="text-bone font-semibold mb-3">Operational AI Layer</div>
-        <p class="text-sm text-bone/60">9 ИИ-сотрудников в HR, юр.отделе, закупках, логистике, маркетинге, EV — поверх существующих процессов.</p>
-      </div>
-      <div class="bg-coal border border-gold/30 p-8 text-center">
-        <div class="text-5xl text-gold font-display font-bold mb-4">3</div>
-        <div class="text-bone font-semibold mb-3">Unified Customer Experience</div>
-        <p class="text-sm text-bone/60">RedPay как единая точка взаимодействия с разными типами клиентов — топливо, EV, B2B. Сквозная лояльность, единая аналитика. (Целевая модель, объём расширения — на согласование.)</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 6. МОДУЛИ ============ -->
-<section id="modules" class="py-32 border-t border-steel">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
-        <div class="text-xs tracking-[0.4em] text-gold mb-6">05 — МОДУЛИ</div>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-bold">Из чего собирается экосистема</h2>
-      </div>
-      <div class="md:col-span-8">
-        <p class="text-lg text-bone/70 leading-relaxed">
-          Четыре больших модуля. Каждый — самостоятельная поставка с собственной ценностью и сроком окупаемости. Внедряются последовательно или параллельно. Минимальный старт — Master Data Hub под HR и финансы; на нём дальше подключаются ИИ-слой, EV-расширение и единый бухгалтерский контур.
-        </p>
-      </div>
-    </div>
-
-    <!-- =========== МОДУЛЬ A — RedStaff =========== -->
-    <div class="bg-coal border border-steel mb-8" x-data="{open: true}">
-      <div class="p-8 cursor-pointer flex items-start gap-6" @click="open = !open">
-        <div class="text-gold text-4xl font-display font-bold">A</div>
-        <div class="flex-1">
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">HR · MASTER DATA HUB</div>
-          <h3 class="font-display text-3xl font-semibold mb-2">RedStaff — Этапы 2 и 3</h3>
-          <p class="text-bone/60">Master Data Hub по сотрудникам и операционному персоналу. Корректная интеграция с 1С, прозрачные расчётные листки в моб. приложении, GPS-геофенсинг для удалённых АЗС. Фундамент для всей экосистемы.</p>
-        </div>
-        <div class="text-right">
-          <div class="text-xs text-muted">ОБЩИЕ ИНВЕСТИЦИИ</div>
-          <div class="text-bone text-2xl font-display font-semibold">66 000 USD</div>
-          <div class="text-xs text-muted mt-1">6 месяцев</div>
-        </div>
-      </div>
-      <div x-show="open" x-collapse>
-        <div class="border-t border-steel grid md:grid-cols-2 divide-x divide-steel">
-          <div class="p-8">
-            <div class="text-xs tracking-[0.3em] text-gold mb-3">A.1 — ЭТАП 2</div>
-            <div class="font-display text-xl font-semibold mb-4">Master Data Hub</div>
-            <ul class="space-y-2 text-sm text-bone/70 mb-6">
-              <li>· Discovery: аудит Этапа 1 и API-контрактов</li>
-              <li>· 1С master-режим + event-driven + журнал интеграций</li>
-              <li>· Расширенный профиль сотрудника (22 поля, ИП, увольнение, версионирование)</li>
-              <li>· Расчётный листок с расшифровкой KPI и PDF на email</li>
-              <li>· Миграция Digital Ocean → NSP, TimescaleDB, observability</li>
-            </ul>
-            <div class="flex justify-between items-center pt-4 border-t border-steel">
-              <span class="text-xs text-muted">3 месяца</span>
-              <span class="text-bone font-semibold">32 000 USD</span>
-            </div>
-          </div>
-          <div class="p-8">
-            <div class="text-xs tracking-[0.3em] text-gold mb-3">A.2 — ЭТАП 3</div>
-            <div class="font-display text-xl font-semibold mb-4">Full Operational Coverage</div>
-            <ul class="space-y-2 text-sm text-bone/70 mb-6">
-              <li>· Табель + СКУД + GPS-геофенсинг + антифрод</li>
-              <li>· Рейтинг с реальными KPI (план, безаварийность, дисциплина)</li>
-              <li>· Заявки: отпуска, больничные, ОБС, командировки + SLA + mass-actions</li>
-              <li>· SSO в Red Petroleum B2B</li>
-              <li>· Накопленный бэклог, feature flags, read replica</li>
-            </ul>
-            <div class="flex justify-between items-center pt-4 border-t border-steel">
-              <span class="text-xs text-muted">3 месяца</span>
-              <span class="text-bone font-semibold">34 000 USD</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- =========== МОДУЛЬ B — ASYSTEM AI Suite =========== -->
-    <div class="bg-coal border border-steel mb-8" x-data="{open: true}">
-      <div class="p-8 cursor-pointer flex items-start gap-6" @click="open = !open">
-        <div class="text-gold text-4xl font-display font-bold">B</div>
-        <div class="flex-1">
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">OPERATIONAL AI · 9 СОТРУДНИКОВ</div>
-          <h3 class="font-display text-3xl font-semibold mb-2">ASYSTEM AI Suite</h3>
-          <p class="text-bone/60">Девять ИИ-сотрудников поверх существующих процессов: HR, клиентский сервис, оператор АЗС/ЭЗС, юристы, закупки, сметный отдел, логистика, маркетинг, EV-аналитика. Каждый — самостоятельный модуль с прозрачным MVP-сроком и оплатой 50/50 после результата.</p>
-        </div>
-        <div class="text-right">
-          <div class="text-xs text-muted">ОБЩИЙ ПАКЕТ</div>
-          <div class="text-bone text-2xl font-display font-semibold">6 200 000 KGS</div>
-          <div class="text-xs text-muted mt-1">14–18 недель</div>
-        </div>
-      </div>
-      <div x-show="open" x-collapse>
-        <div class="border-t border-steel grid md:grid-cols-3 gap-px bg-steel">
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.1 — HR-ОНБОРДИНГ</div>
-            <p class="text-sm text-bone/70 mb-4">Telegram-бот для адаптации новых операторов АЗС. Анкеты, тесты по ТБ, отбор резюме.</p>
-            <div class="text-bone font-semibold">1 000 000 KGS · MVP 3 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.2 — КЛИЕНТ REDPAY</div>
-            <p class="text-sm text-bone/70 mb-4">ИИ-ассистент в моб. приложении: топливо + ЭЗС + лояльность. Снимает нагрузку с 0800.</p>
-            <div class="text-bone font-semibold">1 000 000 KGS · MVP 4 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.3 — ОПЕРАТОР АЗС/ЭЗС</div>
-            <p class="text-sm text-bone/70 mb-4">Карманный ИИ-помощник для операторов смены. Подсказки по кассе, регламентам, ЭЗС.</p>
-            <div class="text-bone font-semibold">800 000 KGS · MVP 4 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.4 — ИИ-ЮРИСТ</div>
-            <p class="text-sm text-bone/70 mb-4">Анализ договоров поставщиков, B2B, аренды участков, страховщиков. Ссылки на НПА КР.</p>
-            <div class="text-bone font-semibold">900 000 KGS · MVP 5 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.5 — ТЕНДЕРЫ И ЗАКУПКИ</div>
-            <p class="text-sm text-bone/70 mb-4">Мониторинг госплощадок КР, сравнение КП поставщиков по матрице TCO.</p>
-            <div class="text-bone font-semibold">750 000 KGS · MVP 5 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.6 — СМЕТНЫЙ ОТДЕЛ</div>
-            <p class="text-sm text-bone/70 mb-4">Автосмета новых АЗС, ЭЗС, магазинов по ТЗ. Сметы за часы, не недели.</p>
-            <div class="text-bone font-semibold">650 000 KGS · MVP 5 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.7 — ML СПРОС ТОПЛИВА</div>
-            <p class="text-sm text-bone/70 mb-4">Прогноз продаж по каждой АЗС с учётом сезона, погоды, событий. Оптимизация резервов.</p>
-            <div class="text-bone font-semibold">950 000 KGS · MVP 6 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.8 — МАРКЕТОЛОГ REDPAY</div>
-            <p class="text-sm text-bone/70 mb-4">RFM-сегментация, churn-модель, персональные акции. Уход от «скидок всем».</p>
-            <div class="text-bone font-semibold">900 000 KGS · MVP 5 нед</div>
-          </div>
-          <div class="bg-coal p-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">B.9 — АНАЛИТИК ЭЗС</div>
-            <p class="text-sm text-bone/70 mb-4">Предиктивное обслуживание ЭЗС поверх OCPP. Прогноз отказа коннектора за 3–7 дней.</p>
-            <div class="text-bone font-semibold">1 000 000 KGS · MVP 7 нед</div>
-          </div>
-        </div>
-        <div class="border-t border-steel p-6 bg-ink/40 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <div class="text-xs tracking-[0.3em] text-gold mb-1">ПАКЕТ «БИЗНЕС» — 6 модулей</div>
-            <div class="text-sm text-bone/70">B.1 + B.2 + B.3 + B.4 + B.5 + B.7 · 8–12 недель</div>
-          </div>
-          <div class="text-bone text-xl font-display font-semibold">4 300 000 KGS</div>
-        </div>
-        <div class="border-t border-steel p-6 bg-ink/40 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <div class="text-xs tracking-[0.3em] text-gold mb-1">ПАКЕТ «КОРПОРАТИВ» — все 9 модулей</div>
-            <div class="text-sm text-bone/70">Все 9 ИИ-сотрудников + 3 мес поддержки + обучение команды · 14–18 недель</div>
-          </div>
-          <div class="text-bone text-xl font-display font-semibold">6 200 000 KGS</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- =========== МОДУЛЬ C — RedCharge Этап 3 =========== -->
-    <div class="bg-coal border border-steel mb-8" x-data="{open: false}">
-      <div class="p-8 cursor-pointer flex items-start gap-6" @click="open = !open">
-        <div class="text-gold text-4xl font-display font-bold">C</div>
-        <div class="flex-1">
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">EV · РАСШИРЕНИЕ + КОРПОРАТИВНЫЕ ТАРИФЫ</div>
-          <h3 class="font-display text-3xl font-semibold mb-2">RedCharge — Этап 3</h3>
-          <p class="text-bone/60">Развитие действующей EV-платформы: OCPI-роуминг, Plug & Charge (ISO 15118), корпоративные тарифы для B2B, расширенная аналитика загрузки сети, интеграция с RedPay-лояльностью.</p>
-        </div>
-        <div class="text-right">
-          <div class="text-xs text-muted">СРОК</div>
-          <div class="text-bone text-2xl font-display font-semibold">~4 мес</div>
-          <div class="text-xs text-muted mt-1">детализируется</div>
-        </div>
-      </div>
-      <div x-show="open" x-collapse>
-        <div class="border-t border-steel grid md:grid-cols-2 divide-x divide-steel">
-          <div class="p-8">
-            <div class="text-xs tracking-[0.3em] text-gold mb-3">C.1 — РОУМИНГ И PLUG &amp; CHARGE</div>
-            <ul class="space-y-2 text-sm text-bone/70 mb-6">
-              <li>· OCPI 2.2.1 для роуминга с Казахстаном, Узбекистаном</li>
-              <li>· ISO 15118-20 — Plug &amp; Charge (автоидентификация авто)</li>
-              <li>· Корпоративные тарифы и контракты для B2B-флитов</li>
-            </ul>
-            <div class="text-xs text-muted">Раскрытие после согласования технического scope</div>
-          </div>
-          <div class="p-8">
-            <div class="text-xs tracking-[0.3em] text-gold mb-3">C.2 — АНАЛИТИКА И ИНТЕГРАЦИЯ</div>
-            <ul class="space-y-2 text-sm text-bone/70 mb-6">
-              <li>· Дашборд загрузки сети и принятия решений по расширению</li>
-              <li>· Интеграция с RedPay для единого клиентского опыта</li>
-              <li>· Связь со страховщиками и аварийными службами</li>
-            </ul>
-            <div class="text-xs text-muted">Цена и срок будут уточнены при доразработке scope</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- =========== МОДУЛЬ D — Финансовый Data Hub =========== -->
-    <div class="bg-coal border border-steel mb-8 ring-1 ring-gold/20" x-data="{open: false}">
-      <div class="p-8 cursor-pointer flex items-start gap-6" @click="open = !open">
-        <div class="text-gold text-4xl font-display font-bold">D</div>
-        <div class="flex-1">
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">БУХГАЛТЕРИЯ · 1С · ФИНАНСОВЫЙ HUB</div>
-          <h3 class="font-display text-3xl font-semibold mb-2">Финансовый контур: интеграция с 1С и бухгалтерией</h3>
-          <p class="text-bone/60">Глубокая интеграция RedCharge с 1С:Бухгалтерия, фискализация всех зарядных сессий, ЭСФ, корпоративные счета. По мере раскрытия — расширение на всю группу: 1С:Бухгалтерия группы юр.лиц + автореконсиляция с эквайерами + биржевая отчётность.</p>
-        </div>
-        <div class="text-right">
-          <div class="text-xs text-muted">СРОК</div>
-          <div class="text-bone text-2xl font-display font-semibold">определяется</div>
-          <div class="text-xs text-muted mt-1">по итогам брифа</div>
-        </div>
-      </div>
-      <div x-show="open" x-collapse>
-        <div class="border-t border-steel grid md:grid-cols-2 divide-x divide-steel">
-          <div class="p-8">
-            <div class="text-xs tracking-[0.3em] text-gold mb-3">D.1 — REDCHARGE-БУХГАЛТЕРИЯ</div>
-            <ul class="space-y-2 text-sm text-bone/70 mb-6">
-              <li>· Интеграция с 1С:Бухгалтерия 8.3 (учётный контур)</li>
-              <li>· Автоматическая фискализация каждой зарядной сессии</li>
-              <li>· Электронные счёт-фактуры (ЭСФ) в систему ГНС</li>
-              <li>· Корпоративные тарифы и счета для B2B-клиентов</li>
-              <li>· Автореконсиляция с банками-эквайерами</li>
-              <li>· Подготовка отчётности под биржевые требования</li>
-            </ul>
-            <div class="text-xs text-muted">Детализация скоупа после брифа</div>
-          </div>
-          <div class="p-8">
-            <div class="text-xs tracking-[0.3em] text-gold mb-3">D.2 — ОПЦИОНАЛЬНОЕ РАСШИРЕНИЕ НА ГРУППУ</div>
-            <ul class="space-y-2 text-sm text-bone/70 mb-6">
-              <li>· Консолидация бухгалтерского контура по 3 юр.лицам</li>
-              <li>· Единая отчётность для биржи и аудиторов</li>
-              <li>· Автоматизация межгрупповых сверок</li>
-              <li>· Налоговая отчётность как единая система</li>
-              <li>· Сквозная интеграция с RedStaff и RedCharge</li>
-            </ul>
-            <div class="text-xs text-muted">Принимается решение Заказчика после Discovery</div>
-          </div>
-        </div>
-        <div class="border-t border-steel p-6 bg-ink/40 text-center">
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">СТАТУС</div>
-          <div class="text-bone/80 text-sm">Бриф готовится. Цена и сроки будут опубликованы после согласования рамок с Заказчиком.</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="mt-10 text-sm text-muted text-center max-w-3xl mx-auto">
-      Модули можно комбинировать. Рекомендованная последовательность: <span class="text-bone">A → D → B → C</span> — сначала Master Data Hub под HR и бухгалтерию, затем ИИ-слой и EV-расширение. Финальный порядок и зависимости — фиксируются после Discovery.
+<!-- ============ CHAPTER 01 — ТЕЗИС (pull quote break) ============ -->
+<section class="chap-open" id="ch-01">
+  <div class="wrap">
+    <div class="chap-no">Глава 01 — Тезис</div>
+    <h2>Сеть АЗС, которая нечаянно<br>стала <em>технологической&nbsp;компанией.</em></h2>
+    <p class="chap-intro dropcap">
+      Вертикально-интегрированный холдинг с&nbsp;финансовой публичностью, EV-направлением, мобильным приложением и&nbsp;B2B-контурами. Каждый из&nbsp;этих контуров уже создан и&nbsp;работает. Не&nbsp;создан только один — контур, который объединяет всё остальное. Этот документ — про&nbsp;него.
     </p>
   </div>
 </section>
 
-<!-- ============ 7. ДОРОЖНАЯ КАРТА ЭКОСИСТЕМЫ ============ -->
-<section id="roadmap" class="py-32 border-t border-steel bg-coal/30">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
-        <div class="text-xs tracking-[0.4em] text-gold mb-6">06 — ДОРОЖНАЯ КАРТА</div>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-bold">18 месяцев от старта до полной экосистемы</h2>
-      </div>
-      <div class="md:col-span-8">
-        <p class="text-lg text-bone/70 leading-relaxed">
-          Поэтапное внедрение без шок-терапии. Каждые 3–6 месяцев — рабочий результат, который окупается до начала следующего этапа. Никакого vendor lock-in: каждый модуль передаётся с исходным кодом, документацией и доступами.
-        </p>
-      </div>
-    </div>
+<div class="pullquote-break">
+  <div class="pq">«Группа уже работает как&nbsp;технологический холдинг — <em>но&nbsp;данные живут в&nbsp;разных контурах.»</em></div>
+</div>
 
-    <div class="relative">
-      <div class="absolute left-6 top-0 bottom-0 w-px bg-gold/30"></div>
-
-      <div class="space-y-12">
-        <div class="relative pl-20">
-          <div class="absolute left-0 top-2 w-12 h-12 rounded-full bg-gold text-ink flex items-center justify-center font-display font-bold">1</div>
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">МЕСЯЦЫ 1–3</div>
-          <h3 class="font-display text-2xl font-semibold mb-3">Master Data Hub (RedStaff Этап 2)</h3>
-          <p class="text-bone/70 mb-2">1С master-режим, расширенный профиль, расчётный листок в моб. приложении, миграция инфраструктуры на NSP, TimescaleDB, observability.</p>
-          <p class="text-sm text-muted">32 000 USD · фундамент всей экосистемы</p>
-        </div>
-
-        <div class="relative pl-20">
-          <div class="absolute left-0 top-2 w-12 h-12 rounded-full bg-gold text-ink flex items-center justify-center font-display font-bold">2</div>
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">МЕСЯЦЫ 4–6</div>
-          <h3 class="font-display text-2xl font-semibold mb-3">Full Operational Coverage (RedStaff Этап 3)</h3>
-          <p class="text-bone/70 mb-2">Табель + СКУД + GPS, рейтинг с реальными KPI, заявки в моб. приложении, SSO в B2B, feature flags + read replica.</p>
-          <p class="text-sm text-muted">34 000 USD · полный HR-контур закрыт</p>
-        </div>
-
-        <div class="relative pl-20">
-          <div class="absolute left-0 top-2 w-12 h-12 rounded-full bg-gold text-ink flex items-center justify-center font-display font-bold">3</div>
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">МЕСЯЦЫ 4–9 ПАРАЛЛЕЛЬНО</div>
-          <h3 class="font-display text-2xl font-semibold mb-3">Финансовый Data Hub (Модуль D)</h3>
-          <p class="text-bone/70 mb-2">Интеграция RedCharge с 1С:Бухгалтерия, фискализация, ЭСФ, реконсиляция с эквайерами. Опционально — консолидация бухгалтерии по группе.</p>
-          <p class="text-sm text-muted">Цена и сроки — после брифа</p>
-        </div>
-
-        <div class="relative pl-20">
-          <div class="absolute left-0 top-2 w-12 h-12 rounded-full bg-gold text-ink flex items-center justify-center font-display font-bold">4</div>
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">МЕСЯЦЫ 6–12</div>
-          <h3 class="font-display text-2xl font-semibold mb-3">Operational AI Layer (Модуль B)</h3>
-          <p class="text-bone/70 mb-2">Поэтапный запуск 9 ИИ-сотрудников. Сначала «Бизнес»-пакет (6 модулей), затем «Корпоратив» (все 9 + поддержка + обучение команды Заказчика).</p>
-          <p class="text-sm text-muted">4,3 → 6,2 млн KGS · по результатам каждой волны</p>
-        </div>
-
-        <div class="relative pl-20">
-          <div class="absolute left-0 top-2 w-12 h-12 rounded-full bg-gold text-ink flex items-center justify-center font-display font-bold">5</div>
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">МЕСЯЦЫ 10–18</div>
-          <h3 class="font-display text-2xl font-semibold mb-3">RedCharge Этап 3 (Модуль C)</h3>
-          <p class="text-bone/70 mb-2">Расширение EV-направления: OCPI-роуминг с соседними странами, Plug &amp; Charge, корпоративные тарифы B2B, расширенная аналитика загрузки сети.</p>
-          <p class="text-sm text-muted">Опирается на работающий OCPP-сервер и финансовый Data Hub</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 8. ОБЩИЙ ЭФФЕКТ ============ -->
-<section id="impact" class="py-32 border-t border-steel">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
-        <div class="text-xs tracking-[0.4em] text-gold mb-6">07 — ЭФФЕКТ</div>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-bold">Что группа получает в деньгах</h2>
-      </div>
-      <div class="md:col-span-8">
-        <p class="text-lg text-bone/70 leading-relaxed">
-          Все цифры ниже — оценки по публично доступным данным о масштабе группы и типовым показателям отрасли. Финальные диапазоны фиксируются на Discovery, когда у нас будут точные данные по штату, ФОТ, обороту и количеству операций. Симуляторы с реальными цифрами будут дополнены в следующих итерациях сайта.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-coal border border-steel p-8">
-        <div class="text-xs tracking-[0.3em] text-gold mb-3">ЭКОНОМИЯ — HR-КОНТУР</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">Master Data Hub + Full Operational Coverage</h3>
-        <ul class="space-y-2 text-sm text-bone/70 mb-6">
-          <li>· Сокращение ошибок начисления зарплаты при изменениях должности</li>
-          <li>· 30% времени HR возвращается к стратегическим задачам</li>
-          <li>· Скорость согласования заявок: с дней до часов</li>
-          <li>· Антифрод в табеле удалённых АЗС</li>
-          <li>· Снижение текучки за счёт прозрачности</li>
-        </ul>
-        <div class="border-t border-steel pt-4">
-          <div class="text-xs text-muted">ОЦЕНКА ЭКОНОМИИ / ГОД</div>
-          <div class="text-bone text-3xl font-display font-semibold">$23 000–38 000</div>
-          <div class="text-xs text-muted mt-1">модель для штата ~300 чел., калибруется на Discovery</div>
-        </div>
-      </div>
-
-      <div class="bg-coal border border-steel p-8">
-        <div class="text-xs tracking-[0.3em] text-gold mb-3">ЭКОНОМИЯ — OPERATIONAL AI</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">9 ИИ-сотрудников поверх процессов</h3>
-        <ul class="space-y-2 text-sm text-bone/70 mb-6">
-          <li>· Снижение нагрузки на клиентский сервис</li>
-          <li>· Ускорение анализа договоров в 3–5 раз</li>
-          <li>· Сметы новых АЗС за часы вместо недель</li>
-          <li>· −20–30% страховых запасов в резервуарах</li>
-          <li>· Прогноз отказа ЭЗС за 3–7 дней</li>
-        </ul>
-        <div class="border-t border-steel pt-4">
-          <div class="text-xs text-muted">ИСТОЧНИК ОЦЕНОК</div>
-          <div class="text-bone text-sm">Оценки калибруются на Discovery по фактическим данным Заказчика</div>
-        </div>
-      </div>
-
-      <div class="bg-coal border border-steel p-8">
-        <div class="text-xs tracking-[0.3em] text-gold mb-3">ЭКОНОМИЯ — ФИНАНСОВЫЙ КОНТУР</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">Финансовый Data Hub (Модуль D)</h3>
-        <ul class="space-y-2 text-sm text-bone/70 mb-6">
-          <li>· Автоматическая фискализация — снимает риск штрафов</li>
-          <li>· Реконсиляция с эквайерами без ручной сверки</li>
-          <li>· Единая отчётность для биржи и аудиторов</li>
-          <li>· Прозрачность P&amp;L по контурам группы</li>
-        </ul>
-        <div class="border-t border-steel pt-4">
-          <div class="text-xs text-muted">ОСНОВНАЯ ЦЕННОСТЬ</div>
-          <div class="text-bone text-sm">Снижение compliance-рисков и подготовка под публичную отчётность</div>
-        </div>
-      </div>
-
-      <div class="bg-coal border border-steel p-8">
-        <div class="text-xs tracking-[0.3em] text-gold mb-3">ВЫРУЧКА — REDCHARGE NEXT</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">EV-расширение</h3>
-        <ul class="space-y-2 text-sm text-bone/70 mb-6">
-          <li>· OCPI-роуминг — новые клиенты из Казахстана и Узбекистана</li>
-          <li>· Корпоративные B2B-тарифы — новый сегмент</li>
-          <li>· Plug &amp; Charge — удержание EV-клиентов</li>
-          <li>· Снижение downtime ЭЗС в 2–3 раза</li>
-        </ul>
-        <div class="border-t border-steel pt-4">
-          <div class="text-xs text-muted">ЭФФЕКТ</div>
-          <div class="text-bone text-sm">Защита EV-инвестиций группы и расширение клиентской базы</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======= СИМУЛЯТОР ЭКОНОМИИ ======= -->
-    <div class="mt-16 bg-coal border border-gold/30 p-10" x-data="ecosystemSimulator()">
-      <div class="text-center mb-10">
-        <div class="text-xs tracking-[0.3em] text-gold mb-3">МОДЕЛЬ ⚑ КАЛИБРУЕТСЯ НА DISCOVERY</div>
-        <h3 class="font-display text-3xl md:text-4xl font-semibold mb-3">Симулятор годовой экономии</h3>
-        <p class="text-bone/70 max-w-3xl mx-auto text-sm">
-          Подвигайте параметры под фактические данные группы — модель пересчитает оценку экономии в реальном времени. Коэффициенты основаны на типовых показателях розничной нефтетрейдинговой отрасли и калибруются на Discovery по реальным данным Заказчика.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- INPUTS -->
-        <div class="space-y-6">
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">ПАРАМЕТРЫ ГРУППЫ</div>
-
-          <div>
-            <div class="flex justify-between text-sm mb-2">
-              <span class="text-bone">Численность сотрудников</span>
-              <span class="text-gold font-display font-semibold" x-text="staff.toLocaleString('ru-RU')"></span>
-            </div>
-            <input type="range" min="100" max="2000" step="50" x-model.number="staff" class="w-full accent-gold">
-            <div class="flex justify-between text-[10px] text-muted mt-1"><span>100</span><span>2 000</span></div>
-          </div>
-
-          <div>
-            <div class="flex justify-between text-sm mb-2">
-              <span class="text-bone">Месячный ФОТ группы, USD</span>
-              <span class="text-gold font-display font-semibold" x-text="payroll.toLocaleString('ru-RU')"></span>
-            </div>
-            <input type="range" min="20000" max="500000" step="5000" x-model.number="payroll" class="w-full accent-gold">
-            <div class="flex justify-between text-[10px] text-muted mt-1"><span>$20k</span><span>$500k</span></div>
-          </div>
-
-          <div>
-            <div class="flex justify-between text-sm mb-2">
-              <span class="text-bone">Число АЗС в сети</span>
-              <span class="text-gold font-display font-semibold" x-text="stations.toLocaleString('ru-RU')"></span>
-            </div>
-            <input type="range" min="50" max="500" step="10" x-model.number="stations" class="w-full accent-gold">
-            <div class="flex justify-between text-[10px] text-muted mt-1"><span>50</span><span>500</span></div>
-          </div>
-
-          <div>
-            <div class="flex justify-between text-sm mb-2">
-              <span class="text-bone">Обращений клиентского сервиса в день</span>
-              <span class="text-gold font-display font-semibold" x-text="tickets.toLocaleString('ru-RU')"></span>
-            </div>
-            <input type="range" min="50" max="2000" step="50" x-model.number="tickets" class="w-full accent-gold">
-            <div class="flex justify-between text-[10px] text-muted mt-1"><span>50</span><span>2 000</span></div>
-          </div>
-
-          <div class="pt-4 border-t border-steel">
-            <div class="flex justify-between text-sm mb-2">
-              <span class="text-bone">Договоров юр.отдела в год</span>
-              <span class="text-gold font-display font-semibold" x-text="contracts.toLocaleString('ru-RU')"></span>
-            </div>
-            <input type="range" min="100" max="5000" step="100" x-model.number="contracts" class="w-full accent-gold">
-            <div class="flex justify-between text-[10px] text-muted mt-1"><span>100</span><span>5 000</span></div>
-          </div>
-        </div>
-
-        <!-- OUTPUTS -->
-        <div class="space-y-4">
-          <div class="text-xs tracking-[0.3em] text-gold mb-2">ОЦЕНКА ЭКОНОМИИ В ГОД, USD</div>
-
-          <template x-for="row in breakdown()" :key="row.label">
-            <div class="bg-ink border border-steel p-4">
-              <div class="flex justify-between items-baseline mb-2">
-                <span class="text-bone text-sm" x-text="row.label"></span>
-                <span class="text-gold font-display font-semibold text-lg" x-text="'$' + row.value.toLocaleString('ru-RU')"></span>
-              </div>
-              <div class="w-full bg-steel h-1.5">
-                <div class="bg-gold h-1.5" :style="`width: ${row.pct}%`"></div>
-              </div>
-              <div class="text-[10px] text-muted mt-1" x-text="row.formula"></div>
-            </div>
-          </template>
-
-          <div class="bg-burgundy/30 border border-wine/40 p-5 mt-6">
-            <div class="text-xs tracking-[0.3em] text-gold mb-2">ИТОГО ОЦЕНКА</div>
-            <div class="text-bone text-4xl font-display font-bold" x-text="'$' + total().toLocaleString('ru-RU') + ' / год'"></div>
-            <div class="text-sm text-bone/70 mt-3">
-              Окупаемость инвестиций RedStaff (Этапы 2+3, $66 000):
-              <span class="text-gold font-semibold" x-text="paybackMonths() + ' мес'"></span>
-            </div>
-            <div class="text-[10px] text-muted mt-2">⚑ Модель. Калибруется на Discovery с фактическими данными Заказчика.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 border-t border-steel pt-6 text-[11px] text-muted leading-relaxed">
-        <div class="font-semibold text-bone/80 mb-1">Допущения модели:</div>
-        <ul class="space-y-1">
-          <li>· Ошибки начисления ФОТ: 0,3–1,0% от месячного ФОТ при разделённых системах HR↔1С (наша оценка для разделённых master-источников)</li>
-          <li>· Время HR на сверку табелей: ~30% рабочего времени отдела, ставка специалиста ~$400/мес × 2–3 человека (типовая структура для штата 300+)</li>
-          <li>· Заявки HR: среднее время руководителей × оценочная частота, ставка $10/час</li>
-          <li>· Антифрод табеля: 0,3–1,0% сотрудников × ставка × месяцы — снимается через GPS-геофенсинг и auto-close</li>
-          <li>· Юридический отдел: время на договор × число договоров × ставка специалиста</li>
-          <li>· Колл-центр: время обработки × число обращений × ставка</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="mt-12 bg-burgundy/20 border border-wine/40 p-10 text-center">
-      <div class="text-xs tracking-[0.3em] text-gold mb-4">ВЕРТИКАЛЬНЫЙ ЭФФЕКТ ВСЕЙ ЭКОСИСТЕМЫ</div>
-      <p class="text-xl text-bone leading-relaxed max-w-4xl mx-auto">
-        Совокупная экономия и доход с горизонта 3 лет окупают инвестиции в платформу и оставляют группу с консолидированным цифровым активом стоимостью кратно выше суммы вложений. Точный диапазон фиксируется на Discovery с реальными данными группы.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 9. ПОЧЕМУ ASYSTEM ============ -->
-<section id="why" class="py-32 border-t border-steel bg-coal/30">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
-        <div class="text-xs tracking-[0.4em] text-gold mb-6">08 — ПОЧЕМУ ASYSTEM</div>
-        <h2 class="font-display text-4xl md:text-5xl leading-[1.1] font-bold">Действующий партнёр, не новый подрядчик</h2>
-      </div>
-      <div class="md:col-span-8">
-        <p class="text-lg text-bone/70 leading-relaxed">
-          ASYSTEM уже разработал OCPP-сервер для зарядной инфраструктуры Red Petroleum в рамках действующего договора. Команда, регламенты и доверие — отлажены. Это сокращает discovery-период и снижает риск для Заказчика на старте каждого следующего модуля.
-        </p>
-      </div>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-ink border border-steel p-8">
-        <div class="text-gold text-3xl font-display font-bold mb-4">01</div>
-        <h3 class="font-display text-xl font-semibold mb-3">Доказанный кейс</h3>
-        <p class="text-bone/60 text-sm">RedCharge — действующий продукт, переданный в эксплуатацию. Тот же контрагент, тот же договорный контур.</p>
-      </div>
-      <div class="bg-ink border border-steel p-8">
-        <div class="text-gold text-3xl font-display font-bold mb-4">02</div>
-        <h3 class="font-display text-xl font-semibold mb-3">Локальная команда</h3>
-        <p class="text-bone/60 text-sm">Команда в Бишкеке. Выезды на объекты, поддержка на русском и кыргызском. Без часовых поясов и языковых барьеров.</p>
-      </div>
-      <div class="bg-ink border border-steel p-8">
-        <div class="text-gold text-3xl font-display font-bold mb-4">03</div>
-        <h3 class="font-display text-xl font-semibold mb-3">50/50 оплата</h3>
-        <p class="text-bone/60 text-sm">50% после приёмки MVP, 50% после сдачи и передачи. Никаких авансов вслепую за обещания.</p>
-      </div>
-      <div class="bg-ink border border-steel p-8">
-        <div class="text-gold text-3xl font-display font-bold mb-4">04</div>
-        <h3 class="font-display text-xl font-semibold mb-3">Данные в КР</h3>
-        <p class="text-bone/60 text-sm">Серверы в Кыргызстане, коммерческие данные не уходят за рубеж. NDA до старта работ.</p>
-      </div>
-      <div class="bg-ink border border-steel p-8">
-        <div class="text-gold text-3xl font-display font-bold mb-4">05</div>
-        <h3 class="font-display text-xl font-semibold mb-3">Полная передача</h3>
-        <p class="text-bone/60 text-sm">Исходники, серверы, базы знаний, документация — Заказчику. Зависимости от подрядчика нет.</p>
-      </div>
-      <div class="bg-ink border border-steel p-8">
-        <div class="text-gold text-3xl font-display font-bold mb-4">06</div>
-        <h3 class="font-display text-xl font-semibold mb-3">Прозрачный процесс</h3>
-        <p class="text-bone/60 text-sm">Bitrix24 в реальном времени, еженедельные демо, акты приёмки по каждому подмодулю.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7. КОНТАКТ ============ -->
-<section id="contact" class="py-32 border-t border-steel bg-coal/40">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <div class="text-xs tracking-[0.4em] text-gold mb-6">06 — СЛЕДУЮЩИЙ ШАГ</div>
-    <h2 class="font-display text-5xl md:text-6xl leading-[1.05] font-bold mb-8">
-      Встреча 30 минут.<br>
-      <span class="text-gold">Покажем демо.</span>
-    </h2>
-    <p class="text-lg text-bone/70 leading-relaxed mb-12 max-w-2xl mx-auto">
-      Разберём ваши приоритеты по экосистеме, определим точку первого пилота и зафиксируем даты. Без обязательств.
+<!-- ============ CHAPTER 02 — СТАРТОВАЯ ТОЧКА (sticky-scroll narrative) ============ -->
+<section class="chap-open" id="ch-02">
+  <div class="wrap">
+    <div class="chap-no">Глава 02 — Стартовая точка</div>
+    <h2>Шесть фактов<br>из&nbsp;открытых&nbsp;источников.</h2>
+    <p class="chap-intro">
+      Каждый факт — публично подтверждён или&nbsp;следует из&nbsp;договора ASYSTEM. Это масштаб, на&nbsp;который опирается всё остальное в&nbsp;этом документе.
     </p>
+  </div>
+</section>
 
-    <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-      <a href="https://t.me/Ruslyandi" target="_blank" class="bg-ink border border-gold/40 hover:bg-gold hover:text-ink transition p-8 group">
-        <div class="text-xs tracking-[0.3em] text-gold group-hover:text-ink mb-3">TELEGRAM</div>
-        <div class="font-display text-xl">@Ruslyandi</div>
-      </a>
-      <a href="mailto:asystem.teamwork@gmail.com" class="bg-ink border border-gold/40 hover:bg-gold hover:text-ink transition p-8 group">
-        <div class="text-xs tracking-[0.3em] text-gold group-hover:text-ink mb-3">EMAIL</div>
-        <div class="font-display text-xl">asystem.teamwork@gmail.com</div>
-      </a>
-      <a href="tel:+996500115133" class="bg-ink border border-gold/40 hover:bg-gold hover:text-ink transition p-8 group">
-        <div class="text-xs tracking-[0.3em] text-gold group-hover:text-ink mb-3">ТЕЛЕФОН</div>
-        <div class="font-display text-xl">0500 115 133</div>
-      </a>
+<section class="sticky-narrative">
+  <div class="wrap">
+    <div class="sn-grid">
+      <div class="sn-left">
+        <div class="ll">02.0 · Что у вас уже работает</div>
+        <div class="tt">Не сеть АЗС.<br>Холдинг.</div>
+        <div class="dd">Шесть слоёв инфраструктуры, каждый — отдельный продукт, который вы уже эксплуатируете. Прокрутите вниз → факты расширяются по&nbsp;одному.</div>
+      </div>
+
+      <div class="sn-right">
+        <div class="fact-block">
+          <div class="fl"><span class="num">02.1</span><span>МАСШТАБ</span></div>
+          <div class="ft">Сеть из&nbsp;200+ АЗС</div>
+          <div class="fb"><strong>7&nbsp;регионов Кыргызстана:</strong> Чуйская, Иссык-Кульская, Нарынская, Ошская, Баткенская, Джалал-Абадская, Таласская. 10+&nbsp;видов топлива стандарта Евро-5.</div>
+          <div class="footnote">Источник: AmCham&nbsp;KG · официальный сайт Red&nbsp;Petroleum</div>
+        </div>
+        <div class="fact-block">
+          <div class="fl"><span class="num">02.2</span><span>КЛИЕНТСКИЙ СЛОЙ</span></div>
+          <div class="ft">RedPay — лояльность</div>
+          <div class="fb">Программа лояльности и&nbsp;мобильное приложение для&nbsp;розничного клиента: <strong>кэшбэк, бонусы, оплата.</strong> Подтверждено публикациями AmCham и&nbsp;официальным сайтом.</div>
+          <div class="footnote">Источник: AmCham&nbsp;KG публикация о&nbsp;RedPay</div>
+        </div>
+        <div class="fact-block">
+          <div class="fl"><span class="num">02.3</span><span>EV-НАПРАВЛЕНИЕ</span></div>
+          <div class="ft">RedCharge + OCPP</div>
+          <div class="fb">Сеть электрозарядных станций с&nbsp;<strong>OCPP-сервером 1.6&nbsp;/&nbsp;2.0.1,</strong> разработанным ASYSTEM. Стратегическое направление — указано как&nbsp;цель биржевого размещения.</div>
+          <div class="footnote">Источник: действующий договор ASYSTEM × ОсОО «Альфа Ойл»</div>
+        </div>
+        <div class="fact-block">
+          <div class="fl"><span class="num">02.4</span><span>B2B</span></div>
+          <div class="ft">Опт + госконтракты</div>
+          <div class="fb">Альфа&nbsp;Петролеум — оптовая торговля с&nbsp;<strong>30+ корпоративными клиентами.</strong> Госконтракты 2015—2020: <strong>3&nbsp;800+ контрактов</strong> поставки топлива на&nbsp;1+&nbsp;млрд&nbsp;сомов.</div>
+          <div class="footnote">Источник: реестр госзакупок КР · Akchabar</div>
+        </div>
+        <div class="fact-block">
+          <div class="fl"><span class="num">02.5</span><span>ФИНАНСЫ</span></div>
+          <div class="ft">Биржа + госкредит</div>
+          <div class="fb"><strong>100&nbsp;млн&nbsp;KGS облигаций</strong> под&nbsp;18%, первая нефтетрейдинговая компания на&nbsp;бирже&nbsp;КР. <strong>$36&nbsp;млн кредит</strong> от&nbsp;ОАО «Элдик Банк» под&nbsp;7% на&nbsp;3 года с&nbsp;льготным периодом 21&nbsp;мес.</div>
+          <div class="footnote">Источник: Kaktus.media · Gazeta.kg · Akchabar</div>
+        </div>
+        <div class="fact-block">
+          <div class="fl"><span class="num">02.6</span><span>ИТ-СТЕК</span></div>
+          <div class="ft">1С + Bitrix + RedStaff</div>
+          <div class="fb"><strong>1С:ЗУП</strong> для&nbsp;HR и&nbsp;зарплаты. <strong>Bitrix24</strong> для&nbsp;управления задачами. <strong>RedStaff Этап&nbsp;1</strong> — собственный HR-портал. OCPP-сервер. Мобильное приложение RedPay.</div>
+          <div class="footnote">Источник: ТЗ&nbsp;RedStaff Этап&nbsp;2 · договор RedCharge</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<footer class="border-t border-steel py-10">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted">
-    <div>© 2026 ASYSTEM · Концепция единой экосистемы для группы компаний Red Petroleum / Альфа Ойл</div>
-    <div class="text-xs">Все данные — из публичных источников и материалов проекта. Действительно 30 дней.</div>
+<!-- ============ CHAPTER 03 — ГРУППА (12-col spread) ============ -->
+<section class="chap-open" id="ch-03">
+  <div class="wrap">
+    <div class="chap-no">Глава 03 — Структура группы</div>
+    <h2>Три юрлица.<br>Одна <em>цепочка поставок.</em></h2>
+    <p class="chap-intro">
+      Каждое юр.лицо закрывает свою функцию: импорт, опт, розница. Правильная инженерная декомпозиция бизнеса. Но&nbsp;операционные данные между&nbsp;ними сегодня связаны через ручные процессы — и&nbsp;в&nbsp;этом главный резерв для&nbsp;технологической надстройки.
+    </p>
   </div>
-</footer>
+</section>
 
-<script src="assets/js/main.js"></script>
+<section class="group-spread">
+  <div class="wrap">
+    <div class="gs-grid">
+      <!-- Three entities on asymmetric columns -->
+      <div class="gs-card col-1-4">
+        <span class="role">Импорт</span>
+        <div class="name">ОсОО «Биорг&nbsp;Ойл»</div>
+        <div class="addr">Внешнеэкономическая деятельность</div>
+        <div class="desc">Закупка и&nbsp;ввоз нефтепродуктов с&nbsp;российских&nbsp;НПЗ. Точка входа сырья в&nbsp;группу.</div>
+        <div class="source">Источник данных →<br>объёмы импорта · контракты · качество партий · логистика до&nbsp;нефтебазы</div>
+      </div>
+      <div class="gs-card col-5-12" style="grid-column: 5 / 9;">
+        <span class="role">Опт · B2B</span>
+        <div class="name">Альфа&nbsp;Петролеум&nbsp;LLC</div>
+        <div class="addr">Бишкек, ул. Панфилова 188/2</div>
+        <div class="desc">Оптовая торговля для&nbsp;30+ корпоративных покупателей. ДТ, бензин, СНГ, реактивное топливо, мазут, битум. Госконтракты.</div>
+        <div class="source">Источник данных →<br>договоры B2B · тендеры · контроль исполнения · цены и&nbsp;условия</div>
+      </div>
+      <div class="gs-card" style="grid-column: 9 / 13;">
+        <span class="role">Розница</span>
+        <div class="name">ОсОО «Альфа&nbsp;Ойл»</div>
+        <div class="addr">Бишкек, БЦ «Альфа Ойл», Жумабека 105/1</div>
+        <div class="desc">Бренд&nbsp;Red&nbsp;Petroleum: сеть АЗС, RedPay, ЭЗС, колл-центр, магазины при&nbsp;АЗС. Контрагент в&nbsp;действующем договоре RedCharge.</div>
+        <div class="source">Источник данных →<br>продажи розницы · клиент RedPay · сессии ЭЗС · персонал АЗС</div>
+      </div>
+
+      <!-- Full-width flow diagram -->
+      <div class="gs-flow">
+        <div class="inner">
+          <div class="ftitle">Как движется сырьё и&nbsp;деньги по&nbsp;группе</div>
+          <div class="flow-row">
+            <div class="flow-node">
+              <span class="ll">Поставщики</span>
+              <span class="nn">Российские НПЗ</span>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">
+              <span class="ll">Импорт</span>
+              <span class="nn">ОсОО «Биорг Ойл»</span>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node red">
+              <span class="ll">Хранение</span>
+              <span class="nn">Нефтебазы группы</span>
+            </div>
+            <div class="flow-fork">
+              <div class="flow-side">
+                <div class="flow-node">
+                  <span class="ll">Опт · B2B</span>
+                  <span class="nn">Альфа Петролеум</span>
+                </div>
+                <div class="flow-leaf">30+ корпоративных клиентов</div>
+                <div class="flow-leaf">3 800+ госконтрактов</div>
+              </div>
+              <div class="flow-side">
+                <div class="flow-node">
+                  <span class="ll">Розница</span>
+                  <span class="nn">Альфа Ойл · Red Petroleum</span>
+                </div>
+                <div class="flow-leaf">200+ АЗС в 7 регионах</div>
+                <div class="flow-leaf">RedPay · розничный клиент</div>
+                <div class="flow-leaf">RedCharge OCPP · ЭЗС</div>
+                <div class="flow-leaf">B2B-портал · корпоративные</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-finance">
+            <div class="fin-card">
+              <div class="ll">Биржа КР ↔ Альфа Ойл</div>
+              <div class="nn">100 млн KGS облигации</div>
+              <div class="ss">18% · 3 года</div>
+            </div>
+            <div class="fin-card">
+              <div class="ll">Элдик Банк ↔ Альфа Ойл</div>
+              <div class="nn">$36 млн кредит</div>
+              <div class="ss">7% · 3 года · льгот. 21 мес</div>
+            </div>
+            <div class="fin-card">
+              <div class="ll">Группа → ГНС КР</div>
+              <div class="nn">~3,769 млрд сомов</div>
+              <div class="ss">налогов в год</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 04 — 11 ТРЕНИЙ (Ledger) ============ -->
+<section class="chap-open dark" id="ch-04">
+  <div class="wrap">
+    <div class="chap-no">Глава 04 — Одиннадцать трений</div>
+    <h2>Где сейчас<br><em>напряжение&nbsp;между&nbsp;контурами.</em></h2>
+    <p class="chap-intro">
+      Это гипотезы для&nbsp;проверки на&nbsp;Discovery, а&nbsp;не&nbsp;подтверждённые факты. Часть зон описана в&nbsp;ТЗ&nbsp;RedStaff Этап&nbsp;2 (раздел&nbsp;2.1). Остальные — типовые точки разрыва для&nbsp;группы такого масштаба. Кликните строку слева — справа откроется детализация.
+    </p>
+  </div>
+</section>
+
+<section class="ledger-section">
+  <div class="wrap">
+    <div class="ledger-grid">
+      <div class="ledger-list">
+        <div class="ledger-row active"
+          data-n="01" data-badges="pub,hyp"
+          data-title="Три юр.лица группы"
+          data-body="Группа из трёх юр.лиц — публичный факт. Механика консолидации P&amp;L (ручная или автоматическая) — уточняется на Discovery."
+          data-fix="Master Data Hub">
+          <span class="lr-n">01</span>
+          <div><span class="lr-t">Три юр.лица группы</span><br><span class="lr-b pub">✓ Публично</span> <span class="lr-b hyp">⚑ Механика</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="02" data-badges="tz"
+          data-title="1С:ЗУП vs RedStaff Этап 1"
+          data-body="Master-источник не зафиксирован → ошибки начислений при смене должности или увольнении сотрудника. Источник: ТЗ RedStaff Этап 2 раздел 2.1."
+          data-fix="RedStaff Этап 2">
+          <span class="lr-n">02</span>
+          <div><span class="lr-t">1С:ЗУП vs RedStaff Этап 1</span><br><span class="lr-b pub">✓ Из ТЗ</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="03" data-badges="hyp"
+          data-title="Колл-центр vs RedPay vs OCPP"
+          data-body="Оператор клиентского сервиса не видит статус ЭЗС в реальном времени и не может ответить про баланс RedPay — типовая ситуация при разделённых системах."
+          data-fix="ИИ-ассистент клиента (Модуль B.2)">
+          <span class="lr-n">03</span>
+          <div><span class="lr-t">Колл-центр vs RedPay vs OCPP</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="04" data-badges="hyp"
+          data-title="Табель операторов АЗС"
+          data-body="СКУД установлен не на всех точках → удалённые АЗС в 7 регионах ведут табель в Excel вне системы."
+          data-fix="RedStaff Этап 3 (СКУД + GPS)">
+          <span class="lr-n">04</span>
+          <div><span class="lr-t">Табель операторов АЗС</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="05" data-badges="hyp"
+          data-title="Тендеры на госплощадках"
+          data-body="Отдел закупок физически не успевает мониторить все релевантные тендеры → пропуски возможностей."
+          data-fix="ИИ-агент тендеров (Модуль B.5)">
+          <span class="lr-n">05</span>
+          <div><span class="lr-t">Тендеры на госплощадках</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="06" data-badges="hyp"
+          data-title="Сметы новых АЗС и ЭЗС"
+          data-body="Длительный цикл первичной сметы. При активной стратегии расширения сети это потенциально узкое место."
+          data-fix="Сметный ИИ (Модуль B.6)">
+          <span class="lr-n">06</span>
+          <div><span class="lr-t">Сметы новых АЗС и ЭЗС</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="07" data-badges="hyp"
+          data-title="Юридический отдел"
+          data-body="Договоры с поставщиками, B2B-клиентами, аренда участков под АЗС, страховщики — значительный объём для ручной обработки."
+          data-fix="ИИ-юрист (Модуль B.4)">
+          <span class="lr-n">07</span>
+          <div><span class="lr-t">Юридический отдел</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="08" data-badges="hyp"
+          data-title="Логистика топлива"
+          data-body="Точность прогноза спроса по каждой АЗС влияет на оптимальный уровень страховых запасов в резервуарах и оборачиваемость капитала."
+          data-fix="ML прогноз спроса (Модуль B.7)">
+          <span class="lr-n">08</span>
+          <div><span class="lr-t">Логистика топлива</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="09" data-badges="hyp"
+          data-title="Маркетинг RedPay"
+          data-body="Массовые акции для всей базы клиентов теряют эффективность по сравнению с персонализацией. Push без сегментации = отключения."
+          data-fix="ИИ-маркетолог RedPay (Модуль B.8)">
+          <span class="lr-n">09</span>
+          <div><span class="lr-t">Маркетинг RedPay</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="10" data-badges="hyp"
+          data-title="EV-направление и поломки ЭЗС"
+          data-body="При реактивной модели обслуживания о поломке коннектора узнают через жалобу клиента. Для растущей EV-сети это репутационный риск."
+          data-fix="ИИ-аналитик ЭЗС (Модуль B.9)">
+          <span class="lr-n">10</span>
+          <div><span class="lr-t">EV-направление и поломки ЭЗС</span><br><span class="lr-b hyp">⚑ Гипотеза</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+        <div class="ledger-row"
+          data-n="11" data-badges="pub"
+          data-title="Биржевая публичность"
+          data-body="Облигации на 100 млн KGS + $36 млн кредит = повышенные требования к прозрачности отчётности и аудиту."
+          data-fix="Observability + Compliance (Модуль D)">
+          <span class="lr-n">11</span>
+          <div><span class="lr-t">Биржевая публичность</span><br><span class="lr-b pub">✓ Публично</span></div>
+          <span class="lr-arr">→</span>
+        </div>
+      </div>
+
+      <div class="ledger-detail">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 05 — МАНИФЕСТ ============ -->
+<section class="chap-open" id="ch-05">
+  <div class="wrap">
+    <div class="chap-no">Глава 05 — Манифест</div>
+    <h2>Три столпа<br><em>единой экосистемы.</em></h2>
+    <p class="chap-intro">
+      Не «фичи» и&nbsp;не&nbsp;«модули». Три инженерных утверждения, которые либо принимаются как&nbsp;правда — либо нет. Дальше идёт всё&nbsp;остальное.
+    </p>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="wrap">
+    <div class="manifesto-pillar">
+      <div class="roman">I</div>
+      <div>
+        <div class="ll">Master Data Hub</div>
+        <div class="tt">Один источник правды<br>по&nbsp;данным группы.</div>
+      </div>
+      <div class="bb">
+        Единый источник правды по&nbsp;сотрудникам, объектам, клиентам, контрактам. RedStaff&nbsp;Этап&nbsp;2 — фундамент. Всё&nbsp;остальное опирается на&nbsp;это.
+      </div>
+    </div>
+    <div class="manifesto-pillar">
+      <div class="roman">II</div>
+      <div>
+        <div class="ll">Operational AI Layer</div>
+        <div class="tt">ИИ-слой поверх<br>каждого процесса.</div>
+      </div>
+      <div class="bb">
+        9&nbsp;ИИ-сотрудников в&nbsp;HR, юр.отделе, закупках, логистике, маркетинге, EV. Не&nbsp;замена людям — инструмент, который убирает 30—50% рутины.
+      </div>
+    </div>
+    <div class="manifesto-pillar">
+      <div class="roman">III</div>
+      <div>
+        <div class="ll">Unified Customer Experience</div>
+        <div class="tt">Один клиентский<br>опыт через RedPay.</div>
+      </div>
+      <div class="bb">
+        RedPay как&nbsp;единая точка взаимодействия: топливо, EV, B2B. Сквозная лояльность, единая аналитика. Целевая модель, объём расширения — на&nbsp;согласование.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 06 — МОДУЛИ (Horizontal scroll) ============ -->
+<section class="modules-h" id="ch-06">
+  <div class="head">
+    <div>
+      <div class="ll">Глава 06 — Четыре модуля</div>
+      <h2>Из&nbsp;чего собирается<br><em>экосистема.</em></h2>
+    </div>
+    <p>
+      Каждый модуль — самостоятельная поставка с&nbsp;собственной ценностью и&nbsp;сроком окупаемости. Внедряются последовательно или&nbsp;параллельно. Минимальный старт — Master Data Hub под&nbsp;HR и&nbsp;финансы. Прокрутите вправо &nbsp;→
+    </p>
+  </div>
+
+  <div class="h-scroll-bar">
+    <div class="pages"><span class="cur">01</span> / <span class="total">04</span></div>
+    <div class="progress"><span></span></div>
+    <div class="controls">
+      <button class="prev" aria-label="Назад">←</button>
+      <button class="next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+
+  <div class="h-scroll-track">
+    <!-- Module A: RedStaff -->
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">A</div>
+        <div class="b-meta">
+          <div class="ll">HR · Master Data Hub</div>
+          <div class="tt">RedStaff — Этапы 2 и 3</div>
+          <div class="dd">Master Data Hub по&nbsp;сотрудникам и&nbsp;операционному персоналу. Корректная интеграция с&nbsp;1С, прозрачные расчётные листки в&nbsp;моб.&nbsp;приложении, GPS-геофенсинг для&nbsp;удалённых АЗС. Фундамент для&nbsp;всей экосистемы.</div>
+        </div>
+        <div class="b-price">
+          <div class="ll">Общие инвестиции</div>
+          <div class="vv">66&nbsp;000 USD</div>
+          <div class="ss">6 месяцев</div>
+        </div>
+      </div>
+
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">A.1 · Этап 2</div>
+          <div class="tt">Master Data Hub</div>
+          <ul>
+            <li>Discovery: аудит Этапа 1 и&nbsp;API-контрактов</li>
+            <li>1С master-режим + event-driven + журнал интеграций</li>
+            <li>Расширенный профиль сотрудника (22 поля, ИП, увольнение, версионирование)</li>
+            <li>Расчётный листок с&nbsp;расшифровкой KPI и&nbsp;PDF на&nbsp;email</li>
+            <li>Миграция Digital Ocean → NSP, TimescaleDB, observability</li>
+          </ul>
+          <div class="ft"><span class="term">3 месяца</span><span class="price">32 000 USD</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">A.2 · Этап 3</div>
+          <div class="tt">Full Operational Coverage</div>
+          <ul>
+            <li>Табель + СКУД + GPS-геофенсинг + антифрод</li>
+            <li>Рейтинг с&nbsp;реальными KPI (план, безаварийность, дисциплина)</li>
+            <li>Заявки: отпуска, больничные, ОБС, командировки + SLA + mass-actions</li>
+            <li>SSO в&nbsp;Red&nbsp;Petroleum B2B</li>
+            <li>Накопленный бэклог, feature flags, read replica</li>
+          </ul>
+          <div class="ft"><span class="term">3 месяца</span><span class="price">34 000 USD</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module B: AI Suite (featured, with 9 sub-modules) -->
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter">B</div>
+        <div class="b-meta">
+          <div class="ll">Operational AI · 9 сотрудников</div>
+          <div class="tt">ASYSTEM AI&nbsp;Suite</div>
+          <div class="dd">Девять ИИ-сотрудников поверх существующих процессов: HR, клиентский сервис, оператор АЗС/ЭЗС, юристы, закупки, сметный отдел, логистика, маркетинг, EV-аналитика. Каждый — самостоятельный модуль с&nbsp;MVP-сроком и&nbsp;оплатой 50/50 после результата.</div>
+        </div>
+        <div class="b-price">
+          <div class="ll">Общий пакет</div>
+          <div class="vv">6,2 млн&nbsp;KGS</div>
+          <div class="ss">14—18 недель</div>
+        </div>
+      </div>
+
+      <div class="ai-grid">
+        <div class="ai-card"><div class="ll">B.1 · HR-онбординг</div><div class="tt">Telegram-бот адаптации</div><div class="bb">Telegram-бот для&nbsp;адаптации новых операторов АЗС. Анкеты, тесты по&nbsp;ТБ, отбор резюме.</div><div class="foot"><span class="term">MVP 3 нед</span><span class="price">1 000 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.2 · Клиент RedPay</div><div class="tt">ИИ-ассистент в&nbsp;приложении</div><div class="bb">ИИ-ассистент в&nbsp;моб.&nbsp;приложении: топливо + ЭЗС + лояльность. Снимает нагрузку с&nbsp;клиентского сервиса.</div><div class="foot"><span class="term">MVP 4 нед</span><span class="price">1 000 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.3 · Оператор АЗС/ЭЗС</div><div class="tt">Карманный ИИ-помощник</div><div class="bb">Помощник для&nbsp;операторов смены. Подсказки по&nbsp;кассе, регламентам, ЭЗС.</div><div class="foot"><span class="term">MVP 4 нед</span><span class="price">800 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.4 · ИИ-юрист</div><div class="tt">Анализ договоров</div><div class="bb">Договоры поставщиков, B2B, аренды участков, страховщиков. Ссылки на&nbsp;НПА&nbsp;КР.</div><div class="foot"><span class="term">MVP 5 нед</span><span class="price">900 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.5 · Тендеры и закупки</div><div class="tt">Мониторинг госплощадок</div><div class="bb">Мониторинг госплощадок&nbsp;КР, сравнение КП поставщиков по&nbsp;матрице TCO.</div><div class="foot"><span class="term">MVP 5 нед</span><span class="price">750 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.6 · Сметный отдел</div><div class="tt">Автосмета объектов</div><div class="bb">Сметы новых АЗС, ЭЗС, магазинов по&nbsp;ТЗ. За&nbsp;часы, не&nbsp;недели.</div><div class="foot"><span class="term">MVP 5 нед</span><span class="price">650 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.7 · ML спрос топлива</div><div class="tt">Прогноз по&nbsp;каждой&nbsp;АЗС</div><div class="bb">Прогноз продаж с&nbsp;учётом сезона, погоды, событий. Оптимизация резервов.</div><div class="foot"><span class="term">MVP 6 нед</span><span class="price">950 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.8 · Маркетолог RedPay</div><div class="tt">RFM + churn + персонализация</div><div class="bb">RFM-сегментация, churn-модель, персональные акции. Уход от&nbsp;«скидок всем».</div><div class="foot"><span class="term">MVP 5 нед</span><span class="price">900 000 KGS</span></div></div>
+        <div class="ai-card"><div class="ll">B.9 · Аналитик ЭЗС</div><div class="tt">Предиктивное обслуживание</div><div class="bb">Предиктивное обслуживание ЭЗС поверх OCPP. Прогноз отказа за&nbsp;3—7&nbsp;дней.</div><div class="foot"><span class="term">MVP 7 нед</span><span class="price">1 000 000 KGS</span></div></div>
+      </div>
+
+      <div class="pack-row">
+        <div class="pack-card"><div><div class="ll">Пакет «Бизнес» · 6 модулей</div><div class="tt">B.1 + B.2 + B.3 + B.4 + B.5 + B.7</div><div class="dd">8—12 недель</div></div><div class="pp">4,3 млн&nbsp;KGS</div></div>
+        <div class="pack-card gold"><div><div class="ll">Пакет «Корпоратив» · все 9</div><div class="tt">Все 9 ИИ + 3 мес поддержки + обучение</div><div class="dd">14—18 недель</div></div><div class="pp">6,2 млн&nbsp;KGS</div></div>
+      </div>
+    </div>
+
+    <!-- Module C: RedCharge Stage 3 -->
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">C</div>
+        <div class="b-meta">
+          <div class="ll">EV · расширение + корпоративные тарифы</div>
+          <div class="tt">RedCharge — Этап 3</div>
+          <div class="dd">Развитие действующей EV-платформы: OCPI-роуминг, Plug&nbsp;&amp;&nbsp;Charge (ISO&nbsp;15118), корпоративные тарифы для&nbsp;B2B-флитов, расширенная аналитика загрузки сети, интеграция с&nbsp;RedPay-лояльностью.</div>
+        </div>
+        <div class="b-price">
+          <div class="ll">Срок</div>
+          <div class="vv">~4 мес</div>
+          <div class="ss">детализируется</div>
+        </div>
+      </div>
+
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">C.1 · Роуминг и Plug&nbsp;&amp;&nbsp;Charge</div>
+          <div class="tt">OCPI 2.2.1 + ISO 15118-20</div>
+          <ul>
+            <li>OCPI 2.2.1 для&nbsp;роуминга с&nbsp;Казахстаном, Узбекистаном</li>
+            <li>ISO 15118-20 — Plug&nbsp;&amp;&nbsp;Charge (автоидентификация авто)</li>
+            <li>Корпоративные тарифы и&nbsp;контракты для&nbsp;B2B-флитов</li>
+          </ul>
+          <div class="ft"><span class="term">После scope</span><span class="price">TBD</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">C.2 · Аналитика и интеграция</div>
+          <div class="tt">Дашборд + RedPay</div>
+          <ul>
+            <li>Дашборд загрузки сети и&nbsp;принятия решений по&nbsp;расширению</li>
+            <li>Интеграция с&nbsp;RedPay для&nbsp;единого клиентского опыта</li>
+            <li>Связь со&nbsp;страховщиками и&nbsp;аварийными службами</li>
+          </ul>
+          <div class="ft"><span class="term">Доразработка</span><span class="price">TBD</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module D: Финансовый Hub -->
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">D</div>
+        <div class="b-meta">
+          <div class="ll">Бухгалтерия · 1С · финансовый Hub</div>
+          <div class="tt">Финансовый контур</div>
+          <div class="dd">Глубокая интеграция RedCharge с&nbsp;1С:Бухгалтерия, фискализация всех зарядных сессий, ЭСФ, корпоративные счета. По&nbsp;мере раскрытия — расширение на&nbsp;всю группу: консолидация 3&nbsp;юр.лиц + автореконсиляция + биржевая отчётность.</div>
+        </div>
+        <div class="b-price">
+          <div class="ll">Срок</div>
+          <div class="vv">по&nbsp;брифу</div>
+          <div class="ss">определяется</div>
+        </div>
+      </div>
+
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">D.1 · RedCharge-бухгалтерия</div>
+          <div class="tt">Учётный контур EV</div>
+          <ul>
+            <li>Интеграция с&nbsp;1С:Бухгалтерия 8.3</li>
+            <li>Автоматическая фискализация каждой зарядной сессии</li>
+            <li>Электронные счёт-фактуры (ЭСФ) в&nbsp;систему ГНС</li>
+            <li>Корпоративные тарифы и&nbsp;счета для&nbsp;B2B-клиентов</li>
+            <li>Автореконсиляция с&nbsp;банками-эквайерами</li>
+            <li>Подготовка отчётности под&nbsp;биржевые требования</li>
+          </ul>
+          <div class="ft"><span class="term">После брифа</span><span class="price">TBD</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">D.2 · Расширение на&nbsp;группу</div>
+          <div class="tt">Консолидация по 3 юр.лицам</div>
+          <ul>
+            <li>Консолидация бухгалтерского контура по&nbsp;3&nbsp;юр.лицам</li>
+            <li>Единая отчётность для&nbsp;биржи и&nbsp;аудиторов</li>
+            <li>Автоматизация межгрупповых сверок</li>
+            <li>Налоговая отчётность как&nbsp;единая система</li>
+            <li>Сквозная интеграция с&nbsp;RedStaff и&nbsp;RedCharge</li>
+          </ul>
+          <div class="ft"><span class="term">После Discovery</span><span class="price">TBD</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pullquote-break">
+  <div class="pq">Рекомендованная последовательность —<br><em>A → D → B → C.</em></div>
+</div>
+
+<!-- ============ CHAPTER 07 — ДОРОЖНАЯ КАРТА ============ -->
+<section class="chap-open" id="ch-07">
+  <div class="wrap">
+    <div class="chap-no">Глава 07 — Восемнадцать месяцев</div>
+    <h2>От&nbsp;старта<br>до&nbsp;<em>полной экосистемы.</em></h2>
+    <p class="chap-intro">
+      Поэтапное внедрение без&nbsp;шок-терапии. Каждые 3—6&nbsp;месяцев — рабочий результат, который окупается до&nbsp;начала следующего этапа. Никакого vendor lock-in: каждый модуль передаётся с&nbsp;исходным кодом, документацией и&nbsp;доступами.
+    </p>
+  </div>
+</section>
+
+<section class="h-timeline">
+  <div class="wrap">
+    <div class="htl-rail">
+      <div class="htl-step now">
+        <div class="htl-dot"></div>
+        <div class="month">Мес 1—3</div>
+        <div class="nm">Master Data Hub<br>(RedStaff Этап&nbsp;2)</div>
+        <div class="ds">1С master-режим, расширенный профиль, расчётный листок, миграция инфраструктуры на&nbsp;NSP.</div>
+        <div class="pr">32 000 USD<br><span style="color:var(--ink-3); font-weight:400;">фундамент</span></div>
+      </div>
+      <div class="htl-step">
+        <div class="htl-dot"></div>
+        <div class="month">Мес 4—6</div>
+        <div class="nm">Full Operational<br>(RedStaff Этап&nbsp;3)</div>
+        <div class="ds">Табель + СКУД + GPS, рейтинг, заявки, SSO в&nbsp;B2B, feature flags + read replica.</div>
+        <div class="pr">34 000 USD<br><span style="color:var(--ink-3); font-weight:400;">HR закрыт</span></div>
+      </div>
+      <div class="htl-step">
+        <div class="htl-dot"></div>
+        <div class="month">Мес 4—9 ‖</div>
+        <div class="nm">Финансовый Data Hub<br>(Модуль&nbsp;D)</div>
+        <div class="ds">Интеграция RedCharge с&nbsp;1С:Бухгалтерия, фискализация, ЭСФ, реконсиляция. Опционально — на&nbsp;группу.</div>
+        <div class="pr">после брифа<br><span style="color:var(--ink-3); font-weight:400;">цена детализируется</span></div>
+      </div>
+      <div class="htl-step">
+        <div class="htl-dot"></div>
+        <div class="month">Мес 6—12</div>
+        <div class="nm">Operational AI<br>(Модуль&nbsp;B)</div>
+        <div class="ds">Запуск 9&nbsp;ИИ-сотрудников волнами. «Бизнес» (6) → «Корпоратив» (9 + поддержка).</div>
+        <div class="pr">4,3 → 6,2 млн KGS<br><span style="color:var(--ink-3); font-weight:400;">волнами</span></div>
+      </div>
+      <div class="htl-step">
+        <div class="htl-dot"></div>
+        <div class="month">Мес 10—18</div>
+        <div class="nm">RedCharge Этап 3<br>(Модуль&nbsp;C)</div>
+        <div class="ds">OCPI-роуминг, Plug&nbsp;&amp;&nbsp;Charge, корпоративные тарифы B2B, расширенная аналитика загрузки.</div>
+        <div class="pr">опирается на A+D<br><span style="color:var(--ink-3); font-weight:400;">EV-расширение</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 08 — ЦИФРЫ (Simulator focal) ============ -->
+<section class="chap-open dark" id="ch-08">
+  <div class="wrap">
+    <div class="chap-no">Глава 08 — Цифры</div>
+    <h2>Что группа получает<br><em>в&nbsp;деньгах.</em></h2>
+    <p class="chap-intro">
+      Все цифры — оценки по&nbsp;публично доступным данным о&nbsp;масштабе группы и&nbsp;типовым показателям отрасли. Финальные диапазоны фиксируются на&nbsp;Discovery с&nbsp;точными данными по&nbsp;штату, ФОТ, обороту и&nbsp;количеству операций.
+    </p>
+  </div>
+</section>
+
+<section class="numbers">
+  <div class="wrap">
+    <!-- Simulator first — it's the focal point -->
+    <div class="simulator">
+      <div>
+        <div class="sim-head">
+          <div class="ll">⚑ Модель · калибруется на Discovery</div>
+          <div class="tt">Симулятор<br>годовой&nbsp;экономии</div>
+        </div>
+        <div class="sim-controls">
+          <div class="sim-row">
+            <div class="top"><span class="lbl">Численность сотрудников</span><span class="val" data-sim-v="employees">300 чел.</span></div>
+            <input type="range" class="sim-slider" data-sim="employees" min="100" max="2000" step="10" value="300">
+            <div class="range-l"><span>100</span><span>2 000</span></div>
+          </div>
+          <div class="sim-row">
+            <div class="top"><span class="lbl">Месячный ФОТ группы, USD</span><span class="val" data-sim-v="fot">$120 000</span></div>
+            <input type="range" class="sim-slider" data-sim="fot" min="20000" max="500000" step="5000" value="120000">
+            <div class="range-l"><span>$20k</span><span>$500k</span></div>
+          </div>
+          <div class="sim-row">
+            <div class="top"><span class="lbl">Число АЗС в сети</span><span class="val" data-sim-v="stations">200 АЗС</span></div>
+            <input type="range" class="sim-slider" data-sim="stations" min="50" max="500" step="5" value="200">
+            <div class="range-l"><span>50</span><span>500</span></div>
+          </div>
+          <div class="sim-row">
+            <div class="top"><span class="lbl">Обращений клиентского сервиса в день</span><span class="val" data-sim-v="requests">400 / день</span></div>
+            <input type="range" class="sim-slider" data-sim="requests" min="50" max="2000" step="10" value="400">
+            <div class="range-l"><span>50</span><span>2 000</span></div>
+          </div>
+          <div class="sim-row">
+            <div class="top"><span class="lbl">Договоров юр.отдела в год</span><span class="val" data-sim-v="contracts">800 / год</span></div>
+            <input type="range" class="sim-slider" data-sim="contracts" min="100" max="5000" step="50" value="800">
+            <div class="range-l"><span>100</span><span>5 000</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sim-output">
+        <div class="ll">Оценка экономии в год</div>
+        <div class="big-num"><em data-sim-out="total">$0</em></div>
+        <div class="sub-num" data-sim-out="monthly">$0 / мес</div>
+        <div class="payback">
+          <div>
+            <div class="ll">Окупаемость RedStaff (Этапы 2+3, $66 000)</div>
+            <div class="pv" data-sim-out="payback">— мес</div>
+          </div>
+        </div>
+        <div class="sim-disclaimer">
+          Допущения: ошибки начисления ФОТ 0,3—1,0% при&nbsp;разделённых master-источниках · 30% времени HR на&nbsp;сверку (2—3 спец.) · юр.договоры по&nbsp;1,5ч · колл-центр 3 мин/обращение.
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact callouts as marginalia under simulator -->
+    <div style="margin-top:64px;">
+      <div class="marginalia-grid">
+        <div class="marg">
+          <div class="ll">Откуда экономия</div>
+          <div class="tt">Четыре источника<br>возврата&nbsp;инвестиций.</div>
+          <div class="dd">Симулятор слева сводит эти четыре потока в&nbsp;единую цифру. Ниже — что именно складывается в&nbsp;неё.</div>
+        </div>
+        <div class="impact-grid" style="margin-bottom:0;">
+          <div class="impact-card">
+            <div>
+              <div class="ll">HR-контур</div>
+              <div class="tt">Master Data Hub + Full Coverage</div>
+              <ul>
+                <li>Сокращение ошибок начисления зарплаты</li>
+                <li>30% времени HR возвращается к&nbsp;стратегии</li>
+                <li>Заявки: с&nbsp;дней до&nbsp;часов</li>
+                <li>Антифрод в&nbsp;табеле удалённых АЗС</li>
+              </ul>
+            </div>
+            <div class="pull">
+              <div class="pl">Оценка / год</div>
+              <div class="pv">$23—38K</div>
+              <div class="ps">штат ~300 чел.</div>
+            </div>
+          </div>
+          <div class="impact-card">
+            <div>
+              <div class="ll">Operational AI</div>
+              <div class="tt">9 ИИ-сотрудников</div>
+              <ul>
+                <li>Снижение нагрузки на&nbsp;клиентский сервис</li>
+                <li>Анализ договоров в&nbsp;3—5 раз быстрее</li>
+                <li>Сметы за&nbsp;часы вместо недель</li>
+                <li>−20—30% страховых запасов</li>
+              </ul>
+            </div>
+            <div class="pull">
+              <div class="pl">Источник</div>
+              <div class="pv" style="font-size:18px; line-height:1.3;">Discovery<br>по данным</div>
+              <div class="ps">калибруется</div>
+            </div>
+          </div>
+          <div class="impact-card">
+            <div>
+              <div class="ll">Финансовый контур</div>
+              <div class="tt">Финансовый Data Hub</div>
+              <ul>
+                <li>Автоматическая фискализация</li>
+                <li>Реконсиляция без&nbsp;ручной сверки</li>
+                <li>Единая отчётность для&nbsp;биржи</li>
+                <li>Прозрачность P&amp;L по&nbsp;контурам</li>
+              </ul>
+            </div>
+            <div class="pull">
+              <div class="pl">Эффект</div>
+              <div class="pv" style="font-size:18px; line-height:1.3;">Снижение<br>compliance</div>
+              <div class="ps">риск штрафов</div>
+            </div>
+          </div>
+          <div class="impact-card">
+            <div>
+              <div class="ll">RedCharge Next</div>
+              <div class="tt">EV-расширение</div>
+              <ul>
+                <li>OCPI-роуминг — KZ, UZ</li>
+                <li>Корпоративные B2B-тарифы</li>
+                <li>Plug &amp; Charge — удержание</li>
+                <li>−2—3× downtime ЭЗС</li>
+              </ul>
+            </div>
+            <div class="pull">
+              <div class="pl">Эффект</div>
+              <div class="pv" style="font-size:18px; line-height:1.3;">Защита EV<br>+ новые рынки</div>
+              <div class="ps">расширение базы</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 09 — ПОДПИСЬ ============ -->
+<section class="chap-open" id="ch-09">
+  <div class="wrap">
+    <div class="chap-no">Глава 09 — Подпись</div>
+    <h2>Действующий партнёр,<br><em>не&nbsp;новый подрядчик.</em></h2>
+    <p class="chap-intro">
+      Этот документ написан подрядчиком, который уже сдал и&nbsp;эксплуатирует один продукт в&nbsp;инфраструктуре Red&nbsp;Petroleum. Это меняет всё: сокращает Discovery, снижает риск на&nbsp;старте каждого модуля, убирает «знакомство» из&nbsp;бюджета.
+    </p>
+  </div>
+</section>
+
+<section class="signature">
+  <div class="wrap">
+    <div class="sig-grid">
+      <div class="sig-statement">
+        ASYSTEM разработал OCPP-сервер для&nbsp;<em>зарядной инфраструктуры Red&nbsp;Petroleum</em> в&nbsp;рамках действующего договора.
+        <span class="small">Команда, регламенты и&nbsp;доверие — отлажены. Это и&nbsp;есть наша «верификация»: код, который уже работает в&nbsp;вашем контуре.</span>
+      </div>
+
+      <div class="sig-credentials">
+        <div class="sig-cred"><span class="cn">01</span><div><div class="ct">Доказанный кейс</div><div class="cb">RedCharge — действующий продукт, переданный в&nbsp;эксплуатацию. Тот&nbsp;же контрагент, тот&nbsp;же договорный контур.</div></div></div>
+        <div class="sig-cred"><span class="cn">02</span><div><div class="ct">Локальная команда</div><div class="cb">Команда в&nbsp;Бишкеке. Выезды на&nbsp;объекты, поддержка на&nbsp;русском и&nbsp;кыргызском.</div></div></div>
+        <div class="sig-cred"><span class="cn">03</span><div><div class="ct">50/50 оплата</div><div class="cb">50% после приёмки MVP, 50% после сдачи и&nbsp;передачи. Никаких авансов вслепую.</div></div></div>
+        <div class="sig-cred"><span class="cn">04</span><div><div class="ct">Данные в&nbsp;КР</div><div class="cb">Серверы в&nbsp;Кыргызстане, коммерческие данные не&nbsp;уходят за&nbsp;рубеж. NDA до&nbsp;старта работ.</div></div></div>
+        <div class="sig-cred"><span class="cn">05</span><div><div class="ct">Полная передача</div><div class="cb">Исходники, серверы, базы знаний, документация — Заказчику. Зависимости от&nbsp;подрядчика нет.</div></div></div>
+        <div class="sig-cred"><span class="cn">06</span><div><div class="ct">Прозрачный процесс</div><div class="cb">Bitrix24 в&nbsp;реальном времени, еженедельные демо, акты приёмки по&nbsp;каждому подмодулю.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLOPHON (end-page + CTA + index) ============ -->
+<section class="colophon" id="colophon">
+  <div class="wrap">
+    <div class="col-top">
+      <div class="ll">— Конец документа —</div>
+      <h2>Встреча 30 минут.<br><em>Покажем демо.</em></h2>
+      <p>Разберём ваши приоритеты по&nbsp;экосистеме, определим точку первого пилота и&nbsp;зафиксируем даты. Без&nbsp;обязательств.</p>
+      <div class="col-cta-row">
+        <a href="https://t.me/Ruslyandi" target="_blank" rel="noopener" class="primary">
+          <div><div class="l">Telegram</div><div class="v">@Ruslyandi</div></div>
+          <span style="font-size:18px;">→</span>
+        </a>
+        <a href="mailto:asystem.teamwork@gmail.com">
+          <div><div class="l">Email</div><div class="v">asystem.teamwork@gmail.com</div></div>
+          <span style="font-size:18px;">→</span>
+        </a>
+        <a href="tel:+996500115133">
+          <div><div class="l">Телефон</div><div class="v">0500 115 133</div></div>
+          <span style="font-size:18px;">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-bottom">
+      <div>
+        <div class="ll">Колофон</div>
+        <div class="bb">
+          Документ 01 / 2026, концепция единой технологической экосистемы Red&nbsp;Petroleum&nbsp;/ Альфа&nbsp;Ойл.
+          Все цифры — из&nbsp;публичных источников и&nbsp;материалов проекта.<br><br>
+          Сверстан в&nbsp;Onest&nbsp;+ JetBrains&nbsp;Mono. Палитра: <span style="color:var(--rp-red);">красный #E30613</span>, чёрный, белый.<br><br>
+          Действителен <strong style="color:#fff;">30 календарных дней</strong> с&nbsp;момента передачи.
+        </div>
+      </div>
+      <div>
+        <div class="ll">Главы</div>
+        <div class="index-list">
+          <a href="#ch-01"><span class="nn">01</span><span>Тезис</span></a>
+          <a href="#ch-02"><span class="nn">02</span><span>Стартовая точка</span></a>
+          <a href="#ch-03"><span class="nn">03</span><span>Структура группы</span></a>
+          <a href="#ch-04"><span class="nn">04</span><span>Одиннадцать трений</span></a>
+          <a href="#ch-05"><span class="nn">05</span><span>Манифест</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="ll">&nbsp;</div>
+        <div class="index-list" style="margin-top:18px;">
+          <a href="#ch-06"><span class="nn">06</span><span>Четыре модуля</span></a>
+          <a href="#ch-07"><span class="nn">07</span><span>Восемнадцать месяцев</span></a>
+          <a href="#ch-08"><span class="nn">08</span><span>Цифры</span></a>
+          <a href="#ch-09"><span class="nn">09</span><span>Подпись</span></a>
+          <a href="#cover"><span class="nn">←</span><span>К обложке</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-foot">
+      <div>© 2026 ASYSTEM · Бишкек · Концепция единой экосистемы Red Petroleum / Альфа Ойл</div>
+      <div>t.me/Ruslyandi · asystem.teamwork@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- continues in part 2 below -->
+
+<!-- ============ PROGRESS RAIL ============ -->
+<aside class="progress-rail" aria-label="Содержание">
+  <a href="#ch-01"><span class="dot"></span><span class="lbl">01 Тезис</span></a>
+  <a href="#ch-02"><span class="dot"></span><span class="lbl">02 Стартовая точка</span></a>
+  <a href="#ch-03"><span class="dot"></span><span class="lbl">03 Группа</span></a>
+  <a href="#ch-04"><span class="dot"></span><span class="lbl">04 Разрывы</span></a>
+  <a href="#ch-05"><span class="dot"></span><span class="lbl">05 Манифест</span></a>
+  <a href="#ch-06"><span class="dot"></span><span class="lbl">06 Модули</span></a>
+  <a href="#ch-07"><span class="dot"></span><span class="lbl">07 Карта</span></a>
+  <a href="#ch-08"><span class="dot"></span><span class="lbl">08 Цифры</span></a>
+  <a href="#ch-09"><span class="dot"></span><span class="lbl">09 Подпись</span></a>
+</aside>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta">
+  <div>
+    <div class="l">Документ · 01 / 2026</div>
+    <div class="v">Единая экосистема Red Petroleum</div>
+  </div>
+  <a href="#colophon" class="btn btn-primary">Встреча <span class="arr">→</span></a>
+</div>
+
+<script src="site.js"></script>
 </body>
 </html>
