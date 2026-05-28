@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
-<link rel="stylesheet" href="assets/css/fixes.css?v=5">
+<link rel="stylesheet" href="assets/css/fixes.css?v=6">
 <!-- Motion (Framer Motion vanilla) + GSAP + ScrollTrigger via CDN -->
 <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
@@ -150,7 +150,7 @@
       </a>
       <a class="toc-row" href="#ch-06">
         <span class="tn">06</span>
-        <span class="tt">Четыре модуля</span>
+        <span class="tt">Два модуля</span>
         <span class="ts">Из чего собирается экосистема. Горизонтальный разворот</span>
         <span class="tp">3 мин →</span>
       </a>
@@ -463,7 +463,7 @@
           data-n="11" data-badges="pub"
           data-title="Биржевая публичность"
           data-body="Облигации на 100 млн KGS + $36 млн кредит = повышенные требования к прозрачности отчётности и аудиту."
-          data-fix="Observability + Compliance (Модуль D)">
+          data-fix="Observability + Compliance — внутри RedStaff Этапа 2">
           <span class="lr-n">11</span>
           <div><span class="lr-t">Биржевая публичность</span><br><span class="lr-b pub">✓ Публично</span></div>
           <span class="lr-arr">→</span>
@@ -527,7 +527,7 @@
 <section class="modules-h" id="ch-06">
   <div class="head">
     <div>
-      <div class="ll">Глава 06 — Четыре модуля</div>
+      <div class="ll">Глава 06 — Два модуля</div>
       <h2>Из&nbsp;чего собирается<br><em>экосистема.</em></h2>
     </div>
     <p>
@@ -536,7 +536,7 @@
   </div>
 
   <div class="h-scroll-bar">
-    <div class="pages"><span class="cur">01</span> / <span class="total">04</span></div>
+    <div class="pages"><span class="cur">01</span> / <span class="total">02</span></div>
     <div class="progress"><span></span></div>
     <div class="controls">
       <button class="prev" aria-label="Назад">←</button>
@@ -546,46 +546,35 @@
 
   <div class="h-scroll-track">
     <!-- Module A: RedStaff -->
-    <div class="h-book">
+    <div class="h-book feat">
       <div class="b-head">
         <div class="b-letter">A</div>
         <div class="b-meta">
-          <div class="ll">HR · Master Data Hub</div>
+          <div class="ll">HR · Master Data Hub · 8 блоков</div>
           <div class="tt">RedStaff — Этапы 2 и 3</div>
-          <div class="dd">Master Data Hub по&nbsp;сотрудникам и&nbsp;операционному персоналу. Корректная интеграция с&nbsp;1С, прозрачные расчётные листки в&nbsp;моб.&nbsp;приложении, GPS-геофенсинг для&nbsp;удалённых АЗС. Фундамент для&nbsp;всей экосистемы.</div>
+          <div class="dd">Master Data Hub по&nbsp;сотрудникам и&nbsp;операционному персоналу. Восемь самостоятельных блоков работ, два этапа поставки. Корректная интеграция с&nbsp;1С, прозрачные расчётные листки, GPS-геофенсинг, антифрод. Фундамент для&nbsp;всей экосистемы.</div>
         </div>
         <div class="b-price">
-          <div class="ll">Общие инвестиции</div>
+          <div class="ll">Общий пакет</div>
           <div class="vv">66&nbsp;000 USD</div>
           <div class="ss">6 месяцев</div>
         </div>
       </div>
 
-      <div class="h-subs">
-        <div class="h-sub">
-          <div class="ll">A.1 · Этап 2</div>
-          <div class="tt">Master Data Hub</div>
-          <ul>
-            <li>Discovery: аудит Этапа 1 и&nbsp;API-контрактов</li>
-            <li>1С master-режим + event-driven + журнал интеграций</li>
-            <li>Расширенный профиль сотрудника (22 поля, ИП, увольнение, версионирование)</li>
-            <li>Расчётный листок с&nbsp;расшифровкой KPI и&nbsp;PDF на&nbsp;email</li>
-            <li>Миграция Digital Ocean → NSP, TimescaleDB, observability</li>
-          </ul>
-          <div class="ft"><span class="term">3 месяца</span><span class="price">32 000 USD</span></div>
-        </div>
-        <div class="h-sub">
-          <div class="ll">A.2 · Этап 3</div>
-          <div class="tt">Full Operational Coverage</div>
-          <ul>
-            <li>Табель + СКУД + GPS-геофенсинг + антифрод</li>
-            <li>Рейтинг с&nbsp;реальными KPI (план, безаварийность, дисциплина)</li>
-            <li>Заявки: отпуска, больничные, ОБС, командировки + SLA + mass-actions</li>
-            <li>SSO в&nbsp;Red&nbsp;Petroleum B2B</li>
-            <li>Накопленный бэклог, feature flags, read replica</li>
-          </ul>
-          <div class="ft"><span class="term">3 месяца</span><span class="price">34 000 USD</span></div>
-        </div>
+      <div class="ai-grid">
+        <div class="ai-card"><div class="ll">A.1 · Этап 2</div><div class="tt">Master + Event-driven</div><div class="bb">1С становится потребителем данных. Event-driven обмен. Журнал интеграций.</div><div class="foot"><span class="term">~5 нед</span><span class="price">в&nbsp;Этапе 2</span></div></div>
+        <div class="ai-card"><div class="ll">A.2 · Этап 2</div><div class="tt">Расширенный профиль</div><div class="bb">22 поля, ПИН&nbsp;КР, ИП, версионирование, корректные увольнения и&nbsp;возвраты.</div><div class="foot"><span class="term">~3 нед</span><span class="price">в&nbsp;Этапе 2</span></div></div>
+        <div class="ai-card"><div class="ll">A.3 · Этап 2</div><div class="tt">Расчётный листок</div><div class="bb">Прозрачные начисления в&nbsp;моб. приложении + PDF на&nbsp;email. HR разгружен.</div><div class="foot"><span class="term">~3 нед</span><span class="price">в&nbsp;Этапе 2</span></div></div>
+        <div class="ai-card"><div class="ll">A.4 · Этап 2</div><div class="tt">Инфра: NSP + observability</div><div class="bb">Миграция Digital Ocean → NSP, TimescaleDB, Grafana, staging, без&nbsp;даунтайма.</div><div class="foot"><span class="term">всю Этап 2</span><span class="price">в&nbsp;Этапе 2</span></div></div>
+        <div class="ai-card"><div class="ll">A.5 · Этап 3</div><div class="tt">Табель + GPS + антифрод</div><div class="bb">3 источника: СКУД, GPS-геофенсинг, ручной ввод. Антифрод на&nbsp;несоответствиях.</div><div class="foot"><span class="term">~5 нед</span><span class="price">в&nbsp;Этапе 3</span></div></div>
+        <div class="ai-card"><div class="ll">A.6 · Этап 3</div><div class="tt">Рейтинг с&nbsp;реальными KPI</div><div class="bb">План, безаварийность, дисциплина, апселл. Индивидуальные и&nbsp;командные.</div><div class="foot"><span class="term">~4 нед</span><span class="price">в&nbsp;Этапе 3</span></div></div>
+        <div class="ai-card"><div class="ll">A.7 · Этап 3</div><div class="tt">Заявки + SLA + mass-actions</div><div class="bb">Отпуска, больничные, ОБС, командировки. SLA, эскалация, mass-actions для&nbsp;HR.</div><div class="foot"><span class="term">~4 нед</span><span class="price">в&nbsp;Этапе 3</span></div></div>
+        <div class="ai-card"><div class="ll">A.8 · Этап 3</div><div class="tt">SSO B2B + бэклог + replica</div><div class="bb">SSO в&nbsp;Red Petroleum B2B, feature flags, read replica для&nbsp;аналитики, накопленный бэклог.</div><div class="foot"><span class="term">~3 нед</span><span class="price">в&nbsp;Этапе 3</span></div></div>
+      </div>
+
+      <div class="pack-row">
+        <div class="pack-card"><div><div class="ll">Этап 2 · Master Data Hub</div><div class="tt">A.1 + A.2 + A.3 + A.4</div><div class="dd">3 месяца, самодостаточная стадия</div></div><div class="pp">32&nbsp;000 USD</div></div>
+        <div class="pack-card gold"><div><div class="ll">Этап 3 · Full Operational Coverage</div><div class="tt">A.5 + A.6 + A.7 + A.8</div><div class="dd">3 месяца, после&nbsp;приёмки Этапа 2</div></div><div class="pp">34&nbsp;000 USD</div></div>
       </div>
       <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); text-align: right;">
         <a href="redstaff/" style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; background: var(--rp-red); color: #fff; border-radius: 999px; font-size: 14px; font-weight: 600; text-decoration: none;">Подробнее о&nbsp;RedStaff <span>→</span></a>
@@ -629,95 +618,11 @@
       </div>
     </div>
 
-    <!-- Module C: RedCharge Stage 3 -->
-    <div class="h-book">
-      <div class="b-head">
-        <div class="b-letter">C</div>
-        <div class="b-meta">
-          <div class="ll">EV · расширение + корпоративные тарифы</div>
-          <div class="tt">RedCharge — Этап 3</div>
-          <div class="dd">Развитие действующей EV-платформы: OCPI-роуминг, Plug&nbsp;&amp;&nbsp;Charge (ISO&nbsp;15118), корпоративные тарифы для&nbsp;B2B-флитов, расширенная аналитика загрузки сети, интеграция с&nbsp;RedPay-лояльностью.</div>
-        </div>
-        <div class="b-price">
-          <div class="ll">Срок</div>
-          <div class="vv">~4 мес</div>
-          <div class="ss">детализируется</div>
-        </div>
-      </div>
-
-      <div class="h-subs">
-        <div class="h-sub">
-          <div class="ll">C.1 · Роуминг и Plug&nbsp;&amp;&nbsp;Charge</div>
-          <div class="tt">OCPI 2.2.1 + ISO 15118-20</div>
-          <ul>
-            <li>OCPI 2.2.1 для&nbsp;роуминга с&nbsp;Казахстаном, Узбекистаном</li>
-            <li>ISO 15118-20 — Plug&nbsp;&amp;&nbsp;Charge (автоидентификация авто)</li>
-            <li>Корпоративные тарифы и&nbsp;контракты для&nbsp;B2B-флитов</li>
-          </ul>
-          <div class="ft"><span class="term">После scope</span><span class="price">TBD</span></div>
-        </div>
-        <div class="h-sub">
-          <div class="ll">C.2 · Аналитика и интеграция</div>
-          <div class="tt">Дашборд + RedPay</div>
-          <ul>
-            <li>Дашборд загрузки сети и&nbsp;принятия решений по&nbsp;расширению</li>
-            <li>Интеграция с&nbsp;RedPay для&nbsp;единого клиентского опыта</li>
-            <li>Связь со&nbsp;страховщиками и&nbsp;аварийными службами</li>
-          </ul>
-          <div class="ft"><span class="term">Доразработка</span><span class="price">TBD</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Module D: Финансовый Hub -->
-    <div class="h-book">
-      <div class="b-head">
-        <div class="b-letter">D</div>
-        <div class="b-meta">
-          <div class="ll">Бухгалтерия · 1С · финансовый Hub</div>
-          <div class="tt">Финансовый контур</div>
-          <div class="dd">Глубокая интеграция RedCharge с&nbsp;1С:Бухгалтерия, фискализация всех зарядных сессий, ЭСФ, корпоративные счета. По&nbsp;мере раскрытия — расширение на&nbsp;всю группу: консолидация 3&nbsp;юр.лиц + автореконсиляция + биржевая отчётность.</div>
-        </div>
-        <div class="b-price">
-          <div class="ll">Срок</div>
-          <div class="vv">по&nbsp;брифу</div>
-          <div class="ss">определяется</div>
-        </div>
-      </div>
-
-      <div class="h-subs">
-        <div class="h-sub">
-          <div class="ll">D.1 · RedCharge-бухгалтерия</div>
-          <div class="tt">Учётный контур EV</div>
-          <ul>
-            <li>Интеграция с&nbsp;1С:Бухгалтерия 8.3</li>
-            <li>Автоматическая фискализация каждой зарядной сессии</li>
-            <li>Электронные счёт-фактуры (ЭСФ) в&nbsp;систему ГНС</li>
-            <li>Корпоративные тарифы и&nbsp;счета для&nbsp;B2B-клиентов</li>
-            <li>Автореконсиляция с&nbsp;банками-эквайерами</li>
-            <li>Подготовка отчётности под&nbsp;биржевые требования</li>
-          </ul>
-          <div class="ft"><span class="term">После брифа</span><span class="price">TBD</span></div>
-        </div>
-        <div class="h-sub">
-          <div class="ll">D.2 · Расширение на&nbsp;группу</div>
-          <div class="tt">Консолидация по 3 юр.лицам</div>
-          <ul>
-            <li>Консолидация бухгалтерского контура по&nbsp;3&nbsp;юр.лицам</li>
-            <li>Единая отчётность для&nbsp;биржи и&nbsp;аудиторов</li>
-            <li>Автоматизация межгрупповых сверок</li>
-            <li>Налоговая отчётность как&nbsp;единая система</li>
-            <li>Сквозная интеграция с&nbsp;RedStaff и&nbsp;RedCharge</li>
-          </ul>
-          <div class="ft"><span class="term">После Discovery</span><span class="price">TBD</span></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <div class="pullquote-break">
-  <div class="pq">Рекомендованная последовательность —<br><em>A → D → B → C.</em></div>
+  <div class="pq">Рекомендованная последовательность —<br><em>RedStaff Этап 2 → Этап 3 → ИИ-боты&nbsp;волнами.</em></div>
 </div>
 
 <!-- ============ CHAPTER 07 — ДОРОЖНАЯ КАРТА ============ -->
@@ -751,23 +656,9 @@
       <div class="htl-step">
         <div class="htl-dot"></div>
         <div class="month">Мес 4—9 ‖</div>
-        <div class="nm">Финансовый Data Hub<br>(Модуль&nbsp;D)</div>
-        <div class="ds">Интеграция RedCharge с&nbsp;1С:Бухгалтерия, фискализация, ЭСФ, реконсиляция. Опционально — на&nbsp;группу.</div>
-        <div class="pr">после брифа<br><span style="color:var(--ink-3); font-weight:400;">цена детализируется</span></div>
-      </div>
-      <div class="htl-step">
-        <div class="htl-dot"></div>
-        <div class="month">Мес 6—12</div>
         <div class="nm">Operational AI<br>(Модуль&nbsp;B)</div>
         <div class="ds">Запуск 9&nbsp;ИИ-сотрудников волнами. «Бизнес» (6) → «Корпоратив» (9 + поддержка).</div>
         <div class="pr">4,3 → 6,2 млн KGS<br><span style="color:var(--ink-3); font-weight:400;">волнами</span></div>
-      </div>
-      <div class="htl-step">
-        <div class="htl-dot"></div>
-        <div class="month">Мес 10—18</div>
-        <div class="nm">RedCharge Этап 3<br>(Модуль&nbsp;C)</div>
-        <div class="ds">OCPI-роуминг, Plug&nbsp;&amp;&nbsp;Charge, корпоративные тарифы B2B, расширенная аналитика загрузки.</div>
-        <div class="pr">опирается на A+D<br><span style="color:var(--ink-3); font-weight:400;">EV-расширение</span></div>
       </div>
     </div>
   </div>
@@ -843,8 +734,8 @@
       <div class="marginalia-grid">
         <div class="marg">
           <div class="ll">Откуда экономия</div>
-          <div class="tt">Четыре источника<br>возврата&nbsp;инвестиций.</div>
-          <div class="dd">Симулятор слева сводит эти четыре потока в&nbsp;единую цифру. Ниже — что именно складывается в&nbsp;неё.</div>
+          <div class="tt">Два источника<br>возврата&nbsp;инвестиций.</div>
+          <div class="dd">Симулятор слева сводит эти потоки в&nbsp;единую цифру. Ниже — что именно складывается в&nbsp;неё.</div>
         </div>
         <div class="impact-grid" style="margin-bottom:0;">
           <div class="impact-card">
@@ -879,40 +770,6 @@
               <div class="pl">Источник</div>
               <div class="pv" style="font-size:18px; line-height:1.3;">Discovery<br>по данным</div>
               <div class="ps">калибруется</div>
-            </div>
-          </div>
-          <div class="impact-card">
-            <div>
-              <div class="ll">Финансовый контур</div>
-              <div class="tt">Финансовый Data Hub</div>
-              <ul>
-                <li>Автоматическая фискализация</li>
-                <li>Реконсиляция без&nbsp;ручной сверки</li>
-                <li>Единая отчётность для&nbsp;биржи</li>
-                <li>Прозрачность P&amp;L по&nbsp;контурам</li>
-              </ul>
-            </div>
-            <div class="pull">
-              <div class="pl">Эффект</div>
-              <div class="pv" style="font-size:18px; line-height:1.3;">Снижение<br>compliance</div>
-              <div class="ps">риск штрафов</div>
-            </div>
-          </div>
-          <div class="impact-card">
-            <div>
-              <div class="ll">RedCharge Next</div>
-              <div class="tt">EV-расширение</div>
-              <ul>
-                <li>OCPI-роуминг — KZ, UZ</li>
-                <li>Корпоративные B2B-тарифы</li>
-                <li>Plug &amp; Charge — удержание</li>
-                <li>−2—3× downtime ЭЗС</li>
-              </ul>
-            </div>
-            <div class="pull">
-              <div class="pl">Эффект</div>
-              <div class="pv" style="font-size:18px; line-height:1.3;">Защита EV<br>+ новые рынки</div>
-              <div class="ps">расширение базы</div>
             </div>
           </div>
         </div>
@@ -998,7 +855,7 @@
       <div>
         <div class="ll">&nbsp;</div>
         <div class="index-list" style="margin-top:18px;">
-          <a href="#ch-06"><span class="nn">06</span><span>Четыре модуля</span></a>
+          <a href="#ch-06"><span class="nn">06</span><span>Два модуля</span></a>
           <a href="#ch-07"><span class="nn">07</span><span>Восемнадцать месяцев</span></a>
           <a href="#ch-08"><span class="nn">08</span><span>Цифры</span></a>
           <a href="#ch-09"><span class="nn">09</span><span>Подпись</span></a>
@@ -1015,19 +872,6 @@
 </section>
 
 <!-- continues in part 2 below -->
-
-<!-- ============ PROGRESS RAIL ============ -->
-<aside class="progress-rail" aria-label="Содержание">
-  <a href="#ch-01"><span class="dot"></span><span class="lbl">01 Тезис</span></a>
-  <a href="#ch-02"><span class="dot"></span><span class="lbl">02 Стартовая точка</span></a>
-  <a href="#ch-03"><span class="dot"></span><span class="lbl">03 Группа</span></a>
-  <a href="#ch-04"><span class="dot"></span><span class="lbl">04 Разрывы</span></a>
-  <a href="#ch-05"><span class="dot"></span><span class="lbl">05 Манифест</span></a>
-  <a href="#ch-06"><span class="dot"></span><span class="lbl">06 Модули</span></a>
-  <a href="#ch-07"><span class="dot"></span><span class="lbl">07 Карта</span></a>
-  <a href="#ch-08"><span class="dot"></span><span class="lbl">08 Цифры</span></a>
-  <a href="#ch-09"><span class="dot"></span><span class="lbl">09 Подпись</span></a>
-</aside>
 
 <!-- Sticky CTA -->
 <div class="sticky-cta">
