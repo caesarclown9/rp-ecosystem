@@ -158,8 +158,8 @@ tailwind.config = {
       <!-- Card 2 -->
       <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
         <div class="text-gold text-xs tracking-[0.3em] mb-4">КЛИЕНТСКИЙ СЛОЙ</div>
-        <h3 class="font-display text-2xl font-semibold mb-4">RedPay + 0800</h3>
-        <p class="text-bone/60 text-sm leading-relaxed">Мобильное приложение с программой лояльности, кэшбэком и оплатой. Колл-центр 0800 для розничного клиента — единая точка обслуживания на топливо и ЭЗС.</p>
+        <h3 class="font-display text-2xl font-semibold mb-4">RedPay — лояльность</h3>
+        <p class="text-bone/60 text-sm leading-relaxed">Программа лояльности и мобильное приложение для розничного клиента: кэшбэк, бонусы, оплата. Подтверждено публикациями AmCham и официальным сайтом.</p>
       </div>
       <!-- Card 3 -->
       <div class="bg-coal border border-steel p-8 hover:border-gold/40 transition group">
@@ -251,7 +251,7 @@ tailwind.config = {
               [Альфа Петролеум]                  [Альфа Ойл / Red Petroleum]
               опт B2B, 30+ клиентов              200+ АЗС в 7 регионах
               госконтракты 3800+                 │
-                                                  ├─→ Розничный клиент (RedPay + 0800)
+                                                  ├─→ Розничный клиент (RedPay)
                                                   ├─→ Магазины при АЗС
                                                   ├─→ ЭЗС (RedCharge OCPP)
                                                   └─→ Корпоративные клиенты (B2B-портал)
@@ -288,8 +288,8 @@ tailwind.config = {
         <div class="flex items-start gap-4">
           <div class="text-3xl font-display font-bold text-wine">01</div>
           <div>
-            <div class="text-bone font-semibold mb-1">Три юр.лица группы <span class="text-gold/70 text-[10px] tracking-widest">✓ ПУБЛИЧНО</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Консолидация P&L по группе через ручную сверку в 1С → трудоёмко, риск ошибок.</div>
+            <div class="text-bone font-semibold mb-1">Три юр.лица группы <span class="text-gold/70 text-[10px] tracking-widest">✓ ПУБЛИЧНО / ⚑ МЕХАНИКА</span></div>
+            <div class="text-sm text-bone/60 leading-relaxed">Группа из трёх юр.лиц — публичный факт. Механика консолидации P&L (ручная или автоматическая) — уточняется на Discovery.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ Master Data Hub</div>
           </div>
         </div>
@@ -311,7 +311,7 @@ tailwind.config = {
           <div class="text-3xl font-display font-bold text-wine">03</div>
           <div>
             <div class="text-bone font-semibold mb-1">Колл-центр vs RedPay vs OCPP <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Клиент звонит в 0800 — оператор не видит статус ЭЗС в реальном времени, не может ответить про баланс RedPay.</div>
+            <div class="text-sm text-bone/60 leading-relaxed">Оператор клиентского сервиса не видит статус ЭЗС в реальном времени и не может ответить про баланс RedPay — типовая ситуация при разделённых системах.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-ассистент клиента</div>
           </div>
         </div>
@@ -344,7 +344,7 @@ tailwind.config = {
           <div class="text-3xl font-display font-bold text-wine">06</div>
           <div>
             <div class="text-bone font-semibold mb-1">Сметы новых АЗС и ЭЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Сметный отдел тратит 3–4 недели на первичную смету. При активной стратегии расширения сети это узкое место.</div>
+            <div class="text-sm text-bone/60 leading-relaxed">Длительный цикл первичной сметы. При активной стратегии расширения сети это потенциально узкое место.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ Сметный ИИ</div>
           </div>
         </div>
@@ -355,7 +355,7 @@ tailwind.config = {
           <div class="text-3xl font-display font-bold text-wine">07</div>
           <div>
             <div class="text-bone font-semibold mb-1">Юридический отдел <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Договоры с поставщиками, B2B-клиентами, аренда участков под АЗС, страховщики — тысячи документов в год.</div>
+            <div class="text-sm text-bone/60 leading-relaxed">Договоры с поставщиками, B2B-клиентами, аренда участков под АЗС, страховщики — значительный объём для ручной обработки.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-юрист</div>
           </div>
         </div>
@@ -366,7 +366,7 @@ tailwind.config = {
           <div class="text-3xl font-display font-bold text-wine">08</div>
           <div>
             <div class="text-bone font-semibold mb-1">Логистика топлива <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Без точного прогноза спроса по каждой АЗС — либо «сухие» резервуары в пик, либо замороженные оборотные средства.</div>
+            <div class="text-sm text-bone/60 leading-relaxed">Точность прогноза спроса по каждой АЗС влияет на оптимальный уровень страховых запасов в резервуарах и оборачиваемость капитала.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ML прогноз спроса</div>
           </div>
         </div>
@@ -377,7 +377,7 @@ tailwind.config = {
           <div class="text-3xl font-display font-bold text-wine">09</div>
           <div>
             <div class="text-bone font-semibold mb-1">Маркетинг RedPay <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Массовые скидки «всем» → бюджет горит на тех, кто и так купил бы. Push-нотификации «всем подряд» приводят к отключениям.</div>
+            <div class="text-sm text-bone/60 leading-relaxed">Массовые акции для всей базы клиентов теряют эффективность по сравнению с персонализацией. Push-нотификации без сегментации приводят к отключениям.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-маркетолог RedPay</div>
           </div>
         </div>
@@ -388,7 +388,7 @@ tailwind.config = {
           <div class="text-3xl font-display font-bold text-wine">10</div>
           <div>
             <div class="text-bone font-semibold mb-1">EV-направление и поломки ЭЗС <span class="text-gold/70 text-[10px] tracking-widest">⚑ ГИПОТЕЗА</span></div>
-            <div class="text-sm text-bone/60 leading-relaxed">Узнаём о поломке коннектора через жалобу клиента в соцсетях. Каждый случай — удар по доверию.</div>
+            <div class="text-sm text-bone/60 leading-relaxed">При реактивной модели обслуживания о поломке коннектора узнают через жалобу клиента. Для растущей EV-сети это репутационный риск.</div>
             <div class="text-xs text-gold mt-3 tracking-widest">→ ИИ-аналитик ЭЗС</div>
           </div>
         </div>
@@ -436,7 +436,7 @@ tailwind.config = {
       <div class="bg-coal border border-gold/30 p-8 text-center">
         <div class="text-5xl text-gold font-display font-bold mb-4">3</div>
         <div class="text-bone font-semibold mb-3">Unified Customer Experience</div>
-        <p class="text-sm text-bone/60">Один RedPay — для топливного клиента, EV-клиента, B2B-партнёра. Сквозная лояльность, единая аналитика.</p>
+        <p class="text-sm text-bone/60">RedPay как единая точка взаимодействия с разными типами клиентов — топливо, EV, B2B. Сквозная лояльность, единая аналитика. (Целевая модель, объём расширения — на согласование.)</p>
       </div>
     </div>
   </div>
@@ -781,7 +781,7 @@ tailwind.config = {
         <div class="text-xs tracking-[0.3em] text-gold mb-3">ЭКОНОМИЯ — OPERATIONAL AI</div>
         <h3 class="font-display text-2xl font-semibold mb-4">9 ИИ-сотрудников поверх процессов</h3>
         <ul class="space-y-2 text-sm text-bone/70 mb-6">
-          <li>· −60% нагрузки на колл-центр 0800</li>
+          <li>· Снижение нагрузки на клиентский сервис</li>
           <li>· Ускорение анализа договоров в 3–5 раз</li>
           <li>· Сметы новых АЗС за часы вместо недель</li>
           <li>· −20–30% страховых запасов в резервуарах</li>
