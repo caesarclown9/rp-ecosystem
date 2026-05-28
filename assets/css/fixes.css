@@ -46,13 +46,39 @@ html, body {
 }
 
 /* === Chapter headings cap === */
-.chap-open h2 {
+.chap-open h2,
+.chap-open h2 em,
+.chap-open h2 .alt {
   font-size: clamp(2rem, 5vw, 3.5rem) !important;
   line-height: 1.05 !important;
+  letter-spacing: -0.02em !important;
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: none;
 }
 
 @media (max-width: 768px) {
-  .chap-open h2 { font-size: clamp(1.6rem, 7vw, 2.6rem) !important; }
+  .chap-open h2,
+  .chap-open h2 em,
+  .chap-open h2 .alt {
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+  }
+}
+
+/* Chapter open wrap — guarantee mobile side padding so chap-no/h2 не вылезают */
+.chap-open { padding-left: 0 !important; padding-right: 0 !important; }
+.chap-open .wrap {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  max-width: min(1200px, 100%) !important;
+  box-sizing: border-box;
+}
+.chap-open .chap-no,
+.chap-open .chap-intro,
+.chap-open p {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
 }
 
 /* === Pull-quote break === */
@@ -129,6 +155,22 @@ html, body {
   .b-letter, .b-meta, .b-price {
     grid-column: 1;
   }
+  /* Chapter 06 head — title + description should stack on mobile */
+  .modules-h .head {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .modules-h .head h2 {
+    font-size: clamp(1.6rem, 6vw, 2.4rem) !important;
+    line-height: 1.05 !important;
+    overflow-wrap: break-word !important;
+  }
+  .modules-h .head p {
+    font-size: 15px !important;
+    max-width: 100% !important;
+  }
 }
 
 /* === Reading progress bar safe z-index === */
@@ -141,4 +183,23 @@ img, svg { max-width: 100%; height: auto; }
 .marquee { overflow: hidden; }
 
 /* === Sticky CTA bottom safety === */
-.sticky-cta { max-width: calc(100vw - 32px); }
+.sticky-cta {
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+}
+
+/* On mobile: shrink sticky-cta to just the CTA button; hide the doc label */
+@media (max-width: 720px) {
+  .sticky-cta > div:first-child {
+    display: none !important;
+  }
+  .sticky-cta {
+    padding: 6px 8px !important;
+    gap: 0 !important;
+    right: 12px !important;
+    left: auto !important;
+    bottom: 12px !important;
+    width: auto !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+}
