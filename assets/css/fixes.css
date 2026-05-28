@@ -1,0 +1,121 @@
+/* RP Ecosystem — responsive safety overrides (fixes.css)
+ * Загружается ПОСЛЕ site.css. Только защита от overflow и ограничения шрифтов
+ * под реальные viewport'ы. Не меняет дизайн-направление.
+ */
+
+/* === Global overflow safety === */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* === Cover title size cap === */
+/* site.css задаёт огромный font-size — ограничиваем для нормальных экранов */
+.cover-title {
+  font-size: clamp(2.5rem, 7vw, 5.5rem) !important;
+  line-height: 1.02 !important;
+  word-break: keep-all;
+  hyphens: none;
+}
+
+@media (max-width: 768px) {
+  .cover-title { font-size: clamp(2rem, 9vw, 3.5rem) !important; }
+}
+
+/* === Chapter headings cap === */
+.chap-open h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  line-height: 1.05 !important;
+}
+
+@media (max-width: 768px) {
+  .chap-open h2 { font-size: clamp(1.6rem, 7vw, 2.6rem) !important; }
+}
+
+/* === Pull-quote break === */
+.pullquote-break .pq, .pq {
+  font-size: clamp(1.8rem, 4.5vw, 3rem) !important;
+  line-height: 1.15 !important;
+}
+
+/* === Container width safety === */
+.wrap {
+  max-width: min(1200px, 100% - 32px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+/* === Cover meta grid stacks on small viewports === */
+@media (max-width: 768px) {
+  .cover-meta { display: flex !important; flex-direction: column !important; gap: 8px; }
+  .cover-foot { flex-direction: column; gap: 8px; align-items: flex-start !important; }
+}
+
+/* === Nav links responsive === */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+}
+
+/* === Sticky narrative facts: stack on mobile === */
+@media (max-width: 980px) {
+  .sn-grid { grid-template-columns: 1fr !important; gap: 32px; }
+  .sn-left { position: relative !important; top: auto !important; }
+}
+
+/* === Group spread: stack on mobile === */
+@media (max-width: 900px) {
+  .gs-grid { display: flex !important; flex-direction: column !important; gap: 24px; }
+  .gs-card { grid-column: auto !important; }
+  .gs-flow { grid-column: auto !important; }
+}
+
+/* === Ledger: stack on mobile === */
+@media (max-width: 900px) {
+  .ledger-grid { grid-template-columns: 1fr !important; gap: 24px; }
+  .ledger-detail { position: relative !important; top: auto !important; }
+}
+
+/* === AI module grid: cap columns on small === */
+@media (max-width: 720px) {
+  .ai-grid { grid-template-columns: 1fr !important; }
+  .pack-row { grid-template-columns: 1fr !important; }
+  .h-subs { grid-template-columns: 1fr !important; }
+}
+
+/* === TOC rows responsive === */
+@media (max-width: 720px) {
+  .toc-row {
+    display: grid !important;
+    grid-template-columns: 40px 1fr !important;
+    grid-template-rows: auto auto;
+  }
+  .toc-row .ts { grid-column: 2; }
+  .toc-row .tp { grid-column: 2; }
+}
+
+/* === Module book head stacks === */
+@media (max-width: 900px) {
+  .b-head {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .b-letter, .b-meta, .b-price {
+    grid-column: 1;
+  }
+}
+
+/* === Reading progress bar safe z-index === */
+#read-progress { z-index: 9999 !important; }
+
+/* === Images: never overflow === */
+img, svg { max-width: 100%; height: auto; }
+
+/* === Marquee — keep its overflow contained === */
+.marquee { overflow: hidden; }
+
+/* === Sticky CTA bottom safety === */
+.sticky-cta { max-width: calc(100vw - 32px); }
