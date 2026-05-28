@@ -176,6 +176,26 @@ html, body {
 /* === Reading progress bar safe z-index === */
 #read-progress { z-index: 9999 !important; }
 
+/* === Progress-rail (fixed right side) — avoid overlap with content ===
+ * site.css показывает .progress-rail на ≥1201px, position: fixed, right: 32px.
+ * Это перекрывает правую часть TOC, chap-open, ledger и numbers. Даём
+ * контейнерам right padding под ширину rail, чтобы текст не уезжал под него.
+ */
+@media (min-width: 1201px) {
+  .toc .wrap,
+  .chap-open .wrap,
+  .modules-h .head,
+  .h-scroll-bar,
+  .pullquote-break,
+  .ledger .wrap,
+  .num-wrap,
+  .colophon .wrap {
+    padding-right: 200px !important;
+  }
+  /* Rail itself — slightly slimmer to leave more breathing room */
+  .progress-rail { right: 24px !important; }
+}
+
 /* === Images: never overflow === */
 img, svg { max-width: 100%; height: auto; }
 
