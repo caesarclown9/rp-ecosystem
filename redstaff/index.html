@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<title>RedStaff — Этапы 2 и 3 · Master Data Hub · ASYSTEM × Red Petroleum</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Коммерческое предложение по разработке Этапов 2 и 3 корпоративной HR-платформы RedStaff для ОсОО «Альфа Ойл» / Red Petroleum. Подготовлено ASYSTEM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../assets/css/fixes.css?v=6">
+<script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="../assets/js/anim.js" defer></script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="../" class="nav-brand">
+      <span class="nav-logo">A</span>
+      <span><span class="b">ASYSTEM</span> <span class="x">×</span> <span class="b">RP</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../">Экосистема</a>
+      <a href="../redstaff/" class="active">RedStaff</a>
+      <a href="../ai-suite/">ИИ-боты</a>
+      <a href="#ch-08">Инвестиции</a>
+    </div>
+    <a href="#colophon" class="nav-cta">
+      <span class="dot"></span>Встреча <span class="arr">→</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ============ COVER ============ -->
+<header class="cover" id="cover">
+  <div class="wrap">
+    <div class="cover-meta">
+      <div class="item"><div class="l">Документ</div><div class="v"><span class="red">02 / 2026</span> · DRAFT</div></div>
+      <div class="item"><div class="l">Тема</div><div class="v">RedStaff — Этапы 2 и 3</div></div>
+      <div class="item"><div class="l">Подготовил</div><div class="v">ASYSTEM · Бишкек</div></div>
+    </div>
+    <div class="cover-body">
+      <div class="cover-no">№ 02 — Master Data Hub · Конфиденциально</div>
+      <h1 class="cover-title">RedStaff<br><span class="alt">— это уже не HR-портал.</span><br><em>Это&nbsp;корпоративный Data Hub</em><br><span class="alt">по&nbsp;людям и&nbsp;операциям.</span></h1>
+      <div class="cover-thesis">
+        Этап 1 уже работает — мобильное приложение, рейтинги, базовая интеграция с&nbsp;1С. Этапы 2 и&nbsp;3 превращают RedStaff из&nbsp;HR-портала в&nbsp;единый источник правды по&nbsp;кадровым данным группы. Эта страница — детальный объём, сроки, команда, инвестиции и&nbsp;окупаемость.
+        <span class="author">— ASYSTEM · Май 2026</span>
+      </div>
+    </div>
+    <div class="cover-foot">
+      <span>АЛЬФА ОЙЛ / RED PETROLEUM GROUP</span>
+      <span class="scroll">ОТКРЫТЬ ДОКУМЕНТ</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>32 000 USD · ЭТАП 2 · 3 МЕС</span><span>✦</span>
+    <span>34 000 USD · ЭТАП 3 · 3 МЕС</span><span>✦</span>
+    <span>66 000 USD · ПОЛНАЯ ПОСТАВКА</span><span>✦</span>
+    <span>50 / 50 ПО КАЖДОМУ ЭТАПУ</span><span>✦</span>
+    <span>ОКУПАЕМОСТЬ 21—34 МЕС</span><span>✦</span>
+    <span>ГАРАНТИЯ 12 МЕС</span><span>✦</span>
+    <span>32 000 USD · ЭТАП 2 · 3 МЕС</span><span>✦</span>
+    <span>34 000 USD · ЭТАП 3 · 3 МЕС</span><span>✦</span>
+    <span>66 000 USD · ПОЛНАЯ ПОСТАВКА</span><span>✦</span>
+    <span>50 / 50 ПО КАЖДОМУ ЭТАПУ</span><span>✦</span>
+    <span>ОКУПАЕМОСТЬ 21—34 МЕС</span><span>✦</span>
+    <span>ГАРАНТИЯ 12 МЕС</span><span>✦</span>
+  </div>
+</div>
+
+<!-- ============ TOC ============ -->
+<section class="toc" id="toc">
+  <div class="wrap">
+    <div class="toc-head">
+      <div class="l">Содержание<br>документа</div>
+      <h2 class="t">9 глав, читается за&nbsp;10&nbsp;минут.<br>Цена появляется в&nbsp;главе&nbsp;08.</h2>
+    </div>
+    <div class="toc-list">
+      <a class="toc-row" href="#ch-01"><span class="tn">01</span><span class="tt">Тезис</span><span class="ts">RedStaff = Data Hub, не&nbsp;HR-портал. Почему это важно</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-02"><span class="tn">02</span><span class="tt">Стартовая точка</span><span class="ts">Что уже работает: Этап 1 в&nbsp;проде. RedCharge как&nbsp;якорь</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-03"><span class="tn">03</span><span class="tt">Пять трений в&nbsp;HR-контуре</span><span class="ts">Где сейчас теряете деньги и&nbsp;время</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-04"><span class="tn">04</span><span class="tt">Этап 2 — Master Data Hub</span><span class="ts">3 месяца. 32 000 USD. 5&nbsp;блоков работ</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-05"><span class="tn">05</span><span class="tt">Этап 3 — Full Operational Coverage</span><span class="ts">3 месяца. 34 000 USD. 5&nbsp;блоков работ</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-06"><span class="tn">06</span><span class="tt">Команда и&nbsp;процесс</span><span class="ts">4—5 FTE, Bitrix24, еженедельные демо</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-07"><span class="tn">07</span><span class="tt">ROI и&nbsp;окупаемость</span><span class="ts">$23,5—38k экономии в&nbsp;год. 21—34 месяца окупаемости</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-08"><span class="tn">08</span><span class="tt">Инвестиции</span><span class="ts">66 000 USD. Схема оплаты 50/50. Что НЕ обещаем</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-09"><span class="tn">09</span><span class="tt">Подпись</span><span class="ts">Контакты ASYSTEM. Срок действия КП — 60 дней</span><span class="tp">1 мин →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 01 — ТЕЗИС ============ -->
+<section class="chap-open" id="ch-01">
+  <div class="wrap">
+    <div class="chap-no">Глава 01 — Тезис</div>
+    <h2>RedStaff — не&nbsp;HR-портал.<br><em>Это&nbsp;корпоративный Data Hub.</em></h2>
+    <p class="chap-intro dropcap">
+      Этап 1 уже передан и&nbsp;работает: мобильное приложение, базовая интеграция с&nbsp;1С, рейтинги. Дальше — не&nbsp;«ещё фичи в&nbsp;HR-портал», а&nbsp;превращение RedStaff в&nbsp;единый источник правды по&nbsp;людям, табелям, заявкам и&nbsp;операциям. 1С становится потребителем данных, а&nbsp;не&nbsp;их хранилищем. На&nbsp;этом фундаменте дальше — бухгалтерия, ИИ-агенты, биржевая отчётность.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 02 — СТАРТОВАЯ ТОЧКА ============ -->
+<section class="chap-open dark" id="ch-02">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 02 — Стартовая точка</div>
+    <h2 style="color: #fff">Что уже работает<br><em>и&nbsp;на&nbsp;что мы&nbsp;опираемся.</em></h2>
+    <p class="chap-intro" style="color: rgba(255,255,255,0.78)">
+      Мы не&nbsp;строим с&nbsp;нуля. Этап 1 RedStaff и&nbsp;действующая платформа RedCharge — два рабочих контура внутри одного юр.лица. Это снимает риски рамповки и&nbsp;контрактного контура.
+    </p>
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Что уже передано</div>
+        <h3>RedStaff Этап 1</h3>
+        <ul>
+          <li>Моб. приложение iOS / Android в&nbsp;сторах</li>
+          <li>HR-портал с&nbsp;ролевой моделью</li>
+          <li>Базовая интеграция с&nbsp;1С:ЗУП</li>
+          <li>Рейтинги операторов АЗС</li>
+          <li>UAT пройден, прод-доступы у&nbsp;Заказчика</li>
+        </ul>
+        <div class="src">Источник: договор Этапа 1, акт приёмки</div>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Что доказывает компетенцию</div>
+        <h3>RedCharge — EV-платформа</h3>
+        <ul>
+          <li>OCPP-сервер, моб. приложение, оплата</li>
+          <li>33 ЭЗС подключены, билд в&nbsp;продакшене</li>
+          <li>Тот же юр.лицо «Альфа Ойл», отлаженный контур</li>
+          <li>Интеграция с&nbsp;RedPay-лояльностью</li>
+        </ul>
+        <div class="src">Источник: договор RedCharge, прод-метрики</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 03 — ПЯТЬ ТРЕНИЙ ============ -->
+<section class="chap-open" id="ch-03">
+  <div class="wrap">
+    <div class="chap-no">Глава 03 — Пять трений</div>
+    <h2>Где сейчас<br><em>теряются деньги и&nbsp;время.</em></h2>
+    <p class="chap-intro">
+      Описание ниже — гипотезы по&nbsp;нашему отраслевому опыту и&nbsp;ТЗ RedStaff Этап&nbsp;2. На&nbsp;Discovery каждое трение подтверждается или&nbsp;корректируется по&nbsp;факту у&nbsp;Заказчика.
+    </p>
+    <div class="ledger-grid" style="margin-top: 64px">
+      <div class="ledger-list">
+        <div class="ledger-row">
+          <span class="num">01</span>
+          <div class="body">
+            <h4>Рассинхрон 1С ↔ RedStaff при изменении должности</h4>
+            <div class="tag-row"><span class="tag-flag">⚑ Гипотеза</span></div>
+          </div>
+          <span class="arr">→</span>
+        </div>
+        <div class="ledger-row">
+          <span class="num">02</span>
+          <div class="body">
+            <h4>Табель удалённых АЗС и&nbsp;нефтебаз — в&nbsp;Excel</h4>
+            <div class="tag-row"><span class="tag-flag">⚑ Гипотеза</span></div>
+          </div>
+          <span class="arr">→</span>
+        </div>
+        <div class="ledger-row">
+          <span class="num">03</span>
+          <div class="body">
+            <h4>Заявки на&nbsp;отпуска и&nbsp;больничные — в&nbsp;почте и&nbsp;мессенджерах</h4>
+            <div class="tag-row"><span class="tag-flag">⚑ Гипотеза</span></div>
+          </div>
+          <span class="arr">→</span>
+        </div>
+        <div class="ledger-row">
+          <span class="num">04</span>
+          <div class="body">
+            <h4>Расчётный листок непрозрачен для&nbsp;сотрудника</h4>
+            <div class="tag-row"><span class="tag-flag">⚑ Гипотеза</span></div>
+          </div>
+          <span class="arr">→</span>
+        </div>
+        <div class="ledger-row">
+          <span class="num">05</span>
+          <div class="body">
+            <h4>Журнал интеграций отсутствует</h4>
+            <div class="tag-row"><span class="tag-flag">✓ Из&nbsp;ТЗ</span></div>
+          </div>
+          <span class="arr">→</span>
+        </div>
+      </div>
+      <div class="ledger-detail">
+        <div class="ll">Цена бездействия при&nbsp;штате ~300&nbsp;чел.</div>
+        <p>
+          По&nbsp;нашей модели на&nbsp;штате около 300&nbsp;сотрудников совокупные потери от&nbsp;этих пяти трений — <strong>$23 500 — 38 000 в&nbsp;год</strong>: ошибки начислений, время HR на&nbsp;ручную сверку, задержки заявок, скрытые часы в&nbsp;табеле, текучка из-за непрозрачных листков.
+        </p>
+        <p>
+          Каждое трение калибруется на&nbsp;Discovery (3—4 недели в&nbsp;старте Этапа&nbsp;2) под&nbsp;фактические цифры Заказчика.
+        </p>
+        <div class="sep"></div>
+        <div class="ll">Решение в&nbsp;архитектуре</div>
+        <div class="arch-link">→ Master Data Hub + Event-driven обмен</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 04 — ЭТАП 2 ============ -->
+<section class="modules-h" id="ch-04">
+  <div class="head">
+    <div>
+      <div class="ll">Глава 04 — Этап 2</div>
+      <h2>Master Data Hub.<br><em>3 месяца. 32 000 USD.</em></h2>
+    </div>
+    <p>
+      Самостоятельная стадия: после приёмки у&nbsp;Заказчика — мастер-источник по&nbsp;сотрудникам, корректная интеграция с&nbsp;1С, прозрачные расчётные листки в&nbsp;моб. приложении, инфраструктура NSP. Без&nbsp;Этапа&nbsp;3 уже даёт измеримый эффект.
+    </p>
+  </div>
+
+  <div class="h-scroll-bar">
+    <div class="pages"><span class="cur">01</span> / <span class="total">05</span></div>
+    <div class="progress"><span></span></div>
+    <div class="controls">
+      <button class="prev" aria-label="Назад">←</button>
+      <button class="next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+
+  <div class="h-scroll-track">
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">B1</div>
+        <div class="b-meta">
+          <div class="ll">Блок 1 · Master + Event-driven</div>
+          <div class="tt">1С как&nbsp;потребитель, RedStaff как&nbsp;источник</div>
+          <div class="dd">RedStaff становится мастер-системой по&nbsp;кадровым данным. 1С получает изменения через event-driven очередь. Журнал интеграций — обязательный, видим что и&nbsp;когда сломалось.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~5 нед</div><div class="ss">внутри Этапа 2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Что входит</div>
+          <div class="tt">Объём работ</div>
+          <ul>
+            <li>Аудит API-контрактов Этапа 1 (Discovery)</li>
+            <li>Переключение RedStaff в&nbsp;master-режим</li>
+            <li>Очередь событий (RabbitMQ / Redis Streams)</li>
+            <li>Webhook расчётного листка с&nbsp;idempotency</li>
+            <li>Журнал интеграций + UI просмотра</li>
+          </ul>
+          <div class="ft"><span class="term">Discovery + разработка</span><span class="price">в&nbsp;Этапе 2</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">На&nbsp;выходе</div>
+          <div class="tt">Что получает Заказчик</div>
+          <ul>
+            <li>Одна точка правды по&nbsp;ФИО, должности, статусу</li>
+            <li>1С не&nbsp;нужно «допиливать» при&nbsp;каждом изменении в&nbsp;кадрах</li>
+            <li>HR видит где и&nbsp;почему сломалась интеграция</li>
+            <li>Фундамент для&nbsp;Этапа 3 и&nbsp;бухгалтерии</li>
+          </ul>
+          <div class="ft"><span class="term">Акт приёмки</span><span class="price">по&nbsp;Блоку 1</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">B2</div>
+        <div class="b-meta">
+          <div class="ll">Блок 2 · Расширенный профиль</div>
+          <div class="tt">22 поля. ИП. Увольнение. Версионирование</div>
+          <div class="dd">Профиль сотрудника расширяется до&nbsp;22 полей с&nbsp;версионированием. Поддержка ИП-сотрудников (важно для&nbsp;Альфа Ойл). Корректный жизненный цикл при&nbsp;увольнении и&nbsp;возврате.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">параллельно с&nbsp;B1</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Поля профиля</div>
+          <div class="tt">Что добавляется</div>
+          <ul>
+            <li>ПИН&nbsp;КР (master-идентификатор)</li>
+            <li>Паспорт для&nbsp;иностранцев</li>
+            <li>Подразделение, объект, должность с&nbsp;историей</li>
+            <li>Контакты, дата приёма, оклад, ставка</li>
+            <li>Поля для&nbsp;ИП и&nbsp;ГПХ</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 2</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Версионирование</div>
+          <div class="tt">Что меняется в&nbsp;логике</div>
+          <ul>
+            <li>Любое изменение поля — отдельная запись с&nbsp;датой</li>
+            <li>Возможность откатить и&nbsp;посмотреть «как было»</li>
+            <li>Корректный учёт увольнений и&nbsp;возвратов</li>
+            <li>Связь с&nbsp;табелем и&nbsp;расчётным листком</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 2</span><span class="price">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">B4</div>
+        <div class="b-meta">
+          <div class="ll">Блок 4 · Расчётный листок</div>
+          <div class="tt">Прозрачные начисления. PDF на&nbsp;email</div>
+          <div class="dd">Сотрудник в&nbsp;моб. приложении видит расшифровку начислений по&nbsp;KPI и&nbsp;табелю. PDF-копия — на&nbsp;email. HR перестаёт быть «справочным бюро» по&nbsp;зарплате.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">после B1+B2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Что видит сотрудник</div>
+          <div class="tt">Моб. приложение</div>
+          <ul>
+            <li>Оклад / часовая ставка</li>
+            <li>KPI с&nbsp;расшифровкой («продажи карты / план / факт»)</li>
+            <li>Бонусы и&nbsp;удержания с&nbsp;причинами</li>
+            <li>История за&nbsp;12 месяцев</li>
+            <li>Скачать PDF · отправить на&nbsp;email</li>
+          </ul>
+          <div class="ft"><span class="term">UX полностью</span><span class="price">в&nbsp;Этапе 2</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Что меняется для&nbsp;HR</div>
+          <div class="tt">Высвобождение времени</div>
+          <ul>
+            <li>Запросы «почему мне начислили столько?» — самообслуживание</li>
+            <li>Меньше эскалаций в&nbsp;трудовые конфликты</li>
+            <li>Доверие к&nbsp;системе растёт</li>
+            <li>HR работает над&nbsp;стратегией, не&nbsp;разъяснением</li>
+          </ul>
+          <div class="ft"><span class="term">Эффект</span><span class="price">с&nbsp;1-го мес после&nbsp;пуска</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">∞</div>
+        <div class="b-meta">
+          <div class="ll">Инфраструктура · параллельно всем&nbsp;блокам</div>
+          <div class="tt">Миграция Digital Ocean → NSP</div>
+          <div class="dd">Переезд на&nbsp;NSP с&nbsp;TimescaleDB для&nbsp;временных рядов (табель, расчёты), staging-контур, observability (Grafana + Loki). App Store / Google Play поддержка обновлений.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">всю&nbsp;Этап 2</div><div class="ss">параллельный поток</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Инфраструктура</div>
+          <div class="tt">Что переносится и&nbsp;настраивается</div>
+          <ul>
+            <li>DO → NSP — данные, доступы, SSL</li>
+            <li>TimescaleDB под&nbsp;табель и&nbsp;историю</li>
+            <li>Staging-контур для&nbsp;UAT</li>
+            <li>Grafana + Loki + alerting</li>
+            <li>Сертификаты и&nbsp;провижининг App Store / Google Play</li>
+          </ul>
+          <div class="ft"><span class="term">Без&nbsp;даунтайма</span><span class="price">прод не&nbsp;ложится</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">PM и&nbsp;контроль</div>
+          <div class="tt">Управление проектом</div>
+          <ul>
+            <li>Bitrix24 — задачи и&nbsp;статусы</li>
+            <li>Еженедельные Google Meet статусы</li>
+            <li>Demo каждые 2 недели куратору</li>
+            <li>UAT по&nbsp;каждому блоку</li>
+            <li>Передача исходного кода — с&nbsp;первого дня</li>
+          </ul>
+          <div class="ft"><span class="term">Прозрачно</span><span class="price">без&nbsp;vendor lock-in</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter">✓</div>
+        <div class="b-meta">
+          <div class="ll">На&nbsp;выходе Этапа 2</div>
+          <div class="tt">Что получает Заказчик</div>
+          <div class="dd">Самодостаточная стадия. После Акта приёмки Этапа&nbsp;2 — мастер-источник по&nbsp;кадрам функционирует, корректная двусторонняя связка с&nbsp;1С, прозрачные расчётные листки в&nbsp;моб. приложении, инфраструктура NSP, observability.</div>
+        </div>
+        <div class="b-price"><div class="ll">Инвестиции</div><div class="vv">32 000 USD</div><div class="ss">50/50 за&nbsp;этап</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 05 — ЭТАП 3 ============ -->
+<section class="modules-h" id="ch-05">
+  <div class="head">
+    <div>
+      <div class="ll">Глава 05 — Этап 3</div>
+      <h2>Full Operational Coverage.<br><em>3 месяца. 34 000 USD.</em></h2>
+    </div>
+    <p>
+      Полное операционное покрытие HR-контура. Стартует после&nbsp;Акта приёмки Этапа&nbsp;2. Закрывает табель, рейтинги, заявки, бэклог Этапа&nbsp;1, SSO в&nbsp;B2B. Конкретные сроки — после&nbsp;Discovery первого этапа.
+    </p>
+  </div>
+
+  <div class="h-scroll-bar">
+    <div class="pages"><span class="cur">01</span> / <span class="total">05</span></div>
+    <div class="progress"><span></span></div>
+    <div class="controls">
+      <button class="prev" aria-label="Назад">←</button>
+      <button class="next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+
+  <div class="h-scroll-track">
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">B3</div>
+        <div class="b-meta">
+          <div class="ll">Блок 3 · Табель + СКУД + GPS</div>
+          <div class="tt">Антифрод. Геофенсинг для&nbsp;удалённых АЗС</div>
+          <div class="dd">Табель учёта рабочего времени с&nbsp;тремя источниками: СКУД (где есть), GPS-геофенсинг для&nbsp;удалённых АЗС, ручной ввод оператора смены. Антифрод-логика на&nbsp;несоответствия.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~5 нед</div><div class="ss">внутри Этапа 3</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Источники табеля</div>
+          <div class="tt">Где и&nbsp;как</div>
+          <ul>
+            <li>СКУД на&nbsp;офисах и&nbsp;крупных АЗС (где доступен протокол)</li>
+            <li>GPS-геофенсинг — основной для&nbsp;удалённых точек</li>
+            <li>Ручной ввод оператора смены с&nbsp;аудитом</li>
+            <li>Связь с&nbsp;графиком работы и&nbsp;сменностью</li>
+          </ul>
+          <div class="ft"><span class="term">~5 нед</span><span class="price">в&nbsp;Этапе 3</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Антифрод</div>
+          <div class="tt">Что система детектит</div>
+          <ul>
+            <li>GPS вне геозоны АЗС в&nbsp;рабочие часы</li>
+            <li>Дублирующиеся отметки СКУД с&nbsp;одной карты</li>
+            <li>Ручные правки задним числом — журнал</li>
+            <li>Обзорный дашборд для&nbsp;HR</li>
+          </ul>
+          <div class="ft"><span class="term">Уведомления</span><span class="price">в&nbsp;real-time</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">B5</div>
+        <div class="b-meta">
+          <div class="ll">Блок 5 · Рейтинг расширенный</div>
+          <div class="tt">Реальные KPI. Командные. Выгрузка в&nbsp;бухгалтерию</div>
+          <div class="dd">Рейтинг операторов АЗС с&nbsp;реальными KPI: план продаж, безаварийность, дисциплина, апселл. Командные рейтинги по&nbsp;объекту. Выгрузка результатов в&nbsp;бухгалтерию для&nbsp;премирования.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~4 нед</div><div class="ss">в&nbsp;Этапе 3</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">KPI расширение</div>
+          <div class="tt">Метрики и&nbsp;веса</div>
+          <ul>
+            <li>План / факт по&nbsp;литражу и&nbsp;выручке</li>
+            <li>Безаварийность смены</li>
+            <li>Дисциплинарные баллы из&nbsp;табеля</li>
+            <li>Апселл — продажа карты RedPay, доп. товаров</li>
+            <li>Веса настраиваются HR без&nbsp;разработки</li>
+          </ul>
+          <div class="ft"><span class="term">Конфигурируемо</span><span class="price">в&nbsp;Этапе 3</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Командные рейтинги</div>
+          <div class="tt">Объектные группы</div>
+          <ul>
+            <li>Рейтинг по&nbsp;каждой АЗС / нефтебазе</li>
+            <li>Сравнение между&nbsp;объектами</li>
+            <li>Премирование команды объекта</li>
+            <li>Выгрузка в&nbsp;1С:Бухгалтерия для&nbsp;расчёта</li>
+          </ul>
+          <div class="ft"><span class="term">Месячный цикл</span><span class="price">+ ad-hoc</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">B6</div>
+        <div class="b-meta">
+          <div class="ll">Блок 6 · Заявки расширенные</div>
+          <div class="tt">Отпуска. Больничные. ОБС. Командировки. SLA</div>
+          <div class="dd">Все типы заявок в&nbsp;одном потоке: отпуск, больничный, ОБС, командировка. SLA с&nbsp;уведомлениями. Mass-actions для&nbsp;HR. Интеграция с&nbsp;табелем и&nbsp;1С.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~4 нед</div><div class="ss">в&nbsp;Этапе 3</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Виды заявок</div>
+          <div class="tt">Что закрывается</div>
+          <ul>
+            <li>Отпуск (плановый, дополнительный, без&nbsp;содержания)</li>
+            <li>Больничный (с&nbsp;листком и&nbsp;без)</li>
+            <li>ОБС — отгул, бытовая ситуация</li>
+            <li>Командировка с&nbsp;командировочными</li>
+            <li>Смена с&nbsp;коллегой (двусторонняя)</li>
+          </ul>
+          <div class="ft"><span class="term">Шаблоны</span><span class="price">+ конструктор</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">SLA + mass-actions</div>
+          <div class="tt">Управление потоком</div>
+          <ul>
+            <li>SLA 1—3 рабочих дня на&nbsp;согласование</li>
+            <li>Эскалация при&nbsp;просрочке</li>
+            <li>Mass-action: одобрить пачку заявок</li>
+            <li>Фильтры по&nbsp;объекту, типу, периоду</li>
+            <li>Журнал решений</li>
+          </ul>
+          <div class="ft"><span class="term">UX HR</span><span class="price">в&nbsp;Этапе 3</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">B7</div>
+        <div class="b-meta">
+          <div class="ll">Блок 7 · Накопленный бэклог</div>
+          <div class="tt">SSO в&nbsp;B2B. Feature flags. Read replica</div>
+          <div class="dd">Закрытие накопленных задач Этапа&nbsp;1, инфраструктурное усиление: feature flags для&nbsp;управления раскаткой, read replica БД для&nbsp;аналитики, SSO в&nbsp;Red Petroleum B2B-портал.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">в&nbsp;Этапе 3</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Инфраструктура</div>
+          <div class="tt">Усиление</div>
+          <ul>
+            <li>Feature flags (LaunchDarkly-аналог)</li>
+            <li>Read replica для&nbsp;тяжёлой аналитики</li>
+            <li>Резервный план failover</li>
+            <li>NFR: 200 одновременных, 99,5% uptime, 500мс</li>
+          </ul>
+          <div class="ft"><span class="term">NFR</span><span class="price">по&nbsp;ТЗ</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">SSO в&nbsp;B2B</div>
+          <div class="tt">Единый вход в&nbsp;группе</div>
+          <ul>
+            <li>Согласование механизма с&nbsp;владельцем B2B</li>
+            <li>OAuth 2.0 / OpenID Connect</li>
+            <li>Один логин для&nbsp;RedStaff + B2B-портал</li>
+            <li>Старт после&nbsp;Согласования протокола</li>
+          </ul>
+          <div class="ft"><span class="term">Старт по&nbsp;апруву</span><span class="price">B2B-владельца</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter">✓</div>
+        <div class="b-meta">
+          <div class="ll">На&nbsp;выходе Этапа 3</div>
+          <div class="tt">Полный HR-контур работает</div>
+          <div class="dd">После Акта приёмки Этапа&nbsp;3 — все HR-процессы группы в&nbsp;единой системе: табель с&nbsp;тремя источниками и&nbsp;антифрод, рейтинги с&nbsp;реальными KPI, поток заявок с&nbsp;SLA, SSO в&nbsp;B2B, инфраструктура под&nbsp;нагрузку. Готово для&nbsp;подключения бухгалтерии и&nbsp;ИИ-агентов.</div>
+        </div>
+        <div class="b-price"><div class="ll">Инвестиции</div><div class="vv">34 000 USD</div><div class="ss">50/50 за&nbsp;этап</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PULL QUOTE ============ -->
+<div class="pullquote-break">
+  <div class="pq">«После Этапа&nbsp;2 — мастер-источник по&nbsp;кадрам.<br><em>После Этапа&nbsp;3 — весь HR-контур в&nbsp;единой системе.»</em></div>
+</div>
+
+<!-- ============ CHAPTER 06 — КОМАНДА ============ -->
+<section class="chap-open" id="ch-06">
+  <div class="wrap">
+    <div class="chap-no">Глава 06 — Команда и&nbsp;процесс</div>
+    <h2>4—5 FTE постоянного состава.<br><em>Параллельные стримы.</em></h2>
+    <p class="chap-intro">
+      Команда снижена по&nbsp;сравнению с&nbsp;ранними оценками — оптимизированный состав без&nbsp;перегрузки и&nbsp;без&nbsp;слишком быстрого темпа. Параллельные стримы Backend / Frontend / Mobile. ИИ-инструменты применяются на&nbsp;boilerplate, миграциях и&nbsp;документации.
+    </p>
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Постоянный состав</div>
+        <h3>4—5 FTE</h3>
+        <ul>
+          <li>PM — 0.5 FTE</li>
+          <li>Аналитик — 0.5 FTE</li>
+          <li>Backend — 1.0 FTE</li>
+          <li>Frontend — 1.0 FTE</li>
+          <li>Mobile — 1.0 FTE</li>
+          <li>QA — 0.5 FTE</li>
+          <li>DevOps — 0.3 FTE</li>
+        </ul>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Процесс</div>
+        <h3>Bitrix24 + Google Meet</h3>
+        <ul>
+          <li>Discovery 3—4 недели в&nbsp;старте Этапа 2</li>
+          <li>Bitrix24 для&nbsp;задач и&nbsp;статусов</li>
+          <li>Еженедельные статусы Google Meet</li>
+          <li>Demo куратору каждые 2 недели</li>
+          <li>UAT по&nbsp;каждому Акту приёмки</li>
+          <li>Полная передача исходного кода с&nbsp;первого дня</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 07 — ROI ============ -->
+<section class="chap-open dark" id="ch-07">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 07 — ROI</div>
+    <h2 style="color: #fff">$23,5—38k экономии в&nbsp;год.<br><em>Окупаемость 21—34&nbsp;месяца.</em></h2>
+    <p class="chap-intro" style="color: rgba(255,255,255,0.78)">
+      Модель для&nbsp;ориентира — штат ~300&nbsp;человек, ФОТ группы $60—80k/мес. На&nbsp;Discovery эти цифры калибруются под&nbsp;фактические у&nbsp;Заказчика. Источники возврата перечислены ниже — каждый закрывается одним из&nbsp;блоков Этапов 2 или 3.
+    </p>
+
+    <div class="num-grid" style="margin-top: 80px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+      <div class="num-card">
+        <div class="ll">Источник 01</div>
+        <div class="tt">Ошибки начисления ФОТ</div>
+        <div class="vv">$3 500 — 6 000</div>
+        <div class="ss">в&nbsp;год · закрывается Блоком 1 + 4</div>
+      </div>
+      <div class="num-card">
+        <div class="ll">Источник 02</div>
+        <div class="tt">Время HR на&nbsp;сверку табелей</div>
+        <div class="vv">$4 000 — 5 500</div>
+        <div class="ss">в&nbsp;год · закрывается Блоком 3</div>
+      </div>
+      <div class="num-card">
+        <div class="ll">Источник 03</div>
+        <div class="tt">Скорость согласования заявок</div>
+        <div class="vv">$5 000 — 7 500</div>
+        <div class="ss">в&nbsp;год · закрывается Блоком 6</div>
+      </div>
+      <div class="num-card">
+        <div class="ll">Источник 04</div>
+        <div class="tt">Антифрод табеля (GPS + СКУД)</div>
+        <div class="vv">$6 000 — 9 000</div>
+        <div class="ss">в&nbsp;год · закрывается Блоком 3</div>
+      </div>
+      <div class="num-card">
+        <div class="ll">Источник 05</div>
+        <div class="tt">Снижение текучки</div>
+        <div class="vv">$3 000 — 5 000</div>
+        <div class="ss">в&nbsp;год · косвенно через Блоки 4, 5</div>
+      </div>
+      <div class="num-card">
+        <div class="ll">Источник 06</div>
+        <div class="tt">Compliance и&nbsp;трудовые споры</div>
+        <div class="vv">$2 000 — 5 000</div>
+        <div class="ss">в&nbsp;год · закрывается журналом + версионированием</div>
+      </div>
+    </div>
+
+    <div class="num-total" style="margin-top: 60px; padding: 40px; background: rgba(227,6,19,0.12); border-radius: 20px; text-align: center;">
+      <div class="ll" style="color: var(--rp-red); font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px;">Итого в&nbsp;год</div>
+      <div class="vv" style="color: #fff; font-size: clamp(40px, 5vw, 72px); font-weight: 800; letter-spacing: -0.02em; line-height: 1;">$23 500 — 38 000</div>
+      <div class="ss" style="color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 14px;">При&nbsp;модели 300 чел. · окупаемость 21—34 месяца · возврат за&nbsp;5 лет $117—190k</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 08 — ИНВЕСТИЦИИ ============ -->
+<section class="chap-open" id="ch-08">
+  <div class="wrap">
+    <div class="chap-no">Глава 08 — Инвестиции</div>
+    <h2>66 000 USD за&nbsp;6 месяцев.<br><em>Схема оплаты 50/50.</em></h2>
+    <p class="chap-intro">
+      Цена за&nbsp;прозрачную ценность. Каждый этап — отдельный договор, оплата 50% по&nbsp;договору, 50% по&nbsp;Акту приёмки. Гарантия 12 месяцев на&nbsp;каждый Акт. Срок действия КП — 60 календарных дней.
+    </p>
+
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Этап 2 — Master Data Hub</div>
+        <h3 style="color: var(--rp-red); font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px;">32 000 USD</h3>
+        <ul>
+          <li>3 месяца, после&nbsp;подписания договора</li>
+          <li>16 000 USD — по&nbsp;договору</li>
+          <li>16 000 USD — по&nbsp;Акту приёмки Этапа 2</li>
+          <li>Блоки 1, 2, 4 + инфраструктура + observability</li>
+          <li>Гарантия 12 мес на&nbsp;Акт</li>
+        </ul>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Этап 3 — Full Operational Coverage</div>
+        <h3 style="color: var(--rp-red); font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px;">34 000 USD</h3>
+        <ul>
+          <li>3 месяца, после&nbsp;Акта приёмки Этапа 2</li>
+          <li>17 000 USD — по&nbsp;договору</li>
+          <li>17 000 USD — по&nbsp;Акту приёмки Этапа 3</li>
+          <li>Блоки 3, 5, 6, 7 + SSO B2B + feature flags</li>
+          <li>Гарантия 12 мес на&nbsp;Акт</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ledger-detail" style="margin-top: 60px; background: #fafafa; padding: 40px; border-radius: 20px;">
+      <div class="ll">Что мы&nbsp;НЕ обещаем</div>
+      <ul>
+        <li>Изменения скоупа — Дополнительное соглашение с&nbsp;пересчётом</li>
+        <li>СКУД при&nbsp;доступном протоколе; иначе GPS-геофенсинг как&nbsp;основной — без&nbsp;изменения стоимости</li>
+        <li>SSO в&nbsp;B2B — старт после&nbsp;согласования механизма с&nbsp;владельцем B2B-портала</li>
+        <li>Бэклог Блока 7 — фиксированный объём по&nbsp;утверждённому списку</li>
+        <li>NFR (200 пользователей, 99,5% uptime, 500&nbsp;мс) при&nbsp;согласованных параметрах NSP</li>
+        <li>Сроки удерживаем при&nbsp;отклике куратора Заказчика в&nbsp;3 рабочих дня</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 09 — ПОДПИСЬ ============ -->
+<section class="colophon" id="ch-09">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 09 — Подпись</div>
+    <h2>Встреча 30 минут.<br><em>Покажем демо Этапа 1.</em></h2>
+    <p class="chap-intro">
+      Финализируем скоуп Этапа&nbsp;2, согласуем список задач Блока&nbsp;7 в&nbsp;Bitrix24, подпишем договор по&nbsp;Этапу&nbsp;2 и&nbsp;стартуем Discovery.
+    </p>
+
+    <div class="contacts" style="margin-top: 60px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+      <a href="https://t.me/Ruslyandi" class="contact-card" style="background: var(--rp-red); color: #fff; padding: 32px; border-radius: 20px; text-decoration: none; display: block;">
+        <div class="ll" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; opacity: 0.7; margin-bottom: 12px;">TELEGRAM</div>
+        <div class="vv" style="font-size: 24px; font-weight: 600;">@Ruslyandi <span style="float: right;">→</span></div>
+      </a>
+      <a href="mailto:asystem.teamwork@gmail.com" class="contact-card" style="background: #131315; color: #fff; padding: 32px; border-radius: 20px; text-decoration: none; display: block;">
+        <div class="ll" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; opacity: 0.7; margin-bottom: 12px;">EMAIL</div>
+        <div class="vv" style="font-size: 20px; font-weight: 600;">asystem.teamwork@gmail.com <span style="float: right;">→</span></div>
+      </a>
+    </div>
+
+    <div class="signature-foot" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--ink-3); text-transform: uppercase;">
+      <span>ОсОО «Асистем» · г. Бишкек, ул. Токтогула 208</span>
+      <span>ИНН 01004201410217 · ОКПО 28764644</span>
+      <span>Срок действия КП — 60 календарных дней</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="sticky-cta">
+  <div>
+    <div class="l">RedStaff · 02 / 2026</div>
+    <div class="v">Master Data Hub — 66 000 USD</div>
+  </div>
+  <a href="#ch-09" class="btn btn-primary">Встреча <span class="arr">→</span></a>
+</div>
+
+<script src="../site.js"></script>
+</body>
+</html>
