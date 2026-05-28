@@ -1,0 +1,46 @@
+/* === RP Ecosystem · Custom styles · Asystem === */
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-feature-settings: "ss01" on, "cv11" on;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle grain texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Section transitions */
+section { scroll-margin-top: 80px; }
+
+/* Card hover micro-anim */
+.bg-coal { transition: transform .4s ease, border-color .3s ease, background-color .3s ease; }
+.bg-coal:hover { transform: translateY(-2px); }
+
+/* Custom selection */
+::selection { background: #C9A14A; color: #0A0A0B; }
+
+/* Pre code block */
+pre { background: transparent; }
+
+/* Scrollbar dark */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #111114; }
+::-webkit-scrollbar-thumb { background: #26262B; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #8B0000; }
+
+/* Nav fade in on scroll */
+nav { transition: background-color .3s ease; }
+
+/* Responsive type tightening */
+@media (max-width: 768px) {
+  h1, h2 { letter-spacing: -0.02em; }
+}
