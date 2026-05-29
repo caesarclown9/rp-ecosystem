@@ -190,6 +190,12 @@ setTimeout(() => {
 
   const rows = list.querySelectorAll('.ledger-row');
 
+  // Интерактивный режим только если строки несут data-* API.
+  // На статических леджерах (RedStaff гл.03) панель уже заполнена в HTML —
+  // не трогаем её, иначе перезапишем контент на "undefined".
+  const isDataDriven = Array.from(rows).some(r => r.dataset.title || r.dataset.body);
+  if (!isDataDriven) return;
+
   function showRow(row) {
     rows.forEach(r => r.classList.remove('active'));
     row.classList.add('active');

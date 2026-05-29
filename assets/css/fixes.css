@@ -103,9 +103,34 @@ html, body {
   .cover-foot { flex-direction: column; gap: 8px; align-items: flex-start !important; }
 }
 
-/* === Nav links responsive === */
+/* === Nav links: ВСЕГДА видимы (раньше прятались <900px, и переходы между
+ *    документами на мобиле пропадали). На узких экранах — переносим ссылки
+ *    на вторую строку, бренд + CTA остаются на первой. === */
 @media (max-width: 900px) {
-  .nav-links { display: none; }
+  .nav { padding: 10px 0; }
+  .nav .wrap {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    justify-content: space-between;
+  }
+  .nav-links {
+    display: flex !important;
+    order: 3;
+    width: 100%;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 13px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+  .nav-links a { padding: 4px 0; }
+  /* на совсем узких — сжимаем бренд до логотипа, чтобы первая строка не ломалась */
+}
+@media (max-width: 420px) {
+  .nav-brand { font-size: 11px; letter-spacing: 0.1em; }
+  .nav-links { gap: 14px; font-size: 12.5px; }
+  .nav-cta { padding: 8px 14px; font-size: 13px; }
 }
 
 /* === Sticky narrative facts: stack on mobile === */
@@ -635,8 +660,17 @@ img, svg { max-width: 100%; height: auto; }
   background: var(--bg-2);
   border-color: var(--line);
 }
-.chap-open:not(.dark) .ledger-detail .ll { color: var(--rp-red); }
-.chap-open:not(.dark) .ledger-detail p { color: var(--ink-2); }
+.chap-open:not(.dark) .ledger-detail .ll,
+.chap-open .ledger-detail > .ll {
+  color: var(--rp-red);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.chap-open:not(.dark) .ledger-detail p { color: var(--ink-2); font-size: 16px; line-height: 1.6; }
 .chap-open:not(.dark) .ledger-detail .sep { background: var(--line); }
 /* ledger-list на светлой главе: делаем разделители видимыми, номера красными */
 .chap-open:not(.dark) .ledger-list { border-top: 1px solid var(--line); }
