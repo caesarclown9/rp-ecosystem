@@ -44,17 +44,8 @@
     }
 
     // ---------- 3. Smooth scroll for anchor links ----------
-    document.querySelectorAll('a[href^="#"]').forEach((a) => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href').slice(1);
-        if (!id) return;
-        const tgt = document.getElementById(id);
-        if (!tgt) return;
-        e.preventDefault();
-        const top = tgt.getBoundingClientRect().top + window.scrollY - 24;
-        window.scrollTo({ top, behavior: 'smooth' });
-      });
-    });
+    // (handled centrally in site.js with the correct sticky-nav offset —
+    //  removed here to avoid double scroll-to / jank)
 
     // ---------- 4. Reading progress bar (no layout impact) ----------
     const bar = document.createElement('div');

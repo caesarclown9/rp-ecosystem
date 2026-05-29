@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../site.css">
-<link rel="stylesheet" href="../assets/css/fixes.css?v=9">
+<link rel="stylesheet" href="../assets/css/fixes.css?v=10">
 <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
@@ -699,7 +699,7 @@
       Модель для&nbsp;ориентира — штат ~300&nbsp;человек, ФОТ группы $60—80k/мес. На&nbsp;Discovery эти цифры калибруются под&nbsp;фактические у&nbsp;Заказчика. Источники возврата перечислены ниже — каждый закрывается одним из&nbsp;блоков Этапов 2 или 3.
     </p>
 
-    <div class="num-grid" style="margin-top: 80px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+    <div class="num-grid" style="margin-top: 80px;">
       <div class="num-card">
         <div class="ll">Источник 01</div>
         <div class="tt">Ошибки начисления ФОТ</div>
@@ -738,10 +738,10 @@
       </div>
     </div>
 
-    <div class="num-total" style="margin-top: 60px; padding: 40px; background: rgba(227,6,19,0.12); border-radius: 20px; text-align: center;">
-      <div class="ll" style="color: var(--rp-red); font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px;">Итого в&nbsp;год</div>
-      <div class="vv" style="color: #fff; font-size: clamp(40px, 5vw, 72px); font-weight: 800; letter-spacing: -0.02em; line-height: 1;">$23 500 — 38 000</div>
-      <div class="ss" style="color: rgba(255,255,255,0.7); margin-top: 16px; font-size: 14px;">При&nbsp;модели 300 чел. · окупаемость 21—34 месяца · возврат за&nbsp;5 лет $117—190k</div>
+    <div class="num-total">
+      <div class="ll">Итого в&nbsp;год</div>
+      <div class="vv">$23 500 — 38 000</div>
+      <div class="ss">При&nbsp;модели 300 чел. · окупаемость 21—34 месяца · возврат за&nbsp;5 лет $117—190k</div>
     </div>
   </div>
 </section>
@@ -803,18 +803,18 @@
       Финализируем скоуп Этапа&nbsp;2, согласуем список задач Блока&nbsp;7 в&nbsp;Bitrix24, подпишем договор по&nbsp;Этапу&nbsp;2 и&nbsp;стартуем Discovery.
     </p>
 
-    <div class="contacts" style="margin-top: 60px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
-      <a href="https://t.me/Ruslyandi" class="contact-card" style="background: var(--rp-red); color: #fff; padding: 32px; border-radius: 20px; text-decoration: none; display: block;">
-        <div class="ll" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; opacity: 0.7; margin-bottom: 12px;">TELEGRAM</div>
-        <div class="vv" style="font-size: 24px; font-weight: 600;">@Ruslyandi <span style="float: right;">→</span></div>
+    <div class="contacts">
+      <a href="https://t.me/Ruslyandi" class="contact-card-link tg">
+        <div class="ll">TELEGRAM</div>
+        <div class="vv">@Ruslyandi <span>→</span></div>
       </a>
-      <a href="mailto:asystem.teamwork@gmail.com" class="contact-card" style="background: #131315; color: #fff; padding: 32px; border-radius: 20px; text-decoration: none; display: block;">
-        <div class="ll" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; opacity: 0.7; margin-bottom: 12px;">EMAIL</div>
-        <div class="vv" style="font-size: 20px; font-weight: 600;">asystem.teamwork@gmail.com <span style="float: right;">→</span></div>
+      <a href="mailto:asystem.teamwork@gmail.com" class="contact-card-link mail">
+        <div class="ll">EMAIL</div>
+        <div class="vv">asystem.teamwork@gmail.com <span>→</span></div>
       </a>
     </div>
 
-    <div class="signature-foot" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--ink-3); text-transform: uppercase;">
+    <div class="signature-foot">
       <span>ОсОО «Асистем» · г. Бишкек, ул. Токтогула 208</span>
       <span>ИНН 01004201410217 · ОКПО 28764644</span>
       <span>Срок действия КП — 60 календарных дней</span>

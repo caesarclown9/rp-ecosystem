@@ -432,3 +432,250 @@ img, svg { max-width: 100%; height: auto; }
 @media (max-width: 720px) {
   .sticky-cta { bottom: 14px !important; right: 14px !important; }
 }
+
+/* ===================================================================
+   v10 — перевёрстка: недостающие компоненты + адаптив
+   Эти классы использовались в HTML, но НЕ были определены в site.css
+   (рендерились как голый текст / без адаптива). Чиним без смены дизайна.
+   =================================================================== */
+
+/* --- ROI-карточки (RedStaff гл.07) — были без стилей на тёмной секции --- */
+.num-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.num-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+.num-card:hover { border-color: var(--rp-red); transform: translateY(-3px); }
+.num-card .ll {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rp-red);
+  font-weight: 600;
+}
+.num-card .tt {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.num-card .vv {
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 800;
+  color: var(--rp-red);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-top: 4px;
+}
+.num-card .ss {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.num-total {
+  margin-top: 60px;
+  padding: 40px;
+  background: rgba(227,6,19,0.12);
+  border-radius: 20px;
+  text-align: center;
+}
+.num-total .ll {
+  color: var(--rp-red);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.num-total .vv {
+  color: #fff;
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.num-total .ss {
+  color: rgba(255,255,255,0.7);
+  margin-top: 16px;
+  font-size: 14px;
+}
+@media (max-width: 900px) { .num-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .num-grid { grid-template-columns: 1fr; } .num-total { padding: 28px 20px; } }
+
+/* --- Логотип в шапке подстраниц (.nav-logo / .x / .dot) — были без стилей --- */
+.nav-brand .nav-logo {
+  width: 28px; height: 28px;
+  background: var(--rp-red);
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0;
+  flex-shrink: 0;
+}
+.nav-brand .b { color: var(--ink); }
+.nav-brand .x { color: var(--ink-3); font-weight: 400; }
+.nav-links a.active { color: var(--rp-red); }
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  background: var(--rp-red);
+}
+.nav-cta .dot {
+  width: 6px; height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* --- Контакт-блок в подвале (.contacts/.contact-card-link/.signature-foot) --- */
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+.contact-card-link {
+  padding: 32px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.contact-card-link:hover { transform: translateY(-3px); box-shadow: 0 20px 50px -20px rgba(0,0,0,0.4); }
+.contact-card-link.tg { background: var(--rp-red); color: #fff; }
+.contact-card-link.mail { background: #131315; color: #fff; }
+.contact-card-link .ll {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+.contact-card-link .vv {
+  font-size: clamp(17px, 2.2vw, 24px);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.signature-foot {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .contacts { grid-template-columns: 1fr; gap: 16px; }
+  .contact-card-link { padding: 24px; }
+}
+
+/* --- AI-suite гл.07: пакеты должны схлопываться (инлайн-грид убран в HTML) --- */
+@media (max-width: 760px) {
+  .pack-row { grid-template-columns: 1fr !important; }
+}
+
+/* --- Кнопка "Подробнее" внутри h-book (была инлайн на главной) --- */
+.book-cta-row {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: right;
+}
+.book-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: var(--rp-red);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 150ms ease, transform 150ms ease;
+}
+.book-cta:hover { background: var(--rp-red-2); transform: translateY(-2px); }
+
+/* --- Ledger-detail (RedStaff гл.03): мелочи, что были без стилей --- */
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+/* ledger-detail в светлой главе (RedStaff гл.03) — site.css даёт ему
+ * тёмные стили (прозрачный фон + рамка под белый текст). На светлой секции
+ * это выглядит «пусто». Делаем нормальной серой карточкой. */
+.chap-open:not(.dark) .ledger-detail {
+  background: var(--bg-2);
+  border-color: var(--line);
+}
+.chap-open:not(.dark) .ledger-detail .ll { color: var(--rp-red); }
+.chap-open:not(.dark) .ledger-detail p { color: var(--ink-2); }
+.chap-open:not(.dark) .ledger-detail .sep { background: var(--line); }
+/* ledger-list на светлой главе: делаем разделители видимыми, номера красными */
+.chap-open:not(.dark) .ledger-list { border-top: 1px solid var(--line); }
+.chap-open:not(.dark) .ledger-row { border-bottom: 1px solid var(--line); }
+.chap-open:not(.dark) .ledger-row .num { color: var(--rp-red); font-family: var(--mono); font-weight: 700; }
+.chap-open:not(.dark) .ledger-row h4 { color: var(--ink); margin: 0; font-size: 17px; font-weight: 600; line-height: 1.25; }
+.chap-open:not(.dark) .ledger-row .arr { color: var(--ink-4); }
+.chap-open:not(.dark) .ledger-row:hover .arr { color: var(--rp-red); }
+/* ledger-list на тёмной главе (AI-suite гл.02): номера/стрелки красным акцентом */
+.chap-open.dark .ledger-row .num { color: var(--rp-red); font-family: var(--mono); font-weight: 700; }
+.chap-open.dark .ledger-row h4 { color: #fff; margin: 0; font-size: 17px; font-weight: 600; line-height: 1.25; }
+.chap-open.dark .ledger-row .arr { color: var(--rp-red); font-family: var(--mono); }
+.ledger-detail .sep {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 28px 0;
+}
+.ledger-detail .arch-link {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--rp-red);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+/* --- SVG-схема "до/после": не сжимать в нечитаемое, дать горизонтальный скролл --- */
+.scheme-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.scheme-wrap .scheme-svg { min-width: 680px; }
+@media (max-width: 720px) {
+  .scheme-wrap {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px;
+    background: #fff;
+  }
+}
