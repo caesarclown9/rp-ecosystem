@@ -160,7 +160,35 @@ ul { margin: 0; padding: 0; list-style: none; }
   .deck-nav { display: none; }
 }
 @media print {
+  @page { size: A4 landscape; margin: 0; }
   html { scroll-snap-type: none; }
-  .deck-bar, .deck-nav, .deck-progress { display: none; }
-  .slide { min-height: auto; page-break-after: always; }
+  body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .deck-bar, .deck-nav, .deck-progress { display: none !important; }
+  .slide {
+    height: 100vh;
+    min-height: 0;
+    page-break-after: always;
+    break-after: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding: 4.5vh 5vw;
+    overflow: hidden;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .slide-inner { margin: auto 0; }
+  /* компактная типографика под лист A4 landscape */
+  .slide-title { font-size: 30px; line-height: 1.04; }
+  .cover-h1 { font-size: 60px; }
+  .big-figure { font-size: 72px; }
+  .slide-lead, .cover-sub { font-size: 14px; line-height: 1.4; margin-top: 12px; }
+  .slide-top { margin-bottom: 12px; }
+  .slide-grid { margin-top: 16px; gap: 10px; }
+  .panel { padding: 14px 16px; border-radius: 12px; }
+  .panel .ph { margin-bottom: 8px; font-size: 10px; }
+  .panel li { margin-bottom: 5px; font-size: 12px; line-height: 1.38; padding-left: 15px; }
+  .panel li::before { top: 6px; width: 5px; height: 5px; }
+  .result-strip { margin-top: 14px; padding-top: 12px; font-size: 11px; }
+  .cover-facts { margin-top: 28px; padding-top: 20px; }
 }
