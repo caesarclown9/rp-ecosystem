@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
-<link rel="stylesheet" href="assets/css/fixes.css?v=11">
+<link rel="stylesheet" href="assets/css/fixes.css?v=12">
 <!-- Motion (Framer Motion vanilla) + GSAP + ScrollTrigger via CDN -->
 <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
@@ -36,10 +36,10 @@
       ASYSTEM <span style="color:var(--ink-3); font-weight:400;">×</span> RP
     </a>
     <div class="nav-links">
-      <a href="#toc">Содержание</a>
-      <a href="#ch-06">Модули</a>
+      <a href="#ecosystem">Экосистема</a>
       <a href="redstaff/">RedStaff →</a>
       <a href="ai-suite/">ИИ-боты →</a>
+      <a href="redledger/">RedLedger →</a>
     </div>
     <a href="#colophon" class="nav-cta">
       Встреча <span class="arr">→</span>
@@ -150,8 +150,8 @@
       </a>
       <a class="toc-row" href="#ch-06">
         <span class="tn">03</span>
-        <span class="tt">Два решения</span>
-        <span class="ts">RedStaff (HR) + ИИ-боты — что и&nbsp;за&nbsp;сколько</span>
+        <span class="tt">Три решения</span>
+        <span class="ts">RedStaff + ИИ-боты + RedLedger — что и&nbsp;за&nbsp;сколько</span>
         <span class="tp">1 мин →</span>
       </a>
       <a class="toc-row" href="#ch-08">
@@ -248,20 +248,61 @@
 </section>
 
 
+<!-- ============ ECOSYSTEM DIAGRAM ============ -->
+<section class="ecosystem" id="ecosystem">
+  <div class="wrap">
+    <div class="eco-head">
+      <div class="ll">Экосистема</div>
+      <h2>Три контура данных.<br><em>Один источник правды.</em></h2>
+      <p>Люди, процессы и&nbsp;деньги — в&nbsp;единой системе, каждый контур работает поверх вашей 1С. RedCharge и&nbsp;RedPay уже питают её&nbsp;выручкой.</p>
+    </div>
+
+    <div class="eco-tiers">
+      <div class="eco-tier">
+        <div class="layer">Контур 1 · Люди</div>
+        <div class="pname">RedStaff</div>
+        <div class="pdesc">HR Data Hub: профиль, табель с&nbsp;GPS, заявки, прозрачный расчётный листок, рейтинги по&nbsp;KPI.</div>
+        <div class="pstat">В работе · $66k</div>
+      </div>
+      <div class="eco-tier">
+        <div class="layer">Контур 2 · Процессы</div>
+        <div class="pname">ИИ-боты</div>
+        <div class="pdesc">9 ИИ-сотрудников поверх процессов: юрист, тендеры, сметы, прогноз спроса, маркетолог, аналитик ЭЗС.</div>
+        <div class="pstat">Предложение · от&nbsp;4,3 млн KGS</div>
+      </div>
+      <div class="eco-tier new">
+        <div class="layer">Контур 3 · Деньги</div>
+        <div class="pname">RedLedger</div>
+        <div class="pdesc">AI-бухгалтер: документы и&nbsp;выписки → сверка → выгрузка в&nbsp;1С. Готовый продукт, уже в&nbsp;проде.</div>
+        <div class="pstat">Новое · $52k</div>
+      </div>
+    </div>
+
+    <div class="eco-spine"><span>поверх <strong>1С</strong> — система записи остаётся, мы&nbsp;автоматизируем рутину вокруг неё</span></div>
+
+    <div class="eco-sources">
+      <div class="eco-source"><div class="sn">RedCharge</div><div class="sd">Сеть ЭЗС на&nbsp;OCPP — действующий продукт ASYSTEM. Выручка EV&nbsp;→ в&nbsp;учёт.</div></div>
+      <div class="eco-source"><div class="sn">RedPay</div><div class="sd">Лояльность и&nbsp;приложение клиента. Выручка и&nbsp;кэшбэк&nbsp;→ в&nbsp;учёт.</div></div>
+    </div>
+
+    <div class="eco-foot">Единый вход (SSO) · единая ролевая модель · Telegram-кабинет во&nbsp;всех модулях</div>
+  </div>
+</section>
+
 <!-- ============ CHAPTER 06 — МОДУЛИ (Horizontal scroll) ============ -->
 <section class="modules-h" id="ch-06">
   <div class="head">
     <div>
-      <div class="ll">Раздел 03 — Два решения</div>
-      <h2>RedStaff и&nbsp;ИИ-боты.<br><em>Что и&nbsp;за&nbsp;сколько.</em></h2>
+      <div class="ll">Раздел 03 — Три решения</div>
+      <h2>RedStaff, ИИ-боты<br>и&nbsp;RedLedger. <em>Что и&nbsp;за&nbsp;сколько.</em></h2>
     </div>
     <p>
-      Два независимых модуля. Каждый — самостоятельная поставка с&nbsp;собственной ценой и&nbsp;окупаемостью. Можно начать с&nbsp;одного. Минимальный старт — RedStaff Этап&nbsp;2 ($32k за&nbsp;3&nbsp;мес). Подробности на&nbsp;отдельных страницах.
+      Три независимых модуля. Каждый — самостоятельная поставка с&nbsp;собственной ценой и&nbsp;окупаемостью. Можно начать с&nbsp;одного. Минимальный старт — RedStaff Этап&nbsp;2 ($32k за&nbsp;3&nbsp;мес). Подробности на&nbsp;отдельных страницах.
     </p>
   </div>
 
   <div class="h-scroll-bar">
-    <div class="pages"><span class="cur">01</span> / <span class="total">02</span></div>
+    <div class="pages"><span class="cur">01</span> / <span class="total">03</span></div>
     <div class="progress"><span></span></div>
     <div class="controls">
       <button class="prev" aria-label="Назад">←</button>
@@ -340,6 +381,37 @@
       </div>
       <div class="book-cta-row">
         <a href="ai-suite/" class="book-cta">Подробнее об&nbsp;ИИ-боте <span>→</span></a>
+      </div>
+    </div>
+
+    <!-- Module C: RedLedger -->
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter">C</div>
+        <div class="b-meta">
+          <div class="ll">Финансы · AI-бухгалтер · готовый продукт</div>
+          <div class="tt">RedLedger — финансовый контур</div>
+          <div class="dd">AI-слой поверх 1С: пачка документов и&nbsp;банковских выписок → распознавание → сверка контрагентов по&nbsp;ИНН и&nbsp;банка → проверка бухгалтером → выгрузка в&nbsp;1С. Третий контур экосистемы после людей и&nbsp;процессов.</div>
+        </div>
+        <div class="b-price">
+          <div class="ll">Полный контур</div>
+          <div class="vv">52&nbsp;000 USD</div>
+          <div class="ss">2 этапа</div>
+        </div>
+      </div>
+
+      <div class="ai-grid">
+        <div class="ai-card"><div class="ll">C.1 · Конвейер</div><div class="tt">Документы → 1С</div><div class="bb">ZIP с&nbsp;договорами, актами, счетами → распознавание → матчинг по&nbsp;ИНН → выгрузка в&nbsp;1С.</div><div class="foot"><span class="term">Этап 1</span><span class="price">в&nbsp;пакете</span></div></div>
+        <div class="ai-card"><div class="ll">C.2 · Банк</div><div class="tt">Авто-сверка выписок</div><div class="bb">Импорт выписок КР (PDF/XLSX/CSV), авто-категоризация, сверка. Конец Excel-сверкам.</div><div class="foot"><span class="term">Этап 1</span><span class="price">в&nbsp;пакете</span></div></div>
+        <div class="ai-card"><div class="ll">C.3 · Группа</div><div class="tt">3 юрлица + консолидация</div><div class="bb">Сводный учёт, отчётность под&nbsp;биржу/банк/ГНС, связки с&nbsp;RedStaff и&nbsp;ИИ-ботами.</div><div class="foot"><span class="term">Этап 2</span><span class="price">в&nbsp;пакете</span></div></div>
+      </div>
+
+      <div class="pack-row">
+        <div class="pack-card"><div><div class="ll">Этап 1 · Внедрение + пилот</div><div class="tt">Конвейер + банк + 1С + 1&nbsp;юрлицо</div><div class="dd">6—8 недель, самодостаточная стадия</div></div><div class="pp">24&nbsp;000 USD</div></div>
+        <div class="pack-card gold"><div><div class="ll">Этап 2 · Группа + отчётность</div><div class="tt">3 юрлица + консолидация + связки</div><div class="dd">2—3 месяца, после&nbsp;приёмки Этапа 1</div></div><div class="pp">28&nbsp;000 USD</div></div>
+      </div>
+      <div class="book-cta-row">
+        <a href="redledger/" class="book-cta">Подробнее о&nbsp;RedLedger <span>→</span></a>
       </div>
     </div>
 
@@ -538,6 +610,7 @@
           <a href="#ch-09"><span class="nn">05</span><span>Гарант + старт</span></a>
           <a href="redstaff/"><span class="nn">→</span><span>RedStaff детали</span></a>
           <a href="ai-suite/"><span class="nn">→</span><span>ИИ-боты детали</span></a>
+          <a href="redledger/"><span class="nn">→</span><span>RedLedger детали</span></a>
           <a href="#cover"><span class="nn">↑</span><span>К обложке</span></a>
         </div>
       </div>

@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<title>RedLedger — AI-бухгалтерский контур · Master Data Hub по деньгам · ASYSTEM × Red Petroleum</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Коммерческое предложение по внедрению RedLedger — AI-бухгалтерского контура поверх 1С для группы Red Petroleum / Альфа Ойл. Подготовлено ASYSTEM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../assets/css/fixes.css?v=12">
+<script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="../assets/js/anim.js" defer></script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="../" class="nav-brand">
+      <span class="nav-logo">A</span>
+      <span><span class="b">ASYSTEM</span> <span class="x">×</span> <span class="b">RP</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../">Экосистема</a>
+      <a href="../redstaff/">RedStaff</a>
+      <a href="../ai-suite/">ИИ-боты</a>
+      <a href="../redledger/" class="active">RedLedger</a>
+      <a href="#ch-08">Инвестиции</a>
+    </div>
+    <a href="#colophon" class="nav-cta">
+      <span class="dot"></span>Встреча <span class="arr">→</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ============ COVER ============ -->
+<header class="cover" id="cover">
+  <div class="wrap">
+    <div class="cover-meta">
+      <div class="item"><div class="l">Документ</div><div class="v"><span class="red">04 / 2026</span></div></div>
+      <div class="item"><div class="l">Тема</div><div class="v">RedLedger — финансовый контур</div></div>
+      <div class="item"><div class="l">Подготовил</div><div class="v">ASYSTEM · Бишкек</div></div>
+    </div>
+    <div class="cover-body">
+      <div class="cover-no">№ 04 — AI-бухгалтерский контур · Конфиденциально</div>
+      <h1 class="cover-title">RedLedger<br><span class="alt">— это не замена 1С.</span><br><em>Это AI-бухгалтер</em><br><span class="alt">поверх вашей 1С.</span></h1>
+      <div class="cover-thesis">
+        Третий контур экосистемы — деньги. После «людей» (RedStaff) и «процессов» (ИИ-боты) закрываем учёт: загрузил пачку документов и выписок → система распознала, сверила контрагентов и банк → бухгалтер проверил → ушло в&nbsp;1С. Готовый продукт, уже работающий в&nbsp;проде.
+        <span class="author">— ASYSTEM · Май 2026</span>
+      </div>
+    </div>
+    <div class="cover-foot">
+      <span>АЛЬФА ОЙЛ / RED PETROLEUM GROUP</span>
+      <span class="scroll">ОТКРЫТЬ ДОКУМЕНТ</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>52 000 USD · ПОЛНЫЙ КОНТУР</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ЭТАП 1 · 24 000 USD · 6—8 НЕД</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ЭТАП 2 · 28 000 USD · 2—3 МЕС</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>3 ЮРЛИЦА · ОДНА СИСТЕМА</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>AI-СЛОЙ ПОВЕРХ 1С</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ОКУПАЕМОСТЬ 16—26 МЕС</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ГОТОВЫЙ ПРОДУКТ В ПРОДЕ</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>52 000 USD · ПОЛНЫЙ КОНТУР</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ЭТАП 1 · 24 000 USD · 6—8 НЕД</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ЭТАП 2 · 28 000 USD · 2—3 МЕС</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>3 ЮРЛИЦА · ОДНА СИСТЕМА</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>AI-СЛОЙ ПОВЕРХ 1С</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ОКУПАЕМОСТЬ 16—26 МЕС</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ГОТОВЫЙ ПРОДУКТ В ПРОДЕ</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+  </div>
+</div>
+
+<!-- ============ HERO "15 СЕКУНД" ============ -->
+<section class="hero15" id="hero15">
+  <div class="wrap">
+    <div class="ll">За 15 секунд</div>
+    <h2 class="h15-title">$52 000 превращают<br>ручную первичку и&nbsp;сверки<br><em>в&nbsp;AI-конвейер поверх 1С.</em></h2>
+    <p class="h15-sub">Загрузка пачки документов и&nbsp;банковских выписок → распознавание → авто-сверка контрагентов и&nbsp;банка → проверка бухгалтером → выгрузка в&nbsp;1С. По&nbsp;модели $24—39k экономии в&nbsp;год для&nbsp;группы из&nbsp;3 юрлиц. Готовый продукт — демо сразу.</p>
+    <div class="h15-metrics">
+      <div class="h15-m"><div class="v">$24k</div><div class="l">Этап 1 — внедрение + пилот</div></div>
+      <div class="h15-m"><div class="v">$28k</div><div class="l">Этап 2 — группа + отчётность</div></div>
+      <div class="h15-m"><div class="v">$24—39k</div><div class="l">экономия / год по&nbsp;модели</div></div>
+    </div>
+    <div class="h15-cta">
+      <a href="#ch-09" class="btn btn-primary lg">Встреча 30 минут <span class="arr">→</span></a>
+      <a href="#ch-07" class="h15-secondary">Сразу к&nbsp;ROI ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SVG SCHEME: "до / после" ============ -->
+<section class="scheme-section">
+  <div class="wrap">
+    <div class="ll-scheme">Процесс · до и&nbsp;после</div>
+    <h3 class="scheme-h">Первичка перестаёт собираться вручную.</h3>
+    <div class="scheme-wrap">
+      <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" class="scheme-svg">
+        <!-- before -->
+        <g>
+          <text x="60" y="40" fill="#888" font-family="JetBrains Mono" font-size="14" letter-spacing="2">СЕЙЧАС</text>
+          <rect x="60" y="60" width="200" height="60" rx="8" fill="#fff" stroke="#888" stroke-width="2"/>
+          <text x="160" y="88" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="14" font-weight="700">Документы в&#xa0;папках</text>
+          <text x="160" y="107" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="11">договоры, акты, выписки</text>
+          <line x1="260" y1="90" x2="340" y2="90" stroke="#0B0B0C" stroke-width="2" stroke-dasharray="6 4"/>
+          <text x="300" y="80" fill="#888" text-anchor="middle" font-family="JetBrains Mono" font-size="10">руками</text>
+          <rect x="340" y="60" width="180" height="60" rx="8" fill="#fff" stroke="#E30613" stroke-width="2"/>
+          <text x="430" y="95" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="16" font-weight="700">1С</text>
+          <text x="60" y="170" fill="#E30613" font-family="JetBrains Mono" font-size="11">→ ручной ввод · сверки в&#xa0;Excel · ошибки в&#xa0;первичке · долгое закрытие</text>
+        </g>
+        <!-- after -->
+        <g>
+          <text x="620" y="40" fill="#E30613" font-family="JetBrains Mono" font-size="14" letter-spacing="2">С REDLEDGER</text>
+          <rect x="620" y="60" width="150" height="60" rx="8" fill="#fff" stroke="#888" stroke-width="2"/>
+          <text x="695" y="88" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="13" font-weight="700">Пачка / ZIP</text>
+          <text x="695" y="107" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="10">любые документы</text>
+          <line x1="770" y1="90" x2="830" y2="90" stroke="#E30613" stroke-width="2"/>
+          <rect x="830" y="50" width="170" height="80" rx="10" fill="#E30613"/>
+          <text x="915" y="82" fill="#fff" text-anchor="middle" font-family="Onest" font-size="15" font-weight="700">RedLedger</text>
+          <text x="915" y="102" fill="#fff" text-anchor="middle" font-family="JetBrains Mono" font-size="9" letter-spacing="1">AI: распознал · сверил</text>
+          <line x1="1000" y1="90" x2="1050" y2="90" stroke="#E30613" stroke-width="2"/>
+          <text x="1025" y="80" fill="#E30613" text-anchor="middle" font-family="JetBrains Mono" font-size="9">проверка</text>
+          <rect x="1050" y="60" width="90" height="60" rx="8" fill="#fff" stroke="#0B0B0C" stroke-width="2"/>
+          <text x="1095" y="95" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="15" font-weight="700">1С</text>
+          <text x="620" y="170" fill="#E30613" font-family="JetBrains Mono" font-size="11">→ матчинг по&#xa0;ИНН · авто-сверка банка · чистая первичка · быстрое закрытие</text>
+        </g>
+        <!-- bottom labels -->
+        <g>
+          <rect x="60" y="250" width="500" height="90" rx="10" fill="#0B0B0C"/>
+          <text x="310" y="285" fill="#fff" text-anchor="middle" font-family="Onest" font-size="16" font-weight="700">Ручная бухгалтерия группы</text>
+          <text x="310" y="312" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Onest" font-size="13">3 юрлица · сотни операций · риск ошибок в&#xa0;отчётности</text>
+          <rect x="620" y="250" width="520" height="90" rx="10" fill="#E30613"/>
+          <text x="880" y="285" fill="#fff" text-anchor="middle" font-family="Onest" font-size="16" font-weight="700">Единый финансовый контур</text>
+          <text x="880" y="312" fill="#fff" text-anchor="middle" font-family="Onest" font-size="13">консолидация · чистая первичка · окупится за&#xa0;16—26 месяцев</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOC ============ -->
+<section class="toc" id="toc">
+  <div class="wrap">
+    <div class="toc-head">
+      <div class="l">Содержание<br>документа</div>
+      <h2 class="t">9 глав, читается за&nbsp;10&nbsp;минут.<br>Цена появляется в&nbsp;главе&nbsp;08.</h2>
+    </div>
+    <div class="toc-list">
+      <a class="toc-row" href="#ch-01"><span class="tn">01</span><span class="tt">Тезис</span><span class="ts">AI-бухгалтер поверх 1С, не&nbsp;замена. Третий контур экосистемы</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-02"><span class="tn">02</span><span class="tt">Стартовая точка</span><span class="ts">Готовый продукт в&nbsp;проде. RedStaff и&nbsp;RedCharge как&nbsp;якорь</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-03"><span class="tn">03</span><span class="tt">Шесть трений в&nbsp;учёте</span><span class="ts">Где группа теряет время и&nbsp;рискует на&nbsp;отчётности</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-04"><span class="tn">04</span><span class="tt">Этап 1 — Внедрение + пилот</span><span class="ts">6—8 недель. 24 000 USD. Конвейер, банк, 1С, 1&nbsp;юрлицо</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-05"><span class="tn">05</span><span class="tt">Этап 2 — Группа + отчётность</span><span class="ts">2—3 месяца. 28 000 USD. 3 юрлица, консолидация, связки</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-06"><span class="tn">06</span><span class="tt">Команда и&nbsp;процесс</span><span class="ts">Готовая платформа, Bitrix24, еженедельные демо</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-07"><span class="tn">07</span><span class="tt">ROI и&nbsp;окупаемость</span><span class="ts">$24—39k экономии в&nbsp;год. 16—26 месяцев окупаемости</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-08"><span class="tn">08</span><span class="tt">Инвестиции</span><span class="ts">52 000 USD. Схема оплаты 50/50. Что НЕ обещаем</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-09"><span class="tn">09</span><span class="tt">Подпись</span><span class="ts">Контакты ASYSTEM. Срок действия КП — 60 дней</span><span class="tp">1 мин →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 01 — ТЕЗИС ============ -->
+<section class="chap-open" id="ch-01">
+  <div class="wrap">
+    <div class="chap-no">Глава 01 — Тезис</div>
+    <h2>Не&nbsp;«поменять 1С».<br><em>Снять с&nbsp;неё ручную рутину.</em></h2>
+    <p class="chap-intro dropcap">
+      1С остаётся системой записи и&nbsp;официальным учётом — мы&nbsp;её&nbsp;не&nbsp;трогаем. RedLedger встаёт слоем сверху: принимает «грязные» документы и&nbsp;выписки, распознаёт, сверяет контрагентов по&nbsp;ИНН и&nbsp;банк по&nbsp;счетам, отдаёт бухгалтеру на&nbsp;проверку и&nbsp;только подтверждённое выгружает в&nbsp;1С. Это тот&nbsp;же принцип, что в&nbsp;RedStaff («master + потребитель»), только для&nbsp;денег. Третий контур экосистемы после людей и&nbsp;процессов.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 02 — СТАРТОВАЯ ТОЧКА ============ -->
+<section class="chap-open dark" id="ch-02">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 02 — Стартовая точка</div>
+    <h2 style="color: #fff">Не&nbsp;строим с&nbsp;нуля.<br><em>Продукт уже работает.</em></h2>
+    <p class="chap-intro" style="color: rgba(255,255,255,0.78)">
+      RedLedger — не&nbsp;идея на&nbsp;слайде. Это наша готовая AI-платформа учёта, развёрнутая в&nbsp;проде на&nbsp;инфраструктуре в&nbsp;Кыргызстане. Плюс мы&nbsp;уже внутри контура Red&nbsp;Petroleum — RedCharge сдан, RedStaff в&nbsp;работе. Контракт, команда и&nbsp;доверие отлажены.
+    </p>
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Что уже есть</div>
+        <h3>Готовая платформа</h3>
+        <ul>
+          <li>Документ-конвейер: ZIP → распознавание → матчинг</li>
+          <li>Импорт банковских выписок КР (PDF/XLSX/CSV)</li>
+          <li>Двусторонняя синхронизация с&nbsp;1С (OData + webhook)</li>
+          <li>Мульти-тенант: несколько юрлиц в&nbsp;одной системе</li>
+          <li>Telegram-кабинет, ролевая модель, AI-ассистент</li>
+        </ul>
+        <div class="src">Источник: продакшен-развёртывание ASYSTEM</div>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Что снимает риск старта</div>
+        <h3>Тот же контур доверия</h3>
+        <ul>
+          <li>RedCharge — действующий продукт в&nbsp;вашей инфраструктуре</li>
+          <li>RedStaff — тот&nbsp;же принцип «AI-слой поверх 1С»</li>
+          <li>Демо на&nbsp;ваших документах — на&nbsp;первой встрече</li>
+          <li>Данные остаются в&nbsp;Кыргызстане</li>
+        </ul>
+        <div class="src">Источник: договор RedCharge, КП RedStaff</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 03 — ШЕСТЬ ТРЕНИЙ ============ -->
+<section class="chap-open" id="ch-03">
+  <div class="wrap">
+    <div class="chap-no">Глава 03 — Шесть трений</div>
+    <h2>Где группа<br><em>теряет время и&nbsp;рискует.</em></h2>
+    <p class="chap-intro">
+      Трения ниже выводятся из&nbsp;публичного профиля группы: три юрлица, биржевые облигации, госкредит, статус топ-налогоплательщика, опт с&nbsp;30+&nbsp;контрагентами. На&nbsp;Discovery каждое подтверждается на&nbsp;ваших данных.
+    </p>
+    <div class="ledger-grid" style="margin-top: 64px">
+      <div class="ledger-list">
+        <div class="ledger-row"><span class="num">01</span><div class="body"><h4>Три юрлица — ручная консолидация отчётности</h4><div class="tag-row"><span class="tag-flag">Альфа Ойл · Альфа Петролеум · Биорг Ойл</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">02</span><div class="body"><h4>Биржевые облигации — обязательная отчётность эмитента</h4><div class="tag-row"><span class="tag-flag">100 млн KGS · публичность</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">03</span><div class="body"><h4>Госкредит $36 млн — ковенанты и банковская отчётность</h4><div class="tag-row"><span class="tag-flag">Элдик Банк · контроль графика</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">04</span><div class="body"><h4>Топ-1 налогоплательщик — цена ошибки в&nbsp;первичке высока</h4><div class="tag-row"><span class="tag-flag">~3,8 млрд сомов · внимание ГНС</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">05</span><div class="body"><h4>Опт B2B: 30+ контрагентов — поток договоров, актов, сверок</h4><div class="tag-row"><span class="tag-flag">акты сверки вручную</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">06</span><div class="body"><h4>Сотни банковских операций — ручная сверка выписок</h4><div class="tag-row"><span class="tag-flag">много счетов · много юрлиц</span></div></div><span class="arr">→</span></div>
+      </div>
+      <div class="ledger-detail">
+        <div class="ll">Цена ручного учёта в&nbsp;группе такого масштаба</div>
+        <p>
+          Для&nbsp;вертикально-интегрированной группы с&nbsp;публичными обязательствами совокупная цена ручной бухгалтерии — это <strong>не&nbsp;только зарплаты бухгалтеров</strong>, а&nbsp;и&nbsp;штрафы за&nbsp;ошибки в&nbsp;первичке, медленное закрытие периода, риск по&nbsp;отчётности перед биржей и&nbsp;банком.
+        </p>
+        <p>
+          По&nbsp;нашей модели управляемая часть этих потерь — <strong>$24 000 — 39 000 в&nbsp;год</strong>. На&nbsp;Discovery считаем по&nbsp;фактическим объёмам документов и&nbsp;операций.
+        </p>
+        <div class="sep"></div>
+        <div class="ll">Решение в&nbsp;архитектуре</div>
+        <div class="arch-link">→ AI-конвейер первички + авто-сверка + выгрузка в&nbsp;1С</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 04 — ЭТАП 1 ============ -->
+<section class="modules-h" id="ch-04">
+  <div class="head">
+    <div>
+      <div class="ll">Глава 04 — Этап 1</div>
+      <h2>Внедрение + пилот.<br><em>6—8 недель. 24 000 USD.</em></h2>
+    </div>
+    <p>
+      Разворачиваем готовую платформу под&nbsp;Red&nbsp;Petroleum, интегрируем с&nbsp;вашей 1С и&nbsp;запускаем пилот на&nbsp;одном юрлице (рекомендуем Альфа&nbsp;Петролеум — оптовый контур с&nbsp;потоком договоров и&nbsp;сверок). Уже на&nbsp;этом этапе — измеримый эффект.
+    </p>
+  </div>
+
+  <div class="h-scroll-bar">
+    <div class="pages"><span class="cur">01</span> / <span class="total">04</span></div>
+    <div class="progress"><span></span></div>
+    <div class="controls">
+      <button class="prev" aria-label="Назад">←</button>
+      <button class="next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+
+  <div class="h-scroll-track">
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">C1</div>
+        <div class="b-meta">
+          <div class="ll">Блок 1 · Документ-конвейер</div>
+          <div class="tt">Пачка документов → распознавание → матчинг</div>
+          <div class="dd">Загрузка ZIP с&nbsp;договорами, актами, счетами, платёжками. AI инвентаризирует, классифицирует по&nbsp;типу, парсит и&nbsp;матчит контрагентов по&nbsp;ИНН с&nbsp;уровнем уверенности.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">внутри Этапа 1</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Что входит</div>
+          <div class="tt">Конвейер</div>
+          <ul>
+            <li>Пакетная загрузка (ZIP / файлы)</li>
+            <li>Классификация: договор / акт / счёт / выписка / платёжка</li>
+            <li>OCR + LLM-парсинг полей</li>
+            <li>Матчинг контрагентов по&nbsp;ИНН и&nbsp;названию</li>
+            <li>Уровни уверенности и&nbsp;причины «заблокировано»</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 1</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">На&nbsp;выходе</div>
+          <div class="tt">Что получает бухгалтер</div>
+          <ul>
+            <li>Кабинет проверки: партии, контрагенты, банки, ошибки</li>
+            <li>Bulk-действия: назначить контрагента / счёт / исключить</li>
+            <li>Оригиналы хранятся неизменно, с&nbsp;контрольной суммой</li>
+            <li>Меньше ручного ввода первички</li>
+          </ul>
+          <div class="ft"><span class="term">Эффект</span><span class="price">с&nbsp;пилота</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">C2</div>
+        <div class="b-meta">
+          <div class="ll">Блок 2 · Банковские выписки</div>
+          <div class="tt">Импорт, авто-категоризация, сверка</div>
+          <div class="dd">Импорт выписок кыргызских банков (PDF/XLSX/CSV) с&nbsp;LLM-fallback для&nbsp;нестандартных форматов. Авто-категоризация операций, сверка строк с&nbsp;транзакциями и&nbsp;контрагентами.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~2 нед</div><div class="ss">параллельно C1</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Импорт</div>
+          <div class="tt">Форматы и&nbsp;разбор</div>
+          <ul>
+            <li>PDF / XLSX / CSV выписки</li>
+            <li>LLM-fallback для&nbsp;нестандартных форм</li>
+            <li>Нормализация и&nbsp;дедупликация строк</li>
+            <li>Несколько счетов и&nbsp;юрлиц</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 1</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Сверка</div>
+          <div class="tt">Что меняется</div>
+          <ul>
+            <li>Авто-категоризация по&nbsp;правилам и&nbsp;истории</li>
+            <li>Сопоставление строк с&nbsp;контрагентами</li>
+            <li>Подсветка нераспознанного — на&nbsp;ручную проверку</li>
+            <li>Конец сверке выписок в&nbsp;Excel</li>
+          </ul>
+          <div class="ft"><span class="term">Эффект</span><span class="price">с&nbsp;1-го мес</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">C3</div>
+        <div class="b-meta">
+          <div class="ll">Блок 3 · Двусторонняя 1С + пилот</div>
+          <div class="tt">Dry-run → подтверждение → выгрузка</div>
+          <div class="dd">Интеграция с&nbsp;вашей 1С через OData + webhook. Проверенные документы идут как&nbsp;превью (dry-run), и&nbsp;только подтверждённое выгружается с&nbsp;идемпотентностью. Пилот на&nbsp;одном юрлице.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">после C1+C2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Интеграция</div>
+          <div class="tt">Связь с&nbsp;1С</div>
+          <ul>
+            <li>Подключение к&nbsp;вашей 1С (OData / HTTP-сервис)</li>
+            <li>Миграция справочников контрагентов</li>
+            <li>Очередь синхронизации + журнал + повтор</li>
+            <li>Идемпотентность: повтор не&nbsp;создаёт дубль</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 1</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Пилот</div>
+          <div class="tt">Запуск на&nbsp;1 юрлице</div>
+          <ul>
+            <li>Альфа Петролеум — оптовый контур</li>
+            <li>Обучение бухгалтеров кабинету</li>
+            <li>Контрольная сверка результатов с&nbsp;1С</li>
+            <li>Замер baseline-метрик до&nbsp;и&nbsp;после</li>
+          </ul>
+          <div class="ft"><span class="term">Акт приёмки</span><span class="price">Этапа 1</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter b-letter--check"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="b-meta">
+          <div class="ll">На&nbsp;выходе Этапа 1</div>
+          <div class="tt">Что получает Заказчик</div>
+          <div class="dd">Самодостаточная стадия. Работающий AI-конвейер первички и&nbsp;банковских выписок, интеграция с&nbsp;вашей 1С, пилот на&nbsp;одном юрлице с&nbsp;измеренным эффектом. Можно остановиться здесь или&nbsp;раскатывать на&nbsp;группу.</div>
+        </div>
+        <div class="b-price"><div class="ll">Инвестиции</div><div class="vv">24 000 USD</div><div class="ss">50/50 за&nbsp;этап</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 05 — ЭТАП 2 ============ -->
+<section class="modules-h" id="ch-05">
+  <div class="head">
+    <div>
+      <div class="ll">Глава 05 — Этап 2</div>
+      <h2>Группа + отчётность.<br><em>2—3 месяца. 28 000 USD.</em></h2>
+    </div>
+    <p>
+      Раскатываем на&nbsp;все три юрлица, добавляем консолидацию, отчётность под&nbsp;биржу/банк/ГНС и&nbsp;связки с&nbsp;остальной экосистемой. Стартует после&nbsp;приёмки Этапа&nbsp;1.
+    </p>
+  </div>
+
+  <div class="h-scroll-bar">
+    <div class="pages"><span class="cur">01</span> / <span class="total">04</span></div>
+    <div class="progress"><span></span></div>
+    <div class="controls">
+      <button class="prev" aria-label="Назад">←</button>
+      <button class="next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+
+  <div class="h-scroll-track">
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">C4</div>
+        <div class="b-meta">
+          <div class="ll">Блок 4 · Группа и&nbsp;консолидация</div>
+          <div class="tt">3 юрлица в&nbsp;одной системе</div>
+          <div class="dd">Подключаем Альфа&nbsp;Ойл и&nbsp;Биорг&nbsp;Ойл к&nbsp;уже работающему контуру. Сводный учёт по&nbsp;группе, межфирменные операции, права доступа по&nbsp;юрлицам и&nbsp;проектам.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">внутри Этапа 2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Раскатка</div>
+          <div class="tt">Все юрлица</div>
+          <ul>
+            <li>Альфа Ойл (розница + RedPay)</li>
+            <li>Биорг Ойл (импорт из&nbsp;РФ НПЗ)</li>
+            <li>Единые справочники, мульти-тенант</li>
+            <li>Доступ по&nbsp;ролям и&nbsp;юрлицам</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 2</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Консолидация</div>
+          <div class="tt">Сводно по&nbsp;группе</div>
+          <ul>
+            <li>Межфирменные операции</li>
+            <li>Сводный учёт по&nbsp;всей группе</li>
+            <li>Конец ручному сведению в&nbsp;Excel</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 2</span><span class="price">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">C5</div>
+        <div class="b-meta">
+          <div class="ll">Блок 5 · Отчётность</div>
+          <div class="tt">Биржа · банк · ГНС</div>
+          <div class="dd">Отчёты под&nbsp;обязательства публичной компании и&nbsp;кредитора. Чистая первичка → своевременная и&nbsp;корректная отчётность, аудит-след по&nbsp;каждой операции.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">в&nbsp;Этапе 2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Отчёты</div>
+          <div class="tt">Под&nbsp;обязательства</div>
+          <ul>
+            <li>Отчётность эмитента (облигации)</li>
+            <li>Банковская отчётность по&nbsp;кредиту</li>
+            <li>Налоговые срезы под&nbsp;ГНС</li>
+            <li>Дашборды по&nbsp;группе и&nbsp;юрлицам</li>
+          </ul>
+          <div class="ft"><span class="term">Конфигурируемо</span><span class="price">в&nbsp;Этапе 2</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Контроль</div>
+          <div class="tt">Аудит и&nbsp;планирование</div>
+          <ul>
+            <li>Аудит-след по&nbsp;каждой операции</li>
+            <li>Планирование cashflow и&nbsp;бюджетов</li>
+            <li>Контроль графика по&nbsp;кредиту</li>
+          </ul>
+          <div class="ft"><span class="term">Снижение риска</span><span class="price">по&nbsp;отчётности</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">C6</div>
+        <div class="b-meta">
+          <div class="ll">Блок 6 · Связки экосистемы + SSO</div>
+          <div class="tt">RedStaff · ИИ-боты · RedCharge · RedPay</div>
+          <div class="dd">RedLedger перестаёт быть отдельным продуктом и&nbsp;становится финансовым контуром экосистемы: получает данные от&nbsp;других модулей, единый вход и&nbsp;ролевую модель.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">в&nbsp;Этапе 2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Входящие потоки</div>
+          <div class="tt">Откуда данные</div>
+          <ul>
+            <li>RedStaff → ФОТ, премии по&nbsp;рейтингам</li>
+            <li>ИИ-юрист → карточки договоров и&nbsp;контрагентов</li>
+            <li>ИИ-тендеры → кредиторка и&nbsp;платежи</li>
+            <li>RedCharge / RedPay → выручка ЭЗС и&nbsp;лояльности</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Этапа 2</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Единый доступ</div>
+          <div class="tt">SSO + роли</div>
+          <ul>
+            <li>Единый вход с&nbsp;RedStaff (SSO)</li>
+            <li>Общая ролевая модель прав</li>
+            <li>Telegram-кабинет в&nbsp;одном канале с&nbsp;остальными</li>
+          </ul>
+          <div class="ft"><span class="term">Связка</span><span class="price">экосистемы</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter b-letter--check"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="b-meta">
+          <div class="ll">На&nbsp;выходе Этапа 2</div>
+          <div class="tt">Финансовый контур группы работает</div>
+          <div class="dd">Все три юрлица в&nbsp;единой системе, консолидация, отчётность под&nbsp;биржу/банк/ГНС, связки с&nbsp;RedStaff и&nbsp;ИИ-ботами, единый вход. Деньги становятся третьим контуром экосистемы рядом с&nbsp;людьми и&nbsp;процессами.</div>
+        </div>
+        <div class="b-price"><div class="ll">Инвестиции</div><div class="vv">28 000 USD</div><div class="ss">50/50 за&nbsp;этап</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PULL QUOTE ============ -->
+<div class="pullquote-break">
+  <div class="pq">«После Этапа&nbsp;1 — AI-конвейер на&nbsp;одном юрлице.<br><em>После Этапа&nbsp;2 — финансы всей группы в&nbsp;единой системе.»</em></div>
+</div>
+
+<!-- ============ CHAPTER 06 — КОМАНДА ============ -->
+<section class="chap-open" id="ch-06">
+  <div class="wrap">
+    <div class="chap-no">Глава 06 — Команда и&nbsp;процесс</div>
+    <h2>Готовый продукт.<br><em>Внедрение, а&nbsp;не&nbsp;разработка с&nbsp;нуля.</em></h2>
+    <p class="chap-intro">
+      Платформа уже написана и&nbsp;работает — поэтому это проект внедрения и&nbsp;кастомизации, а&nbsp;не&nbsp;многомесячная разработка. Меньше команда, короче срок, ниже риск.
+    </p>
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Состав внедрения</div>
+        <h3>3—4 FTE</h3>
+        <ul>
+          <li>PM — 0.5 FTE</li>
+          <li>Интеграционный инженер (1С) — 1.0 FTE</li>
+          <li>Backend / данные — 1.0 FTE</li>
+          <li>Аналитик-бухгалтер (методология) — 0.5 FTE</li>
+          <li>QA — 0.5 FTE</li>
+        </ul>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Процесс</div>
+        <h3>Bitrix24 + Google Meet</h3>
+        <ul>
+          <li>Discovery 1—2 недели на&nbsp;старте</li>
+          <li>Bitrix24 для&nbsp;задач и&nbsp;статусов</li>
+          <li>Еженедельные демо куратору</li>
+          <li>UAT по&nbsp;каждому этапу</li>
+          <li>Полная передача доступов и&nbsp;кода</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 07 — ROI ============ -->
+<section class="chap-open dark" id="ch-07">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 07 — ROI</div>
+    <h2 style="color: #fff">$24—39k экономии в&nbsp;год.<br><em>Окупаемость 16—26&nbsp;месяцев.</em></h2>
+    <p class="chap-intro" style="color: rgba(255,255,255,0.78)">
+      Модель для&nbsp;ориентира — группа из&nbsp;3 юрлиц, опт с&nbsp;30+&nbsp;контрагентами, сотни банковских операций в&nbsp;месяц. На&nbsp;Discovery цифры калибруются по&nbsp;фактическим объёмам документов и&nbsp;операций.
+    </p>
+
+    <div class="num-grid" style="margin-top: 80px">
+      <div class="num-card"><div class="ll">Источник 01</div><div class="tt">Ручной ввод первички</div><div class="vv">$6 000 — 9 000</div><div class="ss">в&nbsp;год · конвейер документов</div></div>
+      <div class="num-card"><div class="ll">Источник 02</div><div class="tt">Сверка банковских выписок</div><div class="vv">$4 000 — 6 000</div><div class="ss">в&nbsp;год · авто-импорт + сверка</div></div>
+      <div class="num-card"><div class="ll">Источник 03</div><div class="tt">Штрафы и&nbsp;доначисления</div><div class="vv">$4 000 — 8 000</div><div class="ss">в&nbsp;год · чистая первичка</div></div>
+      <div class="num-card"><div class="ll">Источник 04</div><div class="tt">Скорость закрытия и&nbsp;отчётности</div><div class="vv">$3 000 — 5 000</div><div class="ss">в&nbsp;год · быстрее период</div></div>
+      <div class="num-card"><div class="ll">Источник 05</div><div class="tt">Консолидация по&nbsp;3 юрлицам</div><div class="vv">$3 000 — 5 000</div><div class="ss">в&nbsp;год · без&nbsp;ручного сведения</div></div>
+      <div class="num-card"><div class="ll">Источник 06</div><div class="tt">Акты сверки с&nbsp;B2B (30+)</div><div class="vv">$4 000 — 6 000</div><div class="ss">в&nbsp;год · авто-матчинг</div></div>
+    </div>
+
+    <div class="num-total">
+      <div class="ll">Итого в&nbsp;год</div>
+      <div class="vv">$24 000 — 39 000</div>
+      <div class="ss">Группа из&nbsp;3 юрлиц · окупаемость 16—26 месяцев · возврат за&nbsp;5 лет $120—195k</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 08 — ИНВЕСТИЦИИ ============ -->
+<section class="chap-open" id="ch-08">
+  <div class="wrap">
+    <div class="chap-no">Глава 08 — Инвестиции</div>
+    <h2>52 000 USD за&nbsp;внедрение.<br><em>Схема оплаты 50/50.</em></h2>
+    <p class="chap-intro">
+      Готовый продукт — поэтому дешевле и&nbsp;быстрее разработки с&nbsp;нуля. Каждый этап — отдельный договор, оплата 50% по&nbsp;договору, 50% по&nbsp;Акту приёмки. Гарантия 12 месяцев. Срок действия КП — 60 календарных дней.
+    </p>
+
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Этап 1 — Внедрение + пилот</div>
+        <h3 style="color: var(--rp-red); font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px;">24 000 USD</h3>
+        <ul>
+          <li>6—8 недель, после&nbsp;подписания договора</li>
+          <li>12 000 USD — по&nbsp;договору</li>
+          <li>12 000 USD — по&nbsp;Акту приёмки Этапа 1</li>
+          <li>Конвейер + банк-синхро + 1С + пилот на&nbsp;1 юрлице</li>
+          <li>Гарантия 12 мес на&nbsp;Акт</li>
+        </ul>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Этап 2 — Группа + отчётность</div>
+        <h3 style="color: var(--rp-red); font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px;">28 000 USD</h3>
+        <ul>
+          <li>2—3 месяца, после&nbsp;Акта приёмки Этапа 1</li>
+          <li>14 000 USD — по&nbsp;договору</li>
+          <li>14 000 USD — по&nbsp;Акту приёмки Этапа 2</li>
+          <li>3 юрлица + консолидация + отчётность + связки + SSO</li>
+          <li>Гарантия 12 мес на&nbsp;Акт</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ledger-detail" style="margin-top: 60px; background: #fafafa; padding: 40px; border-radius: 20px;">
+      <div class="ll">Опционально · сопровождение</div>
+      <ul>
+        <li>Хостинг в&nbsp;Кыргызстане, обновления, поддержка — от&nbsp;1 500 USD/мес (по&nbsp;согласованию)</li>
+        <li>Или&nbsp;полная передача и&nbsp;размещение на&nbsp;вашей инфраструктуре — без&nbsp;абонплаты</li>
+      </ul>
+      <div class="sep"></div>
+      <div class="ll">Что мы&nbsp;НЕ обещаем</div>
+      <ul>
+        <li>Замену 1С — RedLedger работает поверх неё, не&nbsp;вместо</li>
+        <li>100% авто-распознавание без&nbsp;проверки бухгалтером — проверка обязательна перед выгрузкой</li>
+        <li>Интеграцию с&nbsp;1С без&nbsp;доступа к&nbsp;вашей конфигурации и&nbsp;OData/HTTP-сервису</li>
+        <li>Точные цифры ROI без&nbsp;Discovery — модель калибруется на&nbsp;ваших объёмах</li>
+        <li>Сроки — при&nbsp;отклике куратора Заказчика в&nbsp;3 рабочих дня</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 09 — ПОДПИСЬ ============ -->
+<section class="colophon" id="ch-09">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 09 — Подпись</div>
+    <h2>Встреча 30 минут.<br><em>Покажем демо на&nbsp;ваших документах.</em></h2>
+    <p class="chap-intro">
+      Принесите образец пакета документов (без&nbsp;паролей и&nbsp;секретов) — прогоним вживую: загрузка → распознавание → сверка → превью выгрузки в&nbsp;1С. После — определим юрлицо для&nbsp;пилота и&nbsp;стартуем.
+    </p>
+
+    <div class="contacts">
+      <a href="https://t.me/Ruslyandi" class="contact-card-link tg">
+        <div class="ll">TELEGRAM</div>
+        <div class="vv">@Ruslyandi <span>→</span></div>
+      </a>
+      <a href="mailto:asystem.teamwork@gmail.com" class="contact-card-link mail">
+        <div class="ll">EMAIL</div>
+        <div class="vv">asystem.teamwork@gmail.com <span>→</span></div>
+      </a>
+    </div>
+
+    <div class="signature-foot">
+      <span>ОсОО «Асистем» · г. Бишкек, ул. Токтогула 208</span>
+      <span>ИНН 01004201410217 · ОКПО 28764644</span>
+      <span>Срок действия КП — 60 календарных дней</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="sticky-cta">
+  <div>
+    <div class="l">RedLedger · 04 / 2026</div>
+    <div class="v">Финансовый контур — 52 000 USD</div>
+  </div>
+  <a href="#ch-09" class="btn btn-primary">Встреча <span class="arr">→</span></a>
+</div>
+
+<script src="../site.js"></script>
+</body>
+</html>

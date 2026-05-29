@@ -1,5 +1,5 @@
 /* ===================================================================
-   RP Ecosystem — слой дизайн-системы (fixes.css) · v11
+   RP Ecosystem — слой дизайн-системы (fixes.css) · v12
    Загружается ПОСЛЕ site.css и приводит вёрстку к единым правилам:
      • одна контентная колонка (1200px) и один гаттер во всех секциях
      • единая типошкала: display + section + sub
@@ -363,6 +363,87 @@ img, svg { max-width: 100%; height: auto; }
 /* ============ 13. ВСПОМОГАТЕЛЬНОЕ ============ */
 .progress-rail { display: none !important; }   /* занимал место, налегал на TOC */
 #read-progress { z-index: 9999 !important; }
+
+/* ============ 14. ДИАГРАММА ЭКОСИСТЕМЫ (главная) ============ */
+.ecosystem {
+  background: var(--rp-black);
+  color: #fff;
+  padding-top: clamp(80px, 10vw, 132px);
+  padding-bottom: clamp(80px, 10vw, 132px);
+  position: relative;
+  overflow: hidden;
+}
+.ecosystem::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(800px 600px at 85% 0%, rgba(227,6,19,0.18), transparent 60%),
+    radial-gradient(600px 500px at 0% 100%, rgba(227,6,19,0.12), transparent 60%);
+  pointer-events: none;
+}
+.ecosystem .wrap { position: relative; z-index: 1; }
+.eco-head { margin-bottom: 56px; max-width: 760px; }
+.eco-head .ll { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rp-red); font-weight: 600; margin-bottom: 18px; }
+.eco-head h2 { font-size: var(--t-section); font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; margin: 0 0 20px; color: #fff; }
+.eco-head h2 em { font-style: normal; color: var(--rp-red); }
+.eco-head p { font-size: var(--t-lede); line-height: 1.55; color: rgba(255,255,255,0.7); margin: 0; }
+
+/* три контура данных */
+.eco-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.eco-tier {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color 200ms ease, transform 200ms ease, background 200ms ease;
+}
+.eco-tier:hover { border-color: var(--rp-red); transform: translateY(-3px); }
+.eco-tier .layer { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 600; }
+.eco-tier .pname { font-size: 24px; font-weight: 700; letter-spacing: -0.015em; color: #fff; line-height: 1.1; }
+.eco-tier .pdesc { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+.eco-tier .pstat {
+  margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45);
+}
+.eco-tier.new {
+  background: var(--rp-red); border-color: var(--rp-red);
+}
+.eco-tier.new .layer { color: rgba(255,255,255,0.78); }
+.eco-tier.new .pdesc { color: rgba(255,255,255,0.9); }
+.eco-tier.new .pstat { color: rgba(255,255,255,0.78); border-top-color: rgba(255,255,255,0.25); }
+
+/* «поверх 1С» — общий хребет */
+.eco-spine {
+  margin: 16px 0;
+  border: 1px dashed rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex; align-items: center; gap: 14px; justify-content: center;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+.eco-spine strong { color: #fff; font-weight: 600; }
+
+/* источники выручки */
+.eco-sources { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.eco-source {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex; align-items: baseline; gap: 14px;
+}
+.eco-source .sn { font-size: 17px; font-weight: 700; color: #fff; letter-spacing: -0.01em; white-space: nowrap; }
+.eco-source .sd { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.45; }
+.eco-foot {
+  margin-top: 28px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.45); text-align: center;
+}
+@media (max-width: 900px) {
+  .eco-tiers { grid-template-columns: 1fr; }
+  .eco-sources { grid-template-columns: 1fr; }
+}
 
 /* Sticky CTA — компактная FAB-кнопка в правом нижнем углу на всех экранах */
 .sticky-cta {
