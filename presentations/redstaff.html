@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>RedStaff — детальная презентация по блокам · ASYSTEM × Red Petroleum</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css?v=1">
+</head>
+<body>
+
+<div class="deck-progress"></div>
+<div class="deck-bar">
+  <span class="brand"><span class="mk">A</span> ASYSTEM × RP · <span class="prod">RedStaff</span></span>
+  <span class="count"><span class="cur">01</span> / <span class="tot">11</span></span>
+</div>
+
+<!-- 01 — COVER -->
+<section class="slide dark cover">
+  <div class="slide-inner">
+    <div class="cover-eyebrow">Детальная презентация · 8 блоков работ · Этапы 2 и 3</div>
+    <h1 class="cover-h1">RedStaff<br><em>по блокам.</em></h1>
+    <p class="cover-sub">HR Data Hub для&nbsp;Red&nbsp;Petroleum: что именно делаем в&nbsp;каждом блоке, как&nbsp;технически и&nbsp;что&nbsp;получает заказчик. RedStaff становится единственным master-источником по&nbsp;людям, 1С&nbsp;— потребителем.</p>
+    <div class="cover-facts">
+      <div class="cover-fact"><div class="v"><em>$66k</em></div><div class="l">полная поставка · 6 мес</div></div>
+      <div class="cover-fact"><div class="v">8</div><div class="l">блоков работ</div></div>
+      <div class="cover-fact"><div class="v">$23—38k</div><div class="l">экономия / год по&nbsp;модели</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — БЛОК 1 -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">01</span> Интеграция с 1С · критический · первым</span>
+      <span class="slide-meta">~5 недель · Этап 2</span>
+    </div>
+    <h2 class="slide-title">RedStaff = master, <em>1С = потребитель.</em></h2>
+    <p class="slide-lead">Фиксируем в&nbsp;архитектуре, что источник правды по&nbsp;людям — RedStaff. 1С&nbsp;запрашивает данные по&nbsp;API и&nbsp;подписывается на&nbsp;события, а&nbsp;не&nbsp;хранит мастер-копию. Конец рассинхрону при&nbsp;смене должности и&nbsp;увольнении.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Что делаем</div>
+        <ul>
+          <li>Фиксируем RedStaff как master-источник всех кадровых данных</li>
+          <li>REST API с&nbsp;авторизацией для&nbsp;1С: табель, утверждённые заявки, статус больничных, профиль</li>
+          <li>Журнал интеграций + дашборд мониторинга в&nbsp;админ-панели</li>
+          <li>Регламент сопоставления записей по&nbsp;ПИН&nbsp;КР и&nbsp;альтернативным идентификаторам</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ph">Как технически</div>
+        <ul>
+          <li>Документированный REST API + Swagger-спецификация</li>
+          <li>Журнал: дата, направление, статус, кол-во записей, текст ошибки</li>
+          <li>Политика обработки ошибок и&nbsp;повторных запросов</li>
+          <li>Расписание синхронизаций согласуется при&nbsp;внедрении</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Что получает заказчик</div>
+        <ul>
+          <li>Одна точка правды по&nbsp;ФИО, должности, статусу</li>
+          <li>1С не&nbsp;нужно «допиливать» при&nbsp;каждом изменении в&nbsp;кадрах</li>
+          <li>HR видит, где и&nbsp;почему сломалась интеграция</li>
+          <li>Фундамент для&nbsp;всех остальных блоков</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Дополнительно по согласованию</div>
+        <ul>
+          <li>Event-driven обмен: события employee.hired / transferred / terminated в&nbsp;очередь, polling как&nbsp;fallback</li>
+          <li>Outbox-pattern + idempotency keys на&nbsp;webhook расчётного листка — без&nbsp;дублей</li>
+          <li>API versioning с&nbsp;первого дня (/v1, /v2) — изменения не&nbsp;ломают 1С</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Приоритет: <b>критический</b></span><span>Этап: <b>2</b></span><span>Результат: API + журнал + регламент эксплуатации</span></div>
+  </div>
+</section>
+
+<!-- 03 — БЛОК 2 -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">02</span> Расширенный профиль сотрудника</span>
+      <span class="slide-meta">~3 недели · Этап 2</span>
+    </div>
+    <h2 class="slide-title">22 поля, ИП, увольнение, <em>версионирование.</em></h2>
+    <p class="slide-lead">Профиль расширяется до&nbsp;10 разделов с&nbsp;ролевой моделью доступа. Мобильный онбординг в&nbsp;7&nbsp;шагов, поддержка ИП-сотрудников и&nbsp;корректный жизненный цикл при&nbsp;увольнении и&nbsp;возврате.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Что делаем</div>
+        <ul>
+          <li>Модель профиля: личные / контактные / кадровые / посещения / табель / обучение / рейтинг / документы / события</li>
+          <li>Мобильный онбординг 7 шагов: анкета → документы → верификация → push → передача в&nbsp;УЧР</li>
+          <li>22 поля приёма на&nbsp;работу с&nbsp;валидациями и&nbsp;обязательностью</li>
+          <li>Категория ИП: наименование, ИНН&nbsp;ИП, реквизиты, срок договора, свидетельство</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ph">Как технически</div>
+        <ul>
+          <li>Ролевая модель: Сотрудник / Руководитель / HR / Супер&nbsp;администратор</li>
+          <li>ПИН&nbsp;КР — мастер-идентификатор; паспорт + страна + разрешение для&nbsp;иностранцев</li>
+          <li>Авто-уведомления HR за&nbsp;30 дней до&nbsp;истечения паспорта / разрешения</li>
+          <li>Процедура увольнения: причина, статус передачи МТС, подтверждение HR, перевод в&nbsp;архив</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Что получает заказчик</div>
+        <ul>
+          <li>Единая карточка сотрудника на&nbsp;всю группу</li>
+          <li>Прозрачный приём и&nbsp;увольнение без&nbsp;«потерянных» данных</li>
+          <li>Готовность к&nbsp;ИП/ГПХ — важно для&nbsp;Альфа&nbsp;Ойл</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Дополнительно по согласованию</div>
+        <ul>
+          <li>Версионирование полей: история кто / когда / почему менял должность, оклад, локацию</li>
+          <li>Selfie-верификация при&nbsp;онбординге (фото из&nbsp;паспорта vs&nbsp;selfie)</li>
+          <li>Импорт действующих сотрудников из&nbsp;1С при&nbsp;миграции — без&nbsp;ручного ввода штата</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Приоритет: <b>высокий</b></span><span>Этап: <b>2</b></span><span>Результат: профиль + онбординг + ролевая модель</span></div>
+  </div>
+</section>
+
+<!-- 04 — БЛОК 4 (Расчётный листок, Этап 2) -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">04</span> Расчётный листок 1С → RedStaff</span>
+      <span class="slide-meta">~3 недели · Этап 2</span>
+    </div>
+    <h2 class="slide-title">Прозрачные начисления <em>в&nbsp;кармане сотрудника.</em></h2>
+    <p class="slide-lead">1С передаёт факт начисления через webhook, сотрудник видит расшифровку в&nbsp;мобильном. HR перестаёт быть «справочным бюро» по&nbsp;зарплате.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Что делаем</div>
+        <ul>
+          <li>API-endpoint приёма (POST, авторизация по&nbsp;API-ключу): ПИН, период, KPI, удержания, net_salary</li>
+          <li>Валидация структуры и&nbsp;фиксация в&nbsp;журнале интеграций</li>
+          <li>Раздел «Зарплата» в&nbsp;моб. приложении: оклад / KPI / удержания / итог</li>
+          <li>Push о&nbsp;новом листке; хранение всех листков за&nbsp;всё время</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ph">Как технически</div>
+        <ul>
+          <li>Idempotency на&nbsp;webhook — повтор не&nbsp;создаёт дубль начисления</li>
+          <li>Доступ строго к&nbsp;собственным листкам; чужие — недопустимо</li>
+          <li>Связка с&nbsp;табелем и&nbsp;профилем по&nbsp;ПИН</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Что получает заказчик</div>
+        <ul>
+          <li>Поток вопросов «почему мне начислили столько?» уходит в&nbsp;самообслуживание</li>
+          <li>Меньше трудовых конфликтов, выше доверие</li>
+          <li>HR работает над&nbsp;стратегией, не&nbsp;разъяснением</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Дополнительно по согласованию</div>
+        <ul>
+          <li>Расшифровка KPI и&nbsp;удержаний по&nbsp;основаниям</li>
+          <li>PDF-экспорт листка на&nbsp;email и&nbsp;в&nbsp;«Документы» — для&nbsp;банка/кредита</li>
+          <li>Калькулятор «что если»: пересчёт при&nbsp;изменении переработки/премии</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Приоритет: <b>высокий</b></span><span>Этап: <b>2</b></span><span>Результат: раздел «Зарплата» + webhook + хранение</span></div>
+  </div>
+</section>
+
+<!-- 05 — ИНФРАСТРУКТУРА (Этап 2, сквозной) -->
+<section class="slide dark">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">∞</span> Инфраструктура и сквозная архитектура</span>
+      <span class="slide-meta">всю Этап 2 · параллельный поток</span>
+    </div>
+    <h2 class="slide-title">Миграция DO → NSP <em>без даунтайма.</em></h2>
+    <p class="slide-lead">Серверная часть переезжает на&nbsp;инфраструктуру NSP в&nbsp;Кыргызстане. Закладываем масштаб и&nbsp;наблюдаемость сразу — пока это дешевле, чем&nbsp;на&nbsp;втором году эксплуатации.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Инфраструктура</div>
+        <ul>
+          <li>Миграция Digital Ocean → NSP: данные, доступы, SSL, без&nbsp;простоев</li>
+          <li>Согласование CPU / RAM / диск до&nbsp;старта</li>
+          <li>Staging-контур для&nbsp;UAT (изолированный subdomain, APK, TestFlight)</li>
+          <li>Поддержка публикации в&nbsp;App Store / Google Play</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Сквозные предложения</div>
+        <ul>
+          <li>TimescaleDB для&nbsp;табеля и&nbsp;транзакций — partitioning по&nbsp;времени</li>
+          <li>Read replica PostgreSQL для&nbsp;тяжёлых выгрузок и&nbsp;BI</li>
+          <li>Feature flags — выкат фич без&nbsp;re-deploy и&nbsp;безопасный rollback</li>
+          <li>Observability: structured logs + Prometheus + Grafana</li>
+          <li>Multitenancy-готовность (tenant_id) — на&nbsp;будущее</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Этап: <b>2 (+ задел на 3)</b></span><span>Результат: прод на&nbsp;NSP + наблюдаемость + staging</span></div>
+  </div>
+</section>
+
+<!-- 06 — БЛОК 3 (Табель, Этап 3) -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">03</span> Учёт рабочего времени · СКУД + GPS</span>
+      <span class="slide-meta">~5 недель · Этап 3</span>
+    </div>
+    <h2 class="slide-title">Табель из трёх источников <em>+ антифрод.</em></h2>
+    <p class="slide-lead">Главная боль удалённых АЗС и&nbsp;нефтебаз, где нет&nbsp;СКУД. Табель собирается автоматически из&nbsp;трёх источников, аномалии подсвечиваются HR.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Что делаем</div>
+        <ul>
+          <li>Интеграция со&nbsp;СКУД — фактические приход/уход</li>
+          <li>Сетка табеля по&nbsp;дням с&nbsp;цветовой маркировкой типа дня</li>
+          <li>Кабинеты: сотрудник (свой), руководитель (сводно по&nbsp;подчинённым), HR (вся компания, фильтры)</li>
+          <li>Ручные корректировки с&nbsp;обязательной причиной и&nbsp;журналом; выгрузка XLSX/PDF</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ph">Как технически</div>
+        <ul>
+          <li>Multi-source: СКУД + GPS-геофенсинг + Wi-Fi-чекин</li>
+          <li>Где СКУД нет — геофенсинг подменяет источник, единая модель табеля</li>
+          <li>Auto-close незакрытой смены через настраиваемое время</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Что получает заказчик</div>
+        <ul>
+          <li>Конец Excel-табелям на&nbsp;200+ АЗС</li>
+          <li>Антифрод: одновременное присутствие в&nbsp;двух локациях, аномальные тайм-стампы, правки задним числом</li>
+          <li>Сигналы — для&nbsp;HR в&nbsp;дашборде, не&nbsp;для&nbsp;автоблокировки</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Зависимость</div>
+        <ul>
+          <li>Интеграция со&nbsp;СКУД — при&nbsp;наличии протокола обмена от&nbsp;вендора</li>
+          <li>Если протокол не&nbsp;предоставлен — GPS-геофенсинг как&nbsp;основной источник, без&nbsp;изменения стоимости</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Приоритет: <b>высокий</b></span><span>Этап: <b>3</b></span><span>Результат: единый табель + антифрод-дашборд</span></div>
+  </div>
+</section>
+
+<!-- 07 — БЛОК 5 (Рейтинг, Этап 3) -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">05</span> Рейтинговая система</span>
+      <span class="slide-meta">~4 недели · Этап 3</span>
+    </div>
+    <h2 class="slide-title">Рейтинг по реальным KPI, <em>не игра в тесты.</em></h2>
+    <p class="slide-lead">Базовый рейтинг по&nbsp;обучению расширяется до&nbsp;реальных операционных KPI и&nbsp;командных метрик. Естественный мост к&nbsp;премированию и&nbsp;бухгалтерскому контуру.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Что делаем</div>
+        <ul>
+          <li>Начисление баллов: 50 за&nbsp;тему с&nbsp;тестом ≥80%, 20 за&nbsp;тест ≥70% (настраивается)</li>
+          <li>4 уровня: Новичок / Специалист / Профессионал / Эксперт со&nbsp;значками</li>
+          <li>Рейтинги: общий, по&nbsp;подразделению, таблицы лидеров с&nbsp;фильтрами</li>
+          <li>Виджет на&nbsp;главном экране, ТОП-10 в&nbsp;месячной отчётности, push при&nbsp;переходе уровня</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Что получает заказчик</div>
+        <ul>
+          <li>Прозрачная мотивация линейного персонала</li>
+          <li>Объективная база для&nbsp;премий</li>
+          <li>Вовлечённость и&nbsp;снижение текучки</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Дополнительно по согласованию</div>
+        <ul>
+          <li>Метрики за&nbsp;пределами обучения: безаварийность, план продаж АЗС, NPS, дисциплина</li>
+          <li>Командные рейтинги: смена / АЗС / регион</li>
+          <li>Выгрузка для&nbsp;бухгалтерии — основа премирования (мост к&nbsp;RedLedger)</li>
+          <li>Бейджи и&nbsp;достижения (геймификация)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Приоритет: <b>средний</b></span><span>Этап: <b>3</b></span><span>Результат: рейтинг + виджет + отчётность ТОП-10</span></div>
+  </div>
+</section>
+
+<!-- 08 — БЛОК 6 (Заявки, Этап 3) -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">06</span> Заявки: отпуска / больничные / ОБС / командировки</span>
+      <span class="slide-meta">~4 недели · Этап 3</span>
+    </div>
+    <h2 class="slide-title">Из почты и мессенджеров <em>— в систему с SLA.</em></h2>
+    <p class="slide-lead">Пять типов заявок с&nbsp;типизированными формами, маршрут согласования в&nbsp;три шага, прозрачные статусы и&nbsp;план отпусков с&nbsp;подсветкой пересечений.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Что делаем</div>
+        <ul>
+          <li>5 типов: ежегодный отпуск, ОБС, командировка, выезд по&nbsp;личным делам, больничный</li>
+          <li>Маршрут 3 шага: Сотрудник → Руководитель → HR, 7 статусов</li>
+          <li>Загрузка больничного (PDF/JPG/PNG, до&nbsp;15&nbsp;МБ, авто-сжатие)</li>
+          <li>Уведомления email + push на&nbsp;каждом изменении статуса</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ph">Как технически</div>
+        <ul>
+          <li>История заявок с&nbsp;фильтрами и&nbsp;выгрузкой XLSX/PDF</li>
+          <li>План отпусков по&nbsp;подразделению/компании с&nbsp;автоподсветкой пересечений</li>
+          <li>Связка с&nbsp;табелем и&nbsp;1С</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Что получает заказчик</div>
+        <ul>
+          <li>Ни&nbsp;одной «потерянной» заявки</li>
+          <li>Управляемая загрузка персонала по&nbsp;объектам</li>
+          <li>Документальный след по&nbsp;каждому решению</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Дополнительно по согласованию</div>
+        <ul>
+          <li>Доп. типы: внутренний перевод между&nbsp;АЗС/НБ, аванс, запрос на&nbsp;обучение, изменение реквизитов</li>
+          <li>SLA на&nbsp;согласование с&nbsp;автоэскалацией на&nbsp;HR при&nbsp;просрочке</li>
+          <li>Mass-actions для&nbsp;HR — массовое утверждение типовых заявок</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Приоритет: <b>средний</b></span><span>Этап: <b>3</b></span><span>Результат: workflow заявок + план отпусков</span></div>
+  </div>
+</section>
+
+<!-- 09 — БЛОК 7 + 8 (Бэклог + SSO, Этап 3) -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker"><span class="bn">07·08</span> Накопленный бэклог + SSO в B2B</span>
+      <span class="slide-meta">~3 недели · Этап 3</span>
+    </div>
+    <h2 class="slide-title">Закрываем долги Этапа 1 <em>и&nbsp;единый вход в&nbsp;B2B.</em></h2>
+    <p class="slide-lead">Финальный блок: исполнение накопленного бэклога по&nbsp;утверждённому списку и&nbsp;единый вход в&nbsp;Red&nbsp;Petroleum&nbsp;B2B без&nbsp;повторной аутентификации.</p>
+    <div class="slide-grid">
+      <div class="panel">
+        <div class="ph">Блок 7 · Накопленный бэклог</div>
+        <ul>
+          <li>Исчерпывающий список фиксируется в&nbsp;Bitrix24 до&nbsp;старта и&nbsp;утверждается обеими сторонами</li>
+          <li>Категории: оптимизация бизнес-логики, баги (крит → высокие → средние), UX, отчётность</li>
+          <li>Исполняется итеративно сквозным потоком</li>
+          <li>При&nbsp;существенном превышении объёма — Дополнительное соглашение</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ph">Блок 8 · SSO в Red Petroleum B2B</div>
+        <ul>
+          <li>Кнопка «Red&nbsp;Petroleum&nbsp;B2B» в&nbsp;моб. приложении и&nbsp;веб-портале</li>
+          <li>Переход без&nbsp;повторной аутентификации: OAuth&nbsp;2.0 / SAML&nbsp;2.0</li>
+          <li>Управление правом доступа супер-администратором, по&nbsp;умолчанию не&nbsp;назначен</li>
+          <li>Старт после&nbsp;согласования механизма с&nbsp;владельцем B2B</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Что получает заказчик</div>
+        <ul>
+          <li>Чистая система без&nbsp;накопленных дефектов</li>
+          <li>Единый вход для&nbsp;сотрудников группы</li>
+          <li>Готовность к&nbsp;подключению RedLedger и&nbsp;ИИ-ботов</li>
+        </ul>
+      </div>
+      <div class="panel accent">
+        <div class="ph">Зависимость</div>
+        <ul>
+          <li>SSO стартует только после&nbsp;подписания протокола согласования механизма с&nbsp;владельцем B2B-портала</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Приоритет: <b>текущий / по&nbsp;расписанию</b></span><span>Этап: <b>3</b></span></div>
+  </div>
+</section>
+
+<!-- 10 — ДОРОЖНАЯ КАРТА -->
+<section class="slide dark">
+  <div class="slide-inner">
+    <div class="slide-top">
+      <span class="kicker">Дорожная карта · 6 месяцев</span>
+      <span class="slide-meta">2 этапа по 3 месяца</span>
+    </div>
+    <h2 class="slide-title">Discovery → параллельные стримы <em>→ приёмка.</em></h2>
+    <div class="slide-grid cols-3">
+      <div class="panel">
+        <div class="ph">Этап 2 · Master Data Hub · $32k</div>
+        <ul>
+          <li>Блок 1 — интеграция с&nbsp;1С (master)</li>
+          <li>Блок 2 — расширенный профиль</li>
+          <li>Блок 4 — расчётный листок</li>
+          <li>Инфраструктура NSP + observability</li>
+          <li>Старт с&nbsp;Discovery (3—4 недели)</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ph">Этап 3 · Full Coverage · $34k</div>
+        <ul>
+          <li>Блок 3 — табель + GPS + антифрод</li>
+          <li>Блок 5 — рейтинг по&nbsp;KPI</li>
+          <li>Блок 6 — заявки + SLA</li>
+          <li>Блоки 7+8 — бэклог + SSO + replica</li>
+          <li>Старт после&nbsp;приёмки Этапа&nbsp;2</li>
+        </ul>
+      </div>
+      <div class="panel outcome">
+        <div class="ph">Команда и процесс</div>
+        <ul>
+          <li>4—5 FTE: PM, аналитик, backend, frontend, mobile, QA, DevOps</li>
+          <li>Bitrix24 + еженедельные Google&nbsp;Meet</li>
+          <li>Demo каждые 2 недели, UAT по&nbsp;блокам</li>
+          <li>Передача исходного кода с&nbsp;первого дня</li>
+        </ul>
+      </div>
+    </div>
+    <div class="result-strip"><span>Срок: <b>до 4 мес/этап</b></span><span>Оплата: <b>50/50 за&nbsp;этап</b></span><span>Гарантия: <b>12 мес</b></span></div>
+  </div>
+</section>
+
+<!-- 11 — ИТОГ / CTA -->
+<section class="slide red">
+  <div class="slide-inner">
+    <div class="cover-eyebrow" style="color:rgba(255,255,255,0.8)">Итог</div>
+    <div class="big-figure">$66 000<br><em>за 6 месяцев.</em></div>
+    <p class="cover-sub" style="color:rgba(255,255,255,0.92)">8 блоков, 2 этапа, оплата 50/50, гарантия 12 месяцев. RedStaff становится фундаментом экосистемы — единым источником правды по&nbsp;людям, на&nbsp;котором дальше встают бухгалтерия и&nbsp;ИИ-агенты.</p>
+    <div class="deck-contacts">
+      <a class="primary" href="https://t.me/Ruslyandi">Telegram · @Ruslyandi</a>
+      <a href="mailto:asystem.teamwork@gmail.com">asystem.teamwork@gmail.com</a>
+      <a href="../redstaff/">Открыть КП RedStaff →</a>
+    </div>
+  </div>
+</section>
+
+<div class="deck-nav">
+  <button class="prev" aria-label="Назад">←</button>
+  <button class="next" aria-label="Вперёд">→</button>
+</div>
+<script src="deck.js?v=1"></script>
+</body>
+</html>
