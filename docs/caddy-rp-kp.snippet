@@ -1,0 +1,61 @@
+# ─────────────────────────────────────────────────────────────────────────
+# Caddy token-gate для rp-kp.asystem.ai — приватный КП.
+#
+# Назначение: пускать только по персональной ссылке ?token=<TOKEN>; первый
+# вход ставит cookie asystem_auth на 30 дней; запасной вход — Basic Auth.
+# Без токена/cookie/Basic — отдаём 401, а не контент КП (защита от парсинга
+# и «лишних глаз»).
+#
+# ВСТАВИТЬ этот блок в основной Caddyfile (заменив текущий блок rp-kp, если он
+# просто реверс-проксит на nginx без gate). Затем:
+#   caddy validate --config /path/Caddyfile     # ОБЯЗАТЕЛЬНО до reload
+#   caddy reload   --config /path/Caddyfile
+#
+# Переменные:
+#   {$RPKP_TOKEN}      — отдельный токен ИМЕННО для rp-kp (не общий с 5 субдоменами,
+#                        чтобы отзывать доступ к КП независимо).
+#   {$RPKP_BASIC_HASH} — bcrypt-хэш пароля для Basic Auth: `caddy hash-password`.
+#   upstream nginx     — адрес, куда Caddy уже проксирует rp-kp (см. текущий конфиг,
+#                        напр. coolify-контейнер rp-kp:80 или 127.0.0.1:PORT).
+# ─────────────────────────────────────────────────────────────────────────
+
+rp-kp.asystem.ai {
+
+	# robots/архивация запрещены на уровне прокси (дублирует robots.txt в репо)
+	header {
+		X-Robots-Tag "noindex, nofollow, noarchive"
+		-Server
+	}
+
+	# 1) Вход по ?token= → ставим cookie на 30 дней и редиректим на чистый /
+	@token query token={$RPKP_TOKEN}
+	handle @token {
+		header Set-Cookie "asystem_auth={$RPKP_TOKEN}; Path=/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax"
+		# сохраняем прочие query-параметры (например ?u=ceo) при редиректе
+		redir / 302
+	}
+
+	# 2) Уже впущенные по cookie — пропускаем к сайту
+	@cookie header_regexp auth Cookie "asystem_auth={$RPKP_TOKEN}"
+	handle @cookie {
+		reverse_proxy UPSTREAM_NGINX_HERE
+	}
+
+	# 3) Запасной вход — HTTP Basic Auth (asyl / <пароль>)
+	handle {
+		basic_auth {
+			asyl {$RPKP_BASIC_HASH}
+		}
+		reverse_proxy UPSTREAM_NGINX_HERE
+	}
+}
+
+# ПРИМЕЧАНИЕ по ?u=ceo: редирект из блока @token на "/" срежет query. Чтобы
+# метка получателя долетела до Метрики, в персональной ссылке вести на
+# страницу с уже сохранённым ?u, например:
+#   https://rp-kp.asystem.ai/?token=<TOKEN>&u=ceo
+# Caddy `redir / 302` уберёт оба параметра. Варианты сохранить ?u=:
+#   (а) редиректить на "/?u={http.request.uri.query.u}" — донести метку;
+#   (б) НЕ редиректить, а сразу reverse_proxy в @token-блоке (тогда ?u
+#       остаётся в адресе и Метрика его прочитает).
+# Рекомендуется (б): убрать `redir`, оставить Set-Cookie + reverse_proxy.
