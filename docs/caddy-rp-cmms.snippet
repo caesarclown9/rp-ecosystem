@@ -1,0 +1,106 @@
+# ─────────────────────────────────────────────────────────────────────────
+# Caddy gate для КП RP-CMMS — ОТДЕЛЬНЫЙ токен, доступ только к этому КП.
+#
+# Контекст: весь rp-kp.asystem.ai уже за общим token-gate (см.
+# docs/caddy-rp-kp.snippet, токен {$RPKP_TOKEN}). Этот КП лежит по пути
+# /rp-cmms/ и должен открываться СВОИМ токеном, не общим — чтобы выдать
+# доступ отдельному отделу/получателю, не открывая остальные КП.
+#
+# Сгенерировать токен (НЕ переиспользовать общий):
+#   openssl rand -hex 16        # → значение для {$RPCMMS_TOKEN}
+#
+# Применять ТОЛЬКО так (общий прокси на много доменов — ошибка уронит всё):
+#   caddy validate --config /etc/caddy/Caddyfile
+#   systemctl reload caddy
+# Перед правкой — бэкап: cp /etc/caddy/aioskg.conf /etc/caddy/aioskg.conf.bak.cmms.$(date +%Y%m%d-%H%M%S)
+#
+# Персональная ссылка получателю:
+#   https://rp-kp.asystem.ai/rp-cmms/?token={$RPCMMS_TOKEN}&u=<метка>
+# ─────────────────────────────────────────────────────────────────────────
+
+
+# ╔═══════════════════════════════════════════════════════════════════════╗
+# ║ ВАРИАНТ A (рекомендуется) — path-гейт внутри существующего блока      ║
+# ║ rp-kp.asystem.ai. Без новых DNS-записей и сертификатов.               ║
+# ║                                                                       ║
+# ║ Эти блоки вставить В НАЧАЛО блока `rp-kp.asystem.ai { … }`, ДО общих   ║
+# ║ handle-ов из caddy-rp-kp.snippet. Caddy матчит по порядку — путь      ║
+# ║ /rp-cmms* перехватывается раньше общего gate и проверяет СВОЙ токен.  ║
+# ╚═══════════════════════════════════════════════════════════════════════╝
+
+	# --- RP-CMMS: вход по своему ?token= → cookie на 30 дней ---
+	@cmms_token {
+		path /rp-cmms /rp-cmms/*
+		query token={$RPCMMS_TOKEN}
+	}
+	handle @cmms_token {
+		header Set-Cookie "asystem_cmms={$RPCMMS_TOKEN}; Path=/rp-cmms; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax"
+		reverse_proxy UPSTREAM_HERE     # тот же upstream, что у общего блока rp-kp
+	}
+
+	# --- RP-CMMS: уже впущенные по cookie этого КП ---
+	@cmms_cookie {
+		path /rp-cmms /rp-cmms/*
+		header_regexp cmms Cookie "asystem_cmms={$RPCMMS_TOKEN}"
+	}
+	handle @cmms_cookie {
+		reverse_proxy UPSTREAM_HERE
+	}
+
+	# --- RP-CMMS: (опц.) пускать и держателей общего токена rp-kp — для своих ---
+	#     убрать этот блок, если CMMS должен открываться ИСКЛЮЧИТЕЛЬНО своим токеном.
+	@cmms_master {
+		path /rp-cmms /rp-cmms/*
+		header_regexp master Cookie "asystem_auth={$RPKP_TOKEN}"
+	}
+	handle @cmms_master {
+		reverse_proxy UPSTREAM_HERE
+	}
+
+	# --- RP-CMMS: всё прочее по этому пути без своего токена → 401 (не отдаём КП) ---
+	@cmms_path path /rp-cmms /rp-cmms/*
+	handle @cmms_path {
+		respond "401 Unauthorized" 401
+	}
+
+	# ↓↓↓ ниже идут существующие общие handle-ы блока rp-kp (token/cookie/basic) ↓↓↓
+
+
+# ╔═══════════════════════════════════════════════════════════════════════╗
+# ║ ВАРИАНТ B — отдельный поддомен rp-cmms.asystem.ai.                     ║
+# ║ Нужна A-запись DNS на тот же хост (orion) + авто-TLS Caddy.            ║
+# ║ Проксирует на тот же контейнер, но переписывает путь в /rp-cmms/.      ║
+# ╚═══════════════════════════════════════════════════════════════════════╝
+
+# rp-cmms.asystem.ai {
+# 	header {
+# 		X-Robots-Tag "noindex, nofollow, noarchive"
+# 		-Server
+# 	}
+#
+# 	# отдаём контент из подпапки /rp-cmms репозитория rp-kp
+# 	rewrite * /rp-cmms{uri}
+#
+# 	@token query token={$RPCMMS_TOKEN}
+# 	handle @token {
+# 		header Set-Cookie "asystem_cmms={$RPCMMS_TOKEN}; Path=/; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax"
+# 		reverse_proxy UPSTREAM_HERE
+# 	}
+# 	@cookie header_regexp cmms Cookie "asystem_cmms={$RPCMMS_TOKEN}"
+# 	handle @cookie {
+# 		reverse_proxy UPSTREAM_HERE
+# 	}
+# 	handle {
+# 		respond "401 Unauthorized" 401
+# 	}
+# }
+
+# Примечания:
+# • UPSTREAM_HERE — тот же адрес, что в текущем блоке rp-kp (Coolify-контейнер,
+#   из памяти: 10.10.20.10:3002). Сверить с живым конфигом перед вставкой.
+# • assets (../site.css, ../assets/*) лежат в корне репозитория rp-kp и грузятся
+#   относительно /rp-cmms/ — в Варианте A работают как есть; в Варианте B их
+#   тянет rewrite на /rp-cmms{uri} только для документа, а ../-ассеты резолвятся
+#   в корень → проверить, что поддомен отдаёт и корневые пути (или не переписывать
+#   пути ассетов). Вариант A этой проблемы лишён — поэтому он рекомендуется.
+# • robots.txt в репо уже Disallow: / — индексация закрыта и для подпути.

@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<title>RP-CMMS — интеграционный контур автобазы · Этап 2 · ASYSTEM × Red Petroleum</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Коммерческое предложение по Этапу 2 RP-CMMS — превращение системы учёта автобазы в интеграционный хаб: логистика, 1С, закупки, REALCOM, KPI, дашборд, Power BI. Подготовлено ASYSTEM для Red Petroleum / Альфа Ойл.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../assets/css/fixes.css?v=12">
+<script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="../assets/js/anim.js" defer></script>
+<meta name="robots" content="noindex, nofollow, noarchive">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#cover" class="nav-brand">
+      <span class="nav-logo">A</span>
+      <span><span class="b">ASYSTEM</span> <span class="x">×</span> <span class="b">RP</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#ch-01">Тезис</a>
+      <a href="#ch-04">Фаза 1</a>
+      <a href="#ch-05">Фаза 2</a>
+      <a href="#ch-07">ROI</a>
+      <a href="#ch-08">Инвестиции</a>
+    </div>
+    <a href="#ch-09" class="nav-cta">
+      <span class="dot"></span>Встреча <span class="arr">→</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ============ COVER ============ -->
+<header class="cover" id="cover">
+  <div class="wrap">
+    <div class="cover-meta">
+      <div class="item"><div class="l">Документ</div><div class="v"><span class="red">06 / 2026</span></div></div>
+      <div class="item"><div class="l">Тема</div><div class="v">RP-CMMS — контур автобазы</div></div>
+      <div class="item"><div class="l">Подготовил</div><div class="v">ASYSTEM · Бишкек</div></div>
+    </div>
+    <div class="cover-body">
+      <div class="cover-no">№ 05 — Цифровой контур автобазы · Конфиденциально</div>
+      <h1 class="cover-title">RP-CMMS<br><span class="alt">— это не просто учёт ремонтов.</span><br><em>Это интеграционный хаб</em><br><span class="alt">всей автобазы.</span></h1>
+      <div class="cover-thesis">
+        Этап&nbsp;1 (MVP) уже работает — базовый учёт ТС, ремонтов и&nbsp;ТМЦ. Этап&nbsp;2 связывает автобазу с&nbsp;логистикой, 1С, закупками и&nbsp;телематикой REALCOM в&nbsp;один контур, добавляет KPI&nbsp;по&nbsp;ремонтной службе, оперативный дашборд и&nbsp;выгрузку в&nbsp;Power&nbsp;BI. Достраиваем работающую систему, а&nbsp;не&nbsp;начинаем с&nbsp;нуля.
+        <span class="author">— ASYSTEM · Июнь 2026</span>
+      </div>
+    </div>
+    <div class="cover-foot">
+      <span>АЛЬФА ОЙЛ / RED PETROLEUM GROUP</span>
+      <span class="scroll">ОТКРЫТЬ ДОКУМЕНТ</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>64 000 USD · ПОЛНЫЙ КОНТУР</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ФАЗА 1 · MVP · 32 000 USD · 8—10 НЕД</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ФАЗА 2 · 32 000 USD · 10—12 НЕД</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ОПЛАТА ПО ФАКТУ · 50 / 50</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>6 ИНТЕГРАЦИЙ · ОДИН ХАБ</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ЛОГИСТИКА · 1С · ЗАКУПКИ · REALCOM · DWH</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>KPI · ДАШБОРД · POWER BI</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ГОТОВЫЙ MVP В ПРОДЕ · ДОСТРАИВАЕМ</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>64 000 USD · ПОЛНЫЙ КОНТУР</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ФАЗА 1 · MVP · 32 000 USD · 8—10 НЕД</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ФАЗА 2 · 32 000 USD · 10—12 НЕД</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ОПЛАТА ПО ФАКТУ · 50 / 50</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>6 ИНТЕГРАЦИЙ · ОДИН ХАБ</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>KPI · ДАШБОРД · POWER BI</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+    <span>ГОТОВЫЙ MVP В ПРОДЕ · ДОСТРАИВАЕМ</span><span class="mq-sep"><svg class="ic-m" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2z"/></svg></span>
+  </div>
+</div>
+
+<!-- ============ HERO "15 СЕКУНД" ============ -->
+<section class="hero15" id="hero15">
+  <div class="wrap">
+    <div class="ll">За 15 секунд</div>
+    <h2 class="h15-title">$64 000 превращают<br>разрозненный учёт автобазы<br><em>в&nbsp;единый интеграционный хаб.</em></h2>
+    <p class="h15-sub">Логистика, 1С, закупки и&nbsp;телематика REALCOM сходятся в&nbsp;одну систему. Поверх — KPI&nbsp;ремонтной службы, оперативный дашборд и&nbsp;выгрузка в&nbsp;Power&nbsp;BI. Две фазы, оплата по&nbsp;факту приёмки. MVP уже в&nbsp;проде — достраиваем работающее.</p>
+    <div class="h15-metrics">
+      <div class="h15-m"><div class="v">$32k</div><div class="l">Фаза 1 — MVP-контур + 1С + логистика</div></div>
+      <div class="h15-m"><div class="v">$32k</div><div class="l">Фаза 2 — интеграции + KPI + BI</div></div>
+      <div class="h15-m"><div class="v">6</div><div class="l">внешних систем в&nbsp;одном хабе</div></div>
+    </div>
+    <div class="h15-cta">
+      <a href="#ch-09" class="btn btn-primary lg">Встреча 30 минут <span class="arr">→</span></a>
+      <a href="#ch-08" class="h15-secondary">Сразу к&nbsp;инвестициям ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SVG SCHEME: "до / после" ============ -->
+<section class="scheme-section">
+  <div class="wrap">
+    <div class="ll-scheme">Процесс · до и&nbsp;после</div>
+    <h3 class="scheme-h">Данные автобазы перестают ходить вручную.</h3>
+    <div class="scheme-wrap">
+      <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" class="scheme-svg">
+        <!-- before -->
+        <g>
+          <text x="60" y="40" fill="#888" font-family="JetBrains Mono" font-size="14" letter-spacing="2">СЕЙЧАС</text>
+          <rect x="60" y="60" width="200" height="60" rx="8" fill="#fff" stroke="#888" stroke-width="2"/>
+          <text x="160" y="88" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="14" font-weight="700">Автобаза · ремонты</text>
+          <text x="160" y="107" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="11">учёт + Excel + телефон</text>
+          <line x1="260" y1="90" x2="340" y2="90" stroke="#0B0B0C" stroke-width="2" stroke-dasharray="6 4"/>
+          <text x="300" y="80" fill="#888" text-anchor="middle" font-family="JetBrains Mono" font-size="10">вручную</text>
+          <rect x="340" y="60" width="200" height="60" rx="8" fill="#fff" stroke="#E30613" stroke-width="2"/>
+          <text x="440" y="88" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="13" font-weight="700">Логистика · склад</text>
+          <text x="440" y="107" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="11">1С · закупки — порознь</text>
+          <text x="60" y="170" fill="#E30613" font-family="JetBrains Mono" font-size="11">→ простои из-за ТМЦ · ручная сверка с&#xa0;1С · нет KPI · повторные ремонты вслепую</text>
+        </g>
+        <!-- after -->
+        <g>
+          <text x="620" y="40" fill="#E30613" font-family="JetBrains Mono" font-size="14" letter-spacing="2">С RP-CMMS ЭТАП 2</text>
+          <rect x="620" y="60" width="150" height="60" rx="8" fill="#fff" stroke="#888" stroke-width="2"/>
+          <text x="695" y="88" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="13" font-weight="700">6 систем</text>
+          <text x="695" y="107" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="10">лог. · 1С · Б2Б · REALCOM</text>
+          <line x1="770" y1="90" x2="830" y2="90" stroke="#E30613" stroke-width="2"/>
+          <rect x="830" y="50" width="170" height="80" rx="10" fill="#E30613"/>
+          <text x="915" y="82" fill="#fff" text-anchor="middle" font-family="Onest" font-size="15" font-weight="700">RP-CMMS</text>
+          <text x="915" y="102" fill="#fff" text-anchor="middle" font-family="JetBrains Mono" font-size="9" letter-spacing="1">хаб · очереди · журнал</text>
+          <line x1="1000" y1="90" x2="1050" y2="90" stroke="#E30613" stroke-width="2"/>
+          <text x="1025" y="80" fill="#E30613" text-anchor="middle" font-family="JetBrains Mono" font-size="9">выгрузка</text>
+          <rect x="1050" y="60" width="90" height="60" rx="8" fill="#fff" stroke="#0B0B0C" stroke-width="2"/>
+          <text x="1095" y="88" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="13" font-weight="700">Power BI</text>
+          <text x="1095" y="107" fill="#0B0B0C" text-anchor="middle" font-family="Onest" font-size="10">дашборды</text>
+          <text x="620" y="170" fill="#E30613" font-family="JetBrains Mono" font-size="11">→ авто-обмен · авто-заявки на&#xa0;ТМЦ · KPI ремслужбы · контроль повторов · BI</text>
+        </g>
+        <!-- bottom labels -->
+        <g>
+          <rect x="60" y="250" width="500" height="90" rx="10" fill="#0B0B0C"/>
+          <text x="310" y="285" fill="#fff" text-anchor="middle" font-family="Onest" font-size="16" font-weight="700">Ручной обмен между подразделениями</text>
+          <text x="310" y="312" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-family="Onest" font-size="13">простои ТС · дефицит ТМЦ · непрозрачность для&#xa0;руководства</text>
+          <rect x="620" y="250" width="520" height="90" rx="10" fill="#E30613"/>
+          <text x="880" y="285" fill="#fff" text-anchor="middle" font-family="Onest" font-size="16" font-weight="700">Единый контур автобазы</text>
+          <text x="880" y="312" fill="#fff" text-anchor="middle" font-family="Onest" font-size="13">меньше простоев · прослеживаемость ТМЦ · KPI и&#xa0;управленческая аналитика</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOC ============ -->
+<section class="toc" id="toc">
+  <div class="wrap">
+    <div class="toc-head">
+      <div class="l">Содержание<br>документа</div>
+      <h2 class="t">9 глав, читается за&nbsp;10&nbsp;минут.<br>Цена появляется в&nbsp;главе&nbsp;08.</h2>
+    </div>
+    <div class="toc-list">
+      <a class="toc-row" href="#ch-01"><span class="tn">01</span><span class="tt">Тезис</span><span class="ts">Интеграционный хаб автобазы, не&nbsp;просто учёт ремонтов</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-02"><span class="tn">02</span><span class="tt">Стартовая точка</span><span class="ts">MVP в&nbsp;проде. RedCharge и&nbsp;RedStaff как&nbsp;якорь доверия</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-03"><span class="tn">03</span><span class="tt">Шесть трений автобазы</span><span class="ts">Где парк теряет время, деньги и&nbsp;прозрачность</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-04"><span class="tn">04</span><span class="tt">Фаза 1 — MVP-контур</span><span class="ts">8—10 недель. 32 000 USD. Ядро, ТМЦ, 1С, логистика</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-05"><span class="tn">05</span><span class="tt">Фаза 2 — Интеграции + аналитика</span><span class="ts">10—12 недель. 32 000 USD. Закупки, REALCOM, KPI, BI</span><span class="tp">2 мин →</span></a>
+      <a class="toc-row" href="#ch-06"><span class="tn">06</span><span class="tt">Команда и&nbsp;процесс</span><span class="ts">Достраиваем работающее, Bitrix24, еженедельные демо</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-07"><span class="tn">07</span><span class="tt">ROI и&nbsp;эффект</span><span class="ts">Модель потерь автобазы. Калибруется на&nbsp;Discovery</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-08"><span class="tn">08</span><span class="tt">Инвестиции</span><span class="ts">64 000 USD. Оплата 50/50 по&nbsp;факту. Что обеспечивает Заказчик</span><span class="tp">1 мин →</span></a>
+      <a class="toc-row" href="#ch-09"><span class="tn">09</span><span class="tt">Подпись</span><span class="ts">Контакты ASYSTEM. Срок действия КП — 60 дней</span><span class="tp">1 мин →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 01 — ТЕЗИС ============ -->
+<section class="chap-open" id="ch-01">
+  <div class="wrap">
+    <div class="chap-no">Глава 01 — Тезис</div>
+    <h2>Не&nbsp;«ещё одна учётная система».<br><em>Связать автобазу со&nbsp;всем остальным.</em></h2>
+    <p class="chap-intro dropcap">
+      После Этапа&nbsp;1 у&nbsp;автобазы есть рабочий учёт ТС, ремонтов и&nbsp;ТМЦ — но&nbsp;он&nbsp;живёт отдельно от&nbsp;логистики, склада, закупок и&nbsp;бухгалтерии, и&nbsp;обмен между ними идёт вручную. Этап&nbsp;2 превращает RP-CMMS в&nbsp;интеграционный хаб: статусы ТС уходят в&nbsp;логистику, движения ТМЦ&nbsp;— в&nbsp;1С, дефицит сам формирует заявку в&nbsp;Б2Б-закупки, телематика REALCOM (GPS, топливо, камеры) обогащает ремонтный лист, а&nbsp;поверх всего&nbsp;— KPI ремонтной службы, оперативный дашборд и&nbsp;выгрузка в&nbsp;корпоративный Power&nbsp;BI. Тот&nbsp;же принцип, что в&nbsp;RedStaff и&nbsp;RedLedger&nbsp;— единый контур поверх существующих систем.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 02 — СТАРТОВАЯ ТОЧКА ============ -->
+<section class="chap-open dark" id="ch-02">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 02 — Стартовая точка</div>
+    <h2 style="color: #fff">Не&nbsp;строим с&nbsp;нуля.<br><em>MVP уже работает.</em></h2>
+    <p class="chap-intro" style="color: rgba(255,255,255,0.78)">
+      RP-CMMS Этап&nbsp;1 — работающий продукт в&nbsp;проде: учёт ТС, ремонтных листов и&nbsp;ТМЦ на&nbsp;стеке Python&nbsp;(Django) + React + PostgreSQL. Плюс ASYSTEM уже внутри контура Red&nbsp;Petroleum: RedCharge сдан, RedStaff и&nbsp;RedLedger в&nbsp;работе. Контракт, команда и&nbsp;доверие отлажены. Поэтому Этап&nbsp;2 — это аккуратная достройка, а&nbsp;не&nbsp;рискованный старт с&nbsp;чистого листа.
+    </p>
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Что уже есть</div>
+        <h3>Работающий MVP</h3>
+        <ul>
+          <li>Учёт ТС, прицепов и&nbsp;ремонтных листов</li>
+          <li>Складской учёт ТМЦ и&nbsp;приходные документы</li>
+          <li>Стек Django + React + PostgreSQL</li>
+          <li>Ролевая модель и&nbsp;базовый интерфейс автобазы</li>
+        </ul>
+        <div class="src">Источник: Этап 1 (MVP) в&nbsp;эксплуатации</div>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Что снимает риск старта</div>
+        <h3>Тот же контур доверия</h3>
+        <ul>
+          <li>RedCharge — действующий продукт в&nbsp;вашей группе</li>
+          <li>RedStaff / RedLedger — тот&nbsp;же принцип «контур поверх систем»</li>
+          <li>Первый месяц — Discovery: аудит кода и&nbsp;БД Этапа&nbsp;1</li>
+          <li>Согласование API-контрактов до&nbsp;старта разработки</li>
+        </ul>
+        <div class="src">Источник: договор RedCharge, КП RedStaff / RedLedger</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 03 — ШЕСТЬ ТРЕНИЙ ============ -->
+<section class="chap-open" id="ch-03">
+  <div class="wrap">
+    <div class="chap-no">Глава 03 — Шесть трений</div>
+    <h2>Где автобаза<br><em>теряет время, деньги и&nbsp;прозрачность.</em></h2>
+    <p class="chap-intro">
+      Трения ниже выводятся прямо из&nbsp;целей Этапа&nbsp;2 (раздел&nbsp;1.2 ТЗ). На&nbsp;Discovery каждое подтверждается на&nbsp;ваших данных по&nbsp;парку, ремонтам и&nbsp;обороту ТМЦ.
+    </p>
+    <div class="ledger-grid" style="margin-top: 64px">
+      <div class="ledger-list">
+        <div class="ledger-row"><span class="num">01</span><div class="body"><h4>Ручной обмен между автобазой, логистикой, складом, закупками и&nbsp;1С</h4><div class="tag-row"><span class="tag-flag">5 систем · вручную</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">02</span><div class="body"><h4>Простои ТС из-за отсутствия ТМЦ — заявки на&nbsp;закупку не&nbsp;автоматизированы</h4><div class="tag-row"><span class="tag-flag">дефицит → простой</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">03</span><div class="body"><h4>Нет прослеживаемости ТМЦ: приход → списание → возврат → утилизация</h4><div class="tag-row"><span class="tag-flag">разрывы в&nbsp;учёте</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">04</span><div class="body"><h4>Заезд/выезд в&nbsp;ремзону не&nbsp;фиксируется объективно — нет фото и&nbsp;времени</h4><div class="tag-row"><span class="tag-flag">спорные факты ремонта</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">05</span><div class="body"><h4>KPI слесарей, механиков и&nbsp;завсклада непрозрачны</h4><div class="tag-row"><span class="tag-flag">нет данных для&nbsp;оценки</span></div></div><span class="arr">→</span></div>
+        <div class="ledger-row"><span class="num">06</span><div class="body"><h4>Повторные ремонты и&nbsp;повторная выдача запчастей не&nbsp;контролируются</h4><div class="tag-row"><span class="tag-flag">rework вслепую</span></div></div><span class="arr">→</span></div>
+      </div>
+      <div class="ledger-detail">
+        <div class="ll">Цена разрозненного учёта автобазы</div>
+        <p>
+          Совокупная цена ручного контура — это <strong>не&nbsp;только труд диспетчеров и&nbsp;завсклада</strong>, а&nbsp;и&nbsp;простои ТС в&nbsp;ожидании запчастей, замороженные в&nbsp;неликвиде деньги, повторные ремонты из-за плохих запчастей и&nbsp;отсутствие прозрачности для&nbsp;руководства.
+        </p>
+        <p>
+          По&nbsp;нашей модели управляемая часть этих потерь — <strong>$26 000 — 49 000 в&nbsp;год</strong>. На&nbsp;Discovery считаем по&nbsp;фактическому размеру парка, числу ремонтов и&nbsp;обороту ТМЦ.
+        </p>
+        <div class="sep"></div>
+        <div class="ll">Решение в&nbsp;архитектуре</div>
+        <div class="arch-link">→ Интеграционное ядро + KPI + дашборд + выгрузка в&nbsp;Power BI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 04 — ФАЗА 1 ============ -->
+<section class="modules-h" id="ch-04">
+  <div class="head">
+    <div>
+      <div class="ll">Глава 04 — Фаза 1 · MVP-контур</div>
+      <h2>Ядро, ТМЦ, 1С, логистика.<br><em>8—10 недель. 32 000 USD.</em></h2>
+    </div>
+    <p>
+      Закладываем интеграционный фундамент и&nbsp;закрываем внутренний контур: чистый учёт ТМЦ от&nbsp;прихода до&nbsp;утилизации, двусторонняя 1С и&nbsp;связь с&nbsp;логистикой. Уже на&nbsp;этой фазе автобаза получает работающую, самодостаточную систему.
+    </p>
+  </div>
+
+  <div class="h-scroll-bar">
+    <div class="pages"><span class="cur">01</span> / <span class="total">04</span></div>
+    <div class="progress"><span></span></div>
+    <div class="controls">
+      <button class="prev" aria-label="Назад">←</button>
+      <button class="next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+
+  <div class="h-scroll-track">
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">F1</div>
+        <div class="b-meta">
+          <div class="ll">Блок 1 · Фундамент + Discovery</div>
+          <div class="tt">Интеграционное ядро для&nbsp;всех 6 систем</div>
+          <div class="dd">Аудит кода и&nbsp;БД Этапа&nbsp;1, затем ядро обмена: outbox-очередь, ретраи (1→5→15→60&nbsp;мин→DLQ), идемпотентность, correlation_id, журнал обмена и&nbsp;дашборд мониторинга интеграций.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">старт Фазы 1</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Ядро обмена</div>
+          <div class="tt">Надёжность по&nbsp;ТЗ</div>
+          <ul>
+            <li>Outbox-таблица событий, события не&nbsp;теряются при&nbsp;рестарте</li>
+            <li>Ретраи и&nbsp;DLQ для&nbsp;ручной обработки</li>
+            <li>Идемпотентность: повтор не&nbsp;создаёт дубль</li>
+            <li>Сквозной correlation_id для&nbsp;расследований</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 1</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Наблюдаемость</div>
+          <div class="tt">Что видит администратор</div>
+          <ul>
+            <li>Журнал обмена: запрос/ответ, статус, попытки, ошибка</li>
+            <li>Дашборд мониторинга по&nbsp;каждой внешней системе</li>
+            <li>Технические поля + мягкое удаление везде</li>
+            <li>Discovery: карта Этапа&nbsp;1 → план достройки</li>
+          </ul>
+          <div class="ft"><span class="term">Фундамент</span><span class="price">для всего</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">F2</div>
+        <div class="b-meta">
+          <div class="ll">Блок 2 · Справочники, склады, документы ТС</div>
+          <div class="tt">Чистые мастер-данные с&nbsp;журналом</div>
+          <div class="dd">Мастер-справочники (ТС, прицепы, водители, сотрудники, поставщики, услуги, гаражи, ТМЦ) с&nbsp;журналом изменений; склады с&nbsp;гео-координатами; документы ТС со&nbsp;сроками, статусами и&nbsp;напоминаниями.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">параллельно F1</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Справочники</div>
+          <div class="tt">Мастер-данные</div>
+          <ul>
+            <li>8 справочников с&nbsp;ролевым редактированием</li>
+            <li>Журнал изменений: кто / когда / поле / старое→новое</li>
+            <li>Склады: широта/долгота, карта, ответственный, тип</li>
+            <li>Уникальность e-mail на&nbsp;уровне БД</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 1</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Документы ТС</div>
+          <div class="tt">Контроль сроков</div>
+          <ul>
+            <li>Тип, номер, даты, статус, файл (PDF ≤10&nbsp;МБ)</li>
+            <li>Фоновый джоб раз в&nbsp;сутки пересчитывает статусы</li>
+            <li>Баннер и&nbsp;уведомление за&nbsp;N дней до&nbsp;окончания</li>
+            <li>Просрочка → ТС в&nbsp;«Ожидание документации»</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 1</span><span class="price">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">F3</div>
+        <div class="b-meta">
+          <div class="ll">Блок 3 · Склад и&nbsp;ремонт</div>
+          <div class="tt">Ремлист, возврат, утилизация, приход</div>
+          <div class="dd">Расширение ремонтного листа, полный жизненный цикл движения ТМЦ и&nbsp;исправление текущего бага отмены прихода (сейчас создаётся дубль-черновик).</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">в&nbsp;Фазе 1</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Ремонтный лист</div>
+          <div class="tt">Расширение</div>
+          <ul>
+            <li>ТМЦ из&nbsp;разных складов в&nbsp;одном листе</li>
+            <li>Несколько ремлистов на&nbsp;одно ТС</li>
+            <li>Сложность работы и&nbsp;срок — основа KPI</li>
+            <li>Прогресс в&nbsp;% от&nbsp;ответственного</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 1</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Движение ТМЦ</div>
+          <div class="tt">Прослеживаемость</div>
+          <ul>
+            <li>Возврат поставщику с&nbsp;полным lifecycle</li>
+            <li>Утилизация на&nbsp;БУ-складе с&nbsp;валидациями</li>
+            <li>Отмена + повторное проведение прихода с&nbsp;версиями</li>
+            <li>Фикс бага дубля-черновика при&nbsp;отмене</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 1</span><span class="price">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter b-letter--check"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="b-meta">
+          <div class="ll">Блок 4 + на&nbsp;выходе Фазы 1</div>
+          <div class="tt">1С + Логистика + дашборд</div>
+          <div class="dd">Двусторонняя 1С (приход/списание/возврат/утилизация + сверка остатков + сторно), приём ТС/прицепов/водителей и&nbsp;синхронизация статусов с&nbsp;логистикой, базовый оперативный дашборд. Самодостаточная фаза: чистый учёт ТМЦ, связь с&nbsp;1С и&nbsp;логистикой работают.</div>
+        </div>
+        <div class="b-price"><div class="ll">Инвестиции</div><div class="vv">32 000 USD</div><div class="ss">50% по&nbsp;приёмке</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 05 — ФАЗА 2 ============ -->
+<section class="modules-h" id="ch-05">
+  <div class="head">
+    <div>
+      <div class="ll">Глава 05 — Фаза 2 · Интеграции + аналитика</div>
+      <h2>Закупки, REALCOM, KPI, BI.<br><em>10—12 недель. 32 000 USD.</em></h2>
+    </div>
+    <p>
+      Достраиваем оставшиеся интеграции и&nbsp;аналитический контур: авто-заявки в&nbsp;Б2Б, телематика и&nbsp;камеры REALCOM, KPI ремонтной службы, полный дашборд и&nbsp;выгрузка в&nbsp;Power&nbsp;BI. Стартует после&nbsp;приёмки Фазы&nbsp;1.
+    </p>
+  </div>
+
+  <div class="h-scroll-bar">
+    <div class="pages"><span class="cur">01</span> / <span class="total">04</span></div>
+    <div class="progress"><span></span></div>
+    <div class="controls">
+      <button class="prev" aria-label="Назад">←</button>
+      <button class="next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+
+  <div class="h-scroll-track">
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">F5</div>
+        <div class="b-meta">
+          <div class="ll">Блок 5 · Б2Б-закупки + рекомендации ТМЦ</div>
+          <div class="tt">Дефицит сам формирует заявку</div>
+          <div class="dd">Интеграция с&nbsp;внутренней Б2Б-платформой закупок: авто-заявка при&nbsp;снижении остатка ниже минимума, ручная заявка, обратные статусы и&nbsp;рекомендательный механизм по&nbsp;пополнению склада.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">старт Фазы 2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Заявки</div>
+          <div class="tt">Авто и&nbsp;ручные</div>
+          <ul>
+            <li>Авто-заявка при&nbsp;дефиците или&nbsp;из&nbsp;ремлиста</li>
+            <li>Ручная заявка из&nbsp;карточки ТМЦ и&nbsp;дашборда</li>
+            <li>Статусы из&nbsp;Б2Б: согласована / заказано / доставлено</li>
+            <li>Раздел «Заявки на&nbsp;закупку» с&nbsp;историей</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 2</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Рекомендации</div>
+          <div class="tt">Предупреждение дефицита</div>
+          <ul>
+            <li>Минимальный остаток и&nbsp;страховой запас по&nbsp;позиции</li>
+            <li>Учёт резерва под&nbsp;активные ремонты и&nbsp;ТО</li>
+            <li>Подсказки: «пополнить», «риск простоя ТС»</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 2</span><span class="price">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">F6</div>
+        <div class="b-meta">
+          <div class="ll">Блок 6 · REALCOM + ИИ-камеры</div>
+          <div class="tt">Телематика и&nbsp;фотофиксация ремонта</div>
+          <div class="dd">Приём данных REALCOM (GPS, датчики топлива, события камер) и&nbsp;их&nbsp;отображение в&nbsp;карточке ТС и&nbsp;дашборде. Фотофиксация заезда/выезда в&nbsp;ремзону с&nbsp;привязкой к&nbsp;ремонтному листу.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">в&nbsp;Фазе 2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">Телематика</div>
+          <div class="tt">GPS · топливо · камеры</div>
+          <ul>
+            <li>Последнее местоположение и&nbsp;скорость ТС</li>
+            <li>Уровень топлива и&nbsp;аномалии</li>
+            <li>Данные read-only: подтверждение/комментарий</li>
+            <li>Отображение в&nbsp;карточке ТС и&nbsp;дашборде</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 2</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Фотофиксация</div>
+          <div class="tt">Заезд / выезд</div>
+          <ul>
+            <li>Событие заезда/выезда в&nbsp;ремзону → ремлист</li>
+            <li>Фото до/после и&nbsp;распознанный гос. номер</li>
+            <li>Очередь ручной проверки при&nbsp;низком confidence</li>
+            <li>Мок-контур: ИИ-камеры ещё не&nbsp;установлены</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 2</span><span class="price">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book">
+      <div class="b-head">
+        <div class="b-letter">F7</div>
+        <div class="b-meta">
+          <div class="ll">Блок 7 · KPI-контур + простои + повторы</div>
+          <div class="tt">Прозрачность ремонтной службы</div>
+          <div class="dd">Профили работников, взвешенный по&nbsp;сложности KPI слесарей и&nbsp;механиков, KPI завсклада, обязательные причины простоев и&nbsp;контроль повторных ремонтов и&nbsp;выдач запчастей.</div>
+        </div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3—4 нед</div><div class="ss">в&nbsp;Фазе 2</div></div>
+      </div>
+      <div class="h-subs">
+        <div class="h-sub">
+          <div class="ll">KPI</div>
+          <div class="tt">Справедливая оценка</div>
+          <ul>
+            <li>Профили: история работ, загрузка, сложность</li>
+            <li>Взвешенный объём по&nbsp;коэффициенту сложности</li>
+            <li>Выполнение в&nbsp;срок, отклонение от&nbsp;норматива</li>
+            <li>KPI завсклада: своевременность заявок, дефицит</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 2</span><span class="price">—</span></div>
+        </div>
+        <div class="h-sub">
+          <div class="ll">Простои и&nbsp;повторы</div>
+          <div class="tt">Зоны ответственности</div>
+          <ul>
+            <li>Обязательные причины простоев по&nbsp;статусам</li>
+            <li>Разделение времени ремонта и&nbsp;ожидания ТМЦ</li>
+            <li>Контроль rework и&nbsp;повторной выдачи запчастей</li>
+            <li>Классификация причины повторного ремонта</li>
+          </ul>
+          <div class="ft"><span class="term">Внутри Фазы 2</span><span class="price">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-book feat">
+      <div class="b-head">
+        <div class="b-letter b-letter--check"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="b-meta">
+          <div class="ll">Блок 8 + на&nbsp;выходе Фазы 2</div>
+          <div class="tt">Дашборд + отчёты + Power BI</div>
+          <div class="dd">Полный оперативный дашборд (4 блока, обновление ≤5&nbsp;мин, права и&nbsp;фильтрация), отчёты с&nbsp;фильтром «сотрудник», по&nbsp;расхождениям 1С и&nbsp;интеграционным ошибкам (Excel/PDF), инкрементальная выгрузка в&nbsp;DWH по&nbsp;data contract. На&nbsp;выходе — полный интеграционный хаб на&nbsp;6 систем с&nbsp;KPI и&nbsp;BI.</div>
+        </div>
+        <div class="b-price"><div class="ll">Инвестиции</div><div class="vv">32 000 USD</div><div class="ss">50% по&nbsp;приёмке</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PULL QUOTE ============ -->
+<div class="pullquote-break">
+  <div class="pq">«После Фазы&nbsp;1 — чистый учёт ТМЦ, 1С и&nbsp;логистика в&nbsp;одной системе.<br><em>После Фазы&nbsp;2 — вся автобаза в&nbsp;едином контуре с&nbsp;KPI и&nbsp;дашбордами.»</em></div>
+</div>
+
+<!-- ============ CHAPTER 06 — КОМАНДА ============ -->
+<section class="chap-open" id="ch-06">
+  <div class="wrap">
+    <div class="chap-no">Глава 06 — Команда и&nbsp;процесс</div>
+    <h2>Достраиваем работающее.<br><em>Backend-тяжёлый проект интеграций.</em></h2>
+    <p class="chap-intro">
+      MVP уже написан, поэтому это проект интеграции и&nbsp;достройки, а&nbsp;не&nbsp;разработка с&nbsp;нуля. Основной объём — на&nbsp;backend (6 интеграций + KPI), мобильной разработки нет: система web-only.
+    </p>
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Состав</div>
+        <h3>4—5 FTE</h3>
+        <ul>
+          <li>PM — 0.5 FTE</li>
+          <li>Системный аналитик — 0.5—1 FTE</li>
+          <li>Backend (Django) — 2.0 FTE</li>
+          <li>Frontend (React) — 1.0—1.5 FTE</li>
+          <li>QA — 0.5 FTE · DevOps — 0.3 FTE</li>
+        </ul>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Процесс</div>
+        <h3>Bitrix24 + Google Meet</h3>
+        <ul>
+          <li>Discovery 3—4 недели на&nbsp;старте</li>
+          <li>Bitrix24 для&nbsp;задач и&nbsp;статусов</li>
+          <li>Еженедельные демо куратору</li>
+          <li>UAT по&nbsp;каждой фазе, акты приёмки</li>
+          <li>Полная передача кода и&nbsp;доступов</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 07 — ROI ============ -->
+<section class="chap-open dark" id="ch-07">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 07 — ROI</div>
+    <h2 style="color: #fff">$26—49k потерь в&nbsp;год.<br><em>Окупаемость 1.5—2.5&nbsp;года.</em></h2>
+    <p class="chap-intro" style="color: rgba(255,255,255,0.78)">
+      Ниже — иллюстративная модель для&nbsp;ориентира, а&nbsp;не&nbsp;обещание. Драйверы взяты из&nbsp;целей Этапа&nbsp;2 (раздел&nbsp;1.2 ТЗ); конкретные суммы калибруются на&nbsp;Discovery по&nbsp;фактическому размеру парка, числу ремонтов и&nbsp;обороту ТМЦ.
+    </p>
+
+    <div class="num-grid" style="margin-top: 80px">
+      <div class="num-card"><div class="ll">Источник 01</div><div class="tt">Простои ТС из-за отсутствия ТМЦ</div><div class="vv">$8 000 — 15 000</div><div class="ss">в&nbsp;год · авто-заявки + прозрачность</div></div>
+      <div class="num-card"><div class="ll">Источник 02</div><div class="tt">Ручной обмен между 5 системами</div><div class="vv">$5 000 — 9 000</div><div class="ss">в&nbsp;год · авто-интеграции</div></div>
+      <div class="num-card"><div class="ll">Источник 03</div><div class="tt">Неликвид и&nbsp;дефицит ТМЦ на&nbsp;складе</div><div class="vv">$4 000 — 8 000</div><div class="ss">в&nbsp;год · мин. остатки + рекомендации</div></div>
+      <div class="num-card"><div class="ll">Источник 04</div><div class="tt">Повторные ремонты и&nbsp;выдачи (rework)</div><div class="vv">$4 000 — 7 000</div><div class="ss">в&nbsp;год · контроль повторов</div></div>
+      <div class="num-card"><div class="ll">Источник 05</div><div class="tt">Производительность ремслужбы</div><div class="vv">$3 000 — 6 000</div><div class="ss">в&nbsp;год · KPI и&nbsp;нормативы</div></div>
+      <div class="num-card"><div class="ll">Источник 06</div><div class="tt">Ручная управленческая отчётность</div><div class="vv">$2 000 — 4 000</div><div class="ss">в&nbsp;год · дашборд + Power BI</div></div>
+    </div>
+
+    <div class="num-total">
+      <div class="ll">Итого в&nbsp;год · по&nbsp;модели</div>
+      <div class="vv">$26 000 — 49 000</div>
+      <div class="ss">Окупаемость ~1.5—2.5 года · цифры калибруются на&nbsp;Discovery по&nbsp;вашему парку</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 08 — ИНВЕСТИЦИИ ============ -->
+<section class="chap-open" id="ch-08">
+  <div class="wrap">
+    <div class="chap-no">Глава 08 — Инвестиции</div>
+    <h2>64 000 USD за&nbsp;реализацию.<br><em>Оплата 50/50 по&nbsp;факту приёмки.</em></h2>
+    <p class="chap-intro">
+      Единый бюджет за&nbsp;разработку и&nbsp;интеграцию. Работаем поэтапно: сначала сдаём Фазу&nbsp;1 (MVP-контур), Заказчик принимает и&nbsp;оплачивает 50%; затем — Фаза&nbsp;2, после&nbsp;приёмки оплачиваются оставшиеся 50%. Постоплата по&nbsp;факту: сначала результат, потом оплата. Гарантия 12 месяцев. Срок действия КП — 60 календарных дней.
+    </p>
+
+    <div class="gs-grid" style="margin-top: 64px">
+      <div class="gs-card">
+        <div class="ll">Фаза 1 — MVP-контур</div>
+        <h3 style="color: var(--rp-red); font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px;">32 000 USD</h3>
+        <ul>
+          <li>8—10 недель, после&nbsp;подписания договора</li>
+          <li>32 000 USD — по&nbsp;Акту приёмки Фазы 1 (50% бюджета)</li>
+          <li>Ядро + справочники + склад/ремонт + 1С + логистика</li>
+          <li>Самодостаточная фаза, можно остановиться здесь</li>
+          <li>Гарантия 12 мес на&nbsp;Акт</li>
+        </ul>
+      </div>
+      <div class="gs-card">
+        <div class="ll">Фаза 2 — Интеграции + аналитика</div>
+        <h3 style="color: var(--rp-red); font-size: clamp(32px, 4vw, 48px); margin-bottom: 16px;">32 000 USD</h3>
+        <ul>
+          <li>10—12 недель, после&nbsp;Акта приёмки Фазы 1</li>
+          <li>32 000 USD — по&nbsp;Акту приёмки Фазы 2 (оставшиеся 50%)</li>
+          <li>Б2Б + REALCOM + камеры + KPI + дашборд + Power BI</li>
+          <li>Полный интеграционный хаб на&nbsp;6 систем</li>
+          <li>Гарантия 12 мес на&nbsp;Акт</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ledger-detail" style="margin-top: 60px; background: #fafafa; padding: 40px; border-radius: 20px;">
+      <div class="ll">Что обеспечивает Заказчик</div>
+      <ul>
+        <li>Доступы, спецификации API и&nbsp;тестовые контуры всех 6 систем: логистика, 1С, Б2Б, REALCOM, DWH, ИИ-камеры</li>
+        <li>API-ключи и&nbsp;учётные данные для&nbsp;интеграций (по&nbsp;ТЗ выдаёт сторона-владелец системы)</li>
+        <li>Серверная инфраструктура для&nbsp;прода и&nbsp;staging RP-CMMS + резервное копирование</li>
+        <li>Хранилище фото/видео ремонтов (на&nbsp;стороне REALCOM или&nbsp;файлового хранилища Заказчика)</li>
+        <li>Лицензии и&nbsp;витрины Power&nbsp;BI, корпоративное DWH и&nbsp;BI-команда</li>
+        <li>Куратор проекта с&nbsp;правом решений и&nbsp;доступ к&nbsp;Bitrix24</li>
+      </ul>
+      <div class="sep"></div>
+      <div class="ll">В&nbsp;стоимость 64 000 USD НЕ входит</div>
+      <ul>
+        <li>Оборудование: ИИ-камеры, GPS-трекеры, датчики топлива и&nbsp;их&nbsp;монтаж</li>
+        <li>Лицензии и&nbsp;подписки третьих сторон (Power&nbsp;BI, картографические сервисы и&nbsp;пр.)</li>
+        <li>Серверная инфраструктура и&nbsp;хранилища Заказчика</li>
+        <li>Работы вендоров (логистика, 1С, Б2Б, REALCOM) на&nbsp;их&nbsp;стороне</li>
+      </ul>
+    </div>
+
+    <div class="ledger-detail" style="margin-top: 24px; background: #fafafa; padding: 40px; border-radius: 20px;">
+      <div class="ll">Опционально · сопровождение и&nbsp;карта</div>
+      <ul>
+        <li>Сопровождение, обновления и&nbsp;поддержка после&nbsp;запуска — от&nbsp;1 500 USD/мес (по&nbsp;согласованию)</li>
+        <li>Карта складов на&nbsp;бесплатном OpenStreetMap (Leaflet) вместо&nbsp;платного Google Maps — без&nbsp;абонплаты и&nbsp;ключей</li>
+      </ul>
+      <div class="sep"></div>
+      <div class="ll">Что мы&nbsp;НЕ обещаем</div>
+      <ul>
+        <li>Интеграции без&nbsp;спецификаций, API-ключей и&nbsp;тестовых контуров от&nbsp;вендоров — блок переносится по&nbsp;срокам</li>
+        <li>Распознавание гос. номеров до&nbsp;установки ИИ-камер — на&nbsp;Этапе&nbsp;2 это мок-контур</li>
+        <li>Точные цифры ROI без&nbsp;Discovery — модель калибруется на&nbsp;ваших объёмах</li>
+        <li>Сроки — при&nbsp;отклике куратора Заказчика в&nbsp;3 рабочих дня</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 09 — ПОДПИСЬ ============ -->
+<section class="colophon" id="ch-09">
+  <div class="wrap">
+    <div class="chap-no" style="color: var(--rp-red)">Глава 09 — Подпись</div>
+    <h2>Встреча 30 минут.<br><em>Разберём скоуп и&nbsp;план по&nbsp;фазам.</em></h2>
+    <p class="chap-intro">
+      Покажем, как&nbsp;Этап&nbsp;2 встраивается в&nbsp;ваш MVP, согласуем границы фаз и&nbsp;список вопросов к&nbsp;вендорам (логистика, 1С, Б2Б, REALCOM, DWH). После&nbsp;Discovery фиксируем итоговый план-график и&nbsp;стартуем Фазу&nbsp;1.
+    </p>
+
+    <div class="contacts">
+      <a href="https://t.me/Ruslyandi" class="contact-card-link tg">
+        <div class="ll">TELEGRAM</div>
+        <div class="vv">@Ruslyandi <span>→</span></div>
+      </a>
+      <a href="mailto:asystem.teamwork@gmail.com" class="contact-card-link mail">
+        <div class="ll">EMAIL</div>
+        <div class="vv">asystem.teamwork@gmail.com <span>→</span></div>
+      </a>
+    </div>
+
+    <div class="signature-foot">
+      <span>ОсОО «Асистем» · г. Бишкек, ул. Токтогула 208</span>
+      <span>ИНН 01004201410217 · ОКПО 28764644</span>
+      <span>Срок действия КП — 60 календарных дней</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="sticky-cta">
+  <div>
+    <div class="l">RP-CMMS Этап 2 · 06 / 2026</div>
+    <div class="v">Контур автобазы — 64 000 USD</div>
+  </div>
+  <a href="#ch-09" class="btn btn-primary">Встреча <span class="arr">→</span></a>
+</div>
+
+<script src="../site.js"></script>
+</body>
+</html>
