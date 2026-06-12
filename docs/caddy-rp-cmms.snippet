@@ -28,42 +28,40 @@
 # ║ /rp-cmms* перехватывается раньше общего gate и проверяет СВОЙ токен.  ║
 # ╚═══════════════════════════════════════════════════════════════════════╝
 
+	# ВАЖНО: страница rp-cmms самодостаточна — все её ассеты (site.css, assets/*,
+	# site.js) лежат ВНУТРИ /rp-cmms/, поэтому cookie с Path=/rp-cmms покрывает
+	# и страницу, и её ассеты. Зависимости от корневых /site.css и т.п. нет.
+
 	# --- RP-CMMS: вход по своему ?token= → cookie на 30 дней ---
 	@cmms_token {
 		path /rp-cmms /rp-cmms/*
 		query token={$RPCMMS_TOKEN}
 	}
 	handle @cmms_token {
-		header Set-Cookie "asystem_cmms={$RPCMMS_TOKEN}; Path=/rp-cmms; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax"
+		header +Set-Cookie "asystem_cmms={$RPCMMS_TOKEN}; Path=/rp-cmms; Max-Age=2592000; HttpOnly; Secure; SameSite=Lax"
 		reverse_proxy UPSTREAM_HERE     # тот же upstream, что у общего блока rp-kp
 	}
 
 	# --- RP-CMMS: уже впущенные по cookie этого КП ---
-	@cmms_cookie {
+	@cmms_ok {
 		path /rp-cmms /rp-cmms/*
-		header_regexp cmms Cookie "asystem_cmms={$RPCMMS_TOKEN}"
+		header_regexp Cookie "asystem_cmms={$RPCMMS_TOKEN}"
 	}
-	handle @cmms_cookie {
+	handle @cmms_ok {
 		reverse_proxy UPSTREAM_HERE
 	}
 
-	# --- RP-CMMS: (опц.) пускать и держателей общего токена rp-kp — для своих ---
-	#     убрать этот блок, если CMMS должен открываться ИСКЛЮЧИТЕЛЬНО своим токеном.
-	@cmms_master {
-		path /rp-cmms /rp-cmms/*
-		header_regexp master Cookie "asystem_auth={$RPKP_TOKEN}"
-	}
-	handle @cmms_master {
-		reverse_proxy UPSTREAM_HERE
+	# --- RP-CMMS: путь без СВОЕГО токена → 401. Общий токен rp-kp сюда НЕ пускает ---
+	@cmms_block path /rp-cmms /rp-cmms/*
+	handle @cmms_block {
+		respond "Unauthorized" 401
 	}
 
-	# --- RP-CMMS: всё прочее по этому пути без своего токена → 401 (не отдаём КП) ---
-	@cmms_path path /rp-cmms /rp-cmms/*
-	handle @cmms_path {
-		respond "401 Unauthorized" 401
-	}
-
-	# ↓↓↓ ниже идут существующие общие handle-ы блока rp-kp (token/cookie/basic) ↓↓↓
+	# ↓↓↓ ниже идут существующие общие handle-ы блока rp-kp (token/cookie/basic).
+	#     Изоляция в обе стороны:
+	#     • новый токен ставит cookie asystem_cmms → проходит только @cmms_*,
+	#       а на / и /redledger общий gate требует asystem_auth → 401 (чужие КП закрыты);
+	#     • старый токен (asystem_auth) на /rp-cmms* ловится @cmms_block → 401. ↓↓↓
 
 
 # ╔═══════════════════════════════════════════════════════════════════════╗
