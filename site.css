@@ -2249,7 +2249,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 110px var(--pad-x) 0;
+  padding: 88px var(--pad-x) 0;
   position: relative;
   overflow: hidden;
 }
@@ -2303,9 +2303,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   margin-bottom: 32px;
 }
 .cover-title {
-  font-size: clamp(56px, 11vw, 200px);
+  font-size: clamp(34px, 4.8vw, 78px);
   font-weight: 800;
-  line-height: 0.88;
+  line-height: 1.04;
   letter-spacing: -0.045em;
   margin: 0;
   text-wrap: balance;
@@ -2316,15 +2316,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   font-weight: 500;
 }
 .cover-title em {
+  display: block;
   font-style: normal;
   color: var(--rp-red);
   /* inline-block to allow indent */
 }
 .cover-thesis {
-  margin-top: 80px;
-  max-width: 720px;
+  margin-top: 40px;
+  max-width: 660px;
   margin-left: auto;
-  font-size: clamp(18px, 1.6vw, 22px);
+  font-size: clamp(16px, 1.35vw, 19px);
   line-height: 1.55;
   color: rgba(255,255,255,0.78);
   position: relative;
