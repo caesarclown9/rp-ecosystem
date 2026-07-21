@@ -323,7 +323,7 @@
           <div class="tt">1С как&nbsp;потребитель, RedStaff как&nbsp;источник</div>
           <div class="dd">RedStaff становится мастер-системой по&nbsp;кадровым данным. 1С получает изменения через event-driven очередь. Журнал интеграций — обязательный, видим что и&nbsp;когда сломалось.</div>
         </div>
-        <div class="b-price"><div class="ll">Срок</div><div class="vv">~5 нед</div><div class="ss">внутри Этапа 2</div></div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~5 нед</div><div class="ss">внутри транша 1</div></div>
       </div>
       <div class="h-subs">
         <div class="h-sub">
@@ -333,10 +333,10 @@
             <li>Аудит API-контрактов Этапа 1 (Discovery)</li>
             <li>Переключение RedStaff в&nbsp;master-режим</li>
             <li>Очередь событий (RabbitMQ / Redis Streams)</li>
-            <li>Webhook расчётного листка с&nbsp;idempotency</li>
+            <li>Отдача изменений с&nbsp;курсором — 1С забирает только новое</li>
             <li>Журнал интеграций + UI просмотра</li>
           </ul>
-          <div class="ft"><span class="term">Discovery + разработка</span><span class="price">в&nbsp;Этапе 2</span></div>
+          <div class="ft"><span class="term">Discovery + разработка</span><span class="price">в&nbsp;транше 1</span></div>
         </div>
         <div class="h-sub">
           <div class="ll">На&nbsp;выходе</div>
@@ -373,7 +373,7 @@
             <li>Контакты, дата приёма, оклад, ставка</li>
             <li>Поля для&nbsp;ИП и&nbsp;ГПХ</li>
           </ul>
-          <div class="ft"><span class="term">Внутри Этапа 2</span><span class="price">—</span></div>
+          <div class="ft"><span class="term">Внутри транша 1</span><span class="price">—</span></div>
         </div>
         <div class="h-sub">
           <div class="ll">Версионирование</div>
@@ -384,44 +384,45 @@
             <li>Корректный учёт увольнений и&nbsp;возвратов</li>
             <li>Связь с&nbsp;табелем и&nbsp;расчётным листком</li>
           </ul>
-          <div class="ft"><span class="term">Внутри Этапа 2</span><span class="price">—</span></div>
+          <div class="ft"><span class="term">Внутри транша 1</span><span class="price">—</span></div>
         </div>
       </div>
     </div>
 
     <div class="h-book">
       <div class="b-head">
-        <div class="b-letter">B4</div>
+        <div class="b-letter">B3</div>
         <div class="b-meta">
-          <div class="ll">Блок 4 · Расчётный листок</div>
-          <div class="tt">Прозрачные начисления. PDF на&nbsp;email</div>
-          <div class="dd">Сотрудник в&nbsp;моб. приложении видит расшифровку начислений по&nbsp;KPI и&nbsp;табелю. PDF-копия — на&nbsp;email. HR перестаёт быть «справочным бюро» по&nbsp;зарплате.</div>
+          <div class="ll">Качество данных и&nbsp;защита ПДн</div>
+          <div class="tt">Видно состояние базы. ПИН закрыт</div>
+          <div class="dd">Панель показывает по&nbsp;всем 11&nbsp;663 записям: что заполнено, что мешает перевести человека из&nbsp;черновика в&nbsp;активные, какие ПИН требуют разбора и&nbsp;где один идентификатор у&nbsp;разных людей. Сегодня такой картины нет ни&nbsp;у&nbsp;кого.</div>
         </div>
-        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">после B1+B2</div></div>
+        <div class="b-price"><div class="ll">Статус</div><div class="vv">готово</div><div class="ss">показываем на&nbsp;встрече</div></div>
       </div>
       <div class="h-subs">
         <div class="h-sub">
-          <div class="ll">Что видит сотрудник</div>
-          <div class="tt">Моб. приложение</div>
+          <div class="ll">Что видит кадровая служба</div>
+          <div class="tt">Панель качества данных</div>
           <ul>
-            <li>Оклад / часовая ставка</li>
-            <li>KPI с&nbsp;расшифровкой («продажи карты / план / факт»)</li>
-            <li>Бонусы и&nbsp;удержания с&nbsp;причинами</li>
-            <li>История за&nbsp;12 месяцев</li>
-            <li>Скачать PDF · отправить на&nbsp;email</li>
+            <li>Сколько записей всего и&nbsp;сколько готовы к&nbsp;активации</li>
+            <li>Заполненность по&nbsp;каждому полю — в&nbsp;штуках и&nbsp;процентах</li>
+            <li>ПИН на&nbsp;ручной разбор: короткие, с&nbsp;лишними символами</li>
+            <li>Один ПИН у&nbsp;разных людей — ломает сопоставление с&nbsp;1С</li>
+            <li>Объём работы по&nbsp;дозаполнению виден в&nbsp;цифрах, а&nbsp;не&nbsp;на&nbsp;ощупь</li>
           </ul>
-          <div class="ft"><span class="term">UX полностью</span><span class="price">в&nbsp;Этапе 2</span></div>
+          <div class="ft"><span class="term">Проверено</span><span class="price">на&nbsp;объёме 11&nbsp;663</span></div>
         </div>
         <div class="h-sub">
-          <div class="ll">Что меняется для&nbsp;HR</div>
-          <div class="tt">Высвобождение времени</div>
+          <div class="ll">Что закрывается по&nbsp;безопасности</div>
+          <div class="tt">Персональные данные</div>
           <ul>
-            <li>Запросы «почему мне начислили столько?» — самообслуживание</li>
-            <li>Меньше эскалаций в&nbsp;трудовые конфликты</li>
-            <li>Доверие к&nbsp;системе растёт</li>
-            <li>HR работает над&nbsp;стратегией, не&nbsp;разъяснением</li>
+            <li>Маскирование ПИН: видит только тот, кому положено по&nbsp;роли</li>
+            <li>Журнал раскрытия — кто и&nbsp;в&nbsp;чьём профиле открыл ПИН</li>
+            <li>Единый пароль на&nbsp;все учётные записи — убирается</li>
+            <li>Внутренние документы закрываются авторизацией</li>
+            <li>Кадровые данные защищены от&nbsp;уничтожения: увольнение — это&nbsp;архив</li>
           </ul>
-          <div class="ft"><span class="term">Эффект</span><span class="price">с&nbsp;1-го мес после&nbsp;пуска</span></div>
+          <div class="ft"><span class="term">Основание</span><span class="price">Цифровой кодекс №178</span></div>
         </div>
       </div>
     </div>
@@ -468,7 +469,7 @@
       <div class="b-head">
         <div class="b-letter b-letter--check"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div class="b-meta">
-          <div class="ll">На&nbsp;выходе Этапа 2</div>
+          <div class="ll">На&nbsp;выходе первого транша</div>
           <div class="tt">Что получает Заказчик</div>
           <div class="dd">Самодостаточная стадия. После Акта по&nbsp;первому траншу мастер-источник по&nbsp;кадрам работает, 1С забирает данные из&nbsp;RedStaff, ПИН защищён маскированием и&nbsp;журналом доступа, записи перенесены.</div>
         </div>
@@ -520,7 +521,7 @@
             <li>Ручной ввод оператора смены с&nbsp;аудитом</li>
             <li>Связь с&nbsp;графиком работы и&nbsp;сменностью</li>
           </ul>
-          <div class="ft"><span class="term">~5 нед</span><span class="price">в&nbsp;Этапе 3</span></div>
+          <div class="ft"><span class="term">~5 нед</span><span class="price">в&nbsp;транше 2</span></div>
         </div>
         <div class="h-sub">
           <div class="ll">Антифрод</div>
@@ -544,7 +545,7 @@
           <div class="tt">Реальные KPI. Командные. Выгрузка в&nbsp;бухгалтерию</div>
           <div class="dd">Рейтинг операторов АЗС с&nbsp;реальными KPI: план продаж, безаварийность, дисциплина, апселл. Командные рейтинги по&nbsp;объекту. Выгрузка результатов в&nbsp;бухгалтерию для&nbsp;премирования.</div>
         </div>
-        <div class="b-price"><div class="ll">Срок</div><div class="vv">~4 нед</div><div class="ss">в&nbsp;Этапе 3</div></div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~4 нед</div><div class="ss">в&nbsp;транше 2</div></div>
       </div>
       <div class="h-subs">
         <div class="h-sub">
@@ -557,7 +558,7 @@
             <li>Апселл — продажа карты RedPay, доп. товаров</li>
             <li>Веса настраиваются HR без&nbsp;разработки</li>
           </ul>
-          <div class="ft"><span class="term">Конфигурируемо</span><span class="price">в&nbsp;Этапе 3</span></div>
+          <div class="ft"><span class="term">Конфигурируемо</span><span class="price">в&nbsp;транше 2</span></div>
         </div>
         <div class="h-sub">
           <div class="ll">Командные рейтинги</div>
@@ -581,7 +582,7 @@
           <div class="tt">Отпуска. Больничные. ОБС. Командировки. SLA</div>
           <div class="dd">Все типы заявок в&nbsp;одном потоке: отпуск, больничный, ОБС, командировка. SLA с&nbsp;уведомлениями. Mass-actions для&nbsp;HR. Интеграция с&nbsp;табелем и&nbsp;1С.</div>
         </div>
-        <div class="b-price"><div class="ll">Срок</div><div class="vv">~4 нед</div><div class="ss">в&nbsp;Этапе 3</div></div>
+        <div class="b-price"><div class="ll">Срок</div><div class="vv">~4 нед</div><div class="ss">в&nbsp;транше 2</div></div>
       </div>
       <div class="h-subs">
         <div class="h-sub">
@@ -606,7 +607,7 @@
             <li>Фильтры по&nbsp;объекту, типу, периоду</li>
             <li>Журнал решений</li>
           </ul>
-          <div class="ft"><span class="term">UX HR</span><span class="price">в&nbsp;Этапе 3</span></div>
+          <div class="ft"><span class="term">UX HR</span><span class="price">в&nbsp;транше 2</span></div>
         </div>
       </div>
     </div>
@@ -615,23 +616,25 @@
       <div class="b-head">
         <div class="b-letter">B7</div>
         <div class="b-meta">
-          <div class="ll">Блок 7 · Накопленный бэклог</div>
-          <div class="tt">SSO в&nbsp;B2B. Feature flags. Read replica</div>
-          <div class="dd">Закрытие накопленных задач Этапа&nbsp;1, инфраструктурное усиление: feature flags для&nbsp;управления раскаткой, read replica БД для&nbsp;аналитики, SSO в&nbsp;Red Petroleum B2B-портал.</div>
+          <div class="ll">Расчётный листок, SSO и&nbsp;бэклог</div>
+          <div class="tt">Деньги сотрудника. Единый вход</div>
+          <div class="dd">Приём начислений из&nbsp;1С и&nbsp;прозрачный листок в&nbsp;приложении, единый вход в&nbsp;B2B-портал, накопленные задачи первого этапа и&nbsp;инфраструктурное усиление.</div>
         </div>
-        <div class="b-price"><div class="ll">Срок</div><div class="vv">~3 нед</div><div class="ss">в&nbsp;Этапе 3</div></div>
+        <div class="b-price"><div class="ll">Когда</div><div class="vv">транш 2</div><div class="ss">после Акта</div></div>
       </div>
       <div class="h-subs">
         <div class="h-sub">
-          <div class="ll">Инфраструктура</div>
-          <div class="tt">Усиление</div>
+          <div class="ll">Расчётный листок</div>
+          <div class="tt">Начисления из&nbsp;1С</div>
           <ul>
-            <li>Feature flags (LaunchDarkly-аналог)</li>
-            <li>Read replica для&nbsp;тяжёлой аналитики</li>
-            <li>Резервный план failover</li>
-            <li>NFR: 200 одновременных, 99,5% uptime, 500мс</li>
+            <li>Оклад, KPI с&nbsp;расшифровкой, бонусы и&nbsp;удержания с&nbsp;причинами</li>
+            <li>Повторная отправка из&nbsp;1С не&nbsp;создаёт дубль; доначисление и&nbsp;сторно
+                учитываются отдельно, а&nbsp;не&nbsp;затирают начисление</li>
+            <li>Больничный по&nbsp;Положению №434: все рабочие дни за&nbsp;счёт работодателя,
+                первые 10 — по&nbsp;стажу, с&nbsp;11-го — 100 расчётных показателей в&nbsp;месяц</li>
+            <li>Суммы — в&nbsp;точной арифметике, правило округления фиксируем письменно</li>
           </ul>
-          <div class="ft"><span class="term">NFR</span><span class="price">по&nbsp;ТЗ</span></div>
+          <div class="ft"><span class="term">Деньги</span><span class="price">без&nbsp;потерь при&nbsp;повторах</span></div>
         </div>
         <div class="h-sub">
           <div class="ll">SSO в&nbsp;B2B</div>
@@ -692,7 +695,7 @@
         <div class="ll">Процесс</div>
         <h3>Bitrix24 + Google Meet</h3>
         <ul>
-          <li>Discovery 3—4 недели в&nbsp;старте Этапа 2</li>
+          <li>Сверка построенного ядра с&nbsp;вашим ТЗ в&nbsp;старте первого транша</li>
           <li>Bitrix24 для&nbsp;задач и&nbsp;статусов</li>
           <li>Еженедельные статусы Google Meet</li>
           <li>Demo куратору каждые 2 недели</li>
